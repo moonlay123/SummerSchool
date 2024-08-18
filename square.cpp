@@ -8,6 +8,12 @@ void solve(double a,double b, double c, double x_1[],double x_2[]){
     double sqrtD = sqrt(abs(D));
 
     if (abs(a)<EPS) {
+
+        if(b==0){
+            printf("It's not the equation\n");
+            return;
+        }
+
         x_1[0] = (-c/b);
 
         printf("Only one real root\n");
