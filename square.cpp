@@ -6,21 +6,21 @@
 --Идеальное решение квадратного уравнения--
 */
 
-typedef enum {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, NOPE} roots ;
-typedef enum {Many_equations = 2, Standard = 1, Nope = 0} choose_type;
-
-const int  PATIENCE = 10;
+typedef enum {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, NON_TYPE} roots_type;
+typedef enum {MANY_EQUATIONS = 2, STANDARD = 1, NON_TYPE = 0} choose_type;
+enum {SUCCESS = 0, FAILURE = 1};
+const int PATIENCE = 10;
 const double EPS = 0.000001;
 
-void pass_string();
+void clean_char_buffer();
 
 bool is_zero(double a);
 bool greater_zero(double a);
 double double_rand();
 
-roots linear_case(double b, double c, double x_1[]);
-roots square_case(double a, double b, double c, double x_1[], double x_2[]);
-roots solve(double a, double b, double c, double x_1[], double x_2[]);
+roots_type linear_case(double b, double c, double x[]);
+roots_type square_case(double a, double b, double c, double x_1[], double x_2[]);
+roots_type solve(double a, double b, double c, double x_1[], double x_2[]);
 
 void square_equation_printer(int root_fl, double x_1[], double x_2[]);
 int square_equation_input(double *a, double *b, double *c);
@@ -31,32 +31,32 @@ void standard();
 
 int main()
 {
-    choose_type chosen = choose_variant();
+    choose_type note = choose_variant();
 
-    switch (chosen)
+    switch (note)
     {
-        case Standard:
+        case STANDARD:
             standard();
             break;
-        case Many_equations:
+        case MANY_EQUATIONS:
             many_equations();
             break;
         default:
             printf("Unknown command\n");
             break;
     }
-    return 0;
+    return SUCCESS;
 }
 
-void pass_string()
+void clean_char_buffer()
 {
-    while(getchar()!='\n')
+    while(getchar() != '\n')
         continue;
 }
 
 choose_type choose_variant()
 {
-    choose_type choose = Nope;
+    choose_type choose = NON_TYPE;
     int fl = 0;
     while (choose != 1 and choose != 2 and !fl)
     {
@@ -66,7 +66,7 @@ choose_type choose_variant()
         if (choose != 1 and choose != 2 and !fl)
         {
             printf("Wrong input, try again\n");
-            pass_string();
+            clean_char_buffer();
         }
     }
 
@@ -92,7 +92,7 @@ void standard()
     double a = 0, b = 0, c = 0;
     int next = square_equation_input(&a, &b, &c);
 
-    if (next)
+    if (next == SUCCESS)
     {
         double x_1[2] = {0, 0}, x_2[2] = {0, 0};
         int root_fl = solve(a, b, c, x_1, x_2);
@@ -138,7 +138,7 @@ int square_equation_input(double *a, double *b, double *c)
         if (scanf("%lf %lf %lf", a, b, c) < 3)
         {
             printf("Wrong input, try again \n");
-            pass_string();
+            clean_char_buffer();
             ++counter;
         } else
         {
@@ -148,10 +148,10 @@ int square_equation_input(double *a, double *b, double *c)
 
     if (counter == PATIENCE)
     {
-        return 0;
+        return FAILURE;
     }
 
-    return 1;
+    return SUCCESS;
 }
 
 void square_equation_printer(int root_fl, double x_1[], double x_2[])
@@ -187,7 +187,7 @@ void square_equation_printer(int root_fl, double x_1[], double x_2[])
     }
 }
 
-roots linear_case(double b, double c, double x_1[])
+roots_type linear_case(double b, double c, double x[])
 {
     if (is_zero(b))
     {
@@ -200,12 +200,12 @@ roots linear_case(double b, double c, double x_1[])
         }
     } else
     {
-        x_1[0] = (-c / b);
+        x[0] = (-c / b);
 
         return ONE;
     }
 }
-roots square_case(double a, double b, double c, double x_1[], double x_2[])
+roots_type square_case(double a, double b, double c, double x_1[], double x_2[])
 {
     double D = b * b - 4 * a * c;
     double sqrtD = sqrt(abs(D));
@@ -223,16 +223,15 @@ roots square_case(double a, double b, double c, double x_1[], double x_2[])
     } else
     {
         x_1[0] = (-b) / (2 * a);
-        x_1[1] =  (sqrtD) / (2 * a);
+        x_1[1] = (sqrtD) / (2 * a);
         x_2[0] = x_1[0];
-        x_2[1] =  -x_1[1];
+        x_2[1] = -x_1[1];
         return COMPLEX;
     }
 }
 
-roots solve(double a, double b, double c, double x_1[], double x_2[])
+roots_type solve(double a, double b, double c, double x_1[], double x_2[])
 {
-
     assert(isfinite(a));
     assert(isfinite(b));
     assert(isfinite(c));
@@ -241,7 +240,7 @@ roots solve(double a, double b, double c, double x_1[], double x_2[])
     assert(x_2 != NULL);
     assert(x_1 != x_2);
 
-    roots root_fl = NOPE;
+    roots_type root_fl = NON_TYPE;
 
     if (is_zero(a))
     {
