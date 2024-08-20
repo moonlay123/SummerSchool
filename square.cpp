@@ -5,21 +5,18 @@
 --Идеальное решение квадратного уравнения--
 */
 
-const int TWO_SIMILAR = 11;
-const int INFINITE = -1;
-const int COMPLEX = 22;
-const int ZERO = 0;
-const int ONE = 1;
-const int TWO = 2;
-const int PATIENCE = 10;
+enum roots {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, PATIENCE, NOPE};
 const double EPS = 0.00001;
 
-void basic(double b, double c, double x_1[], int *root_fl);
-void advanced(double a, double b, double c, double x_1[], double x_2[], int *root_fl);
-int solve(double a, double b, double c, double x_1[], double x_2[]);
+bool isZero(double a);
+double double_rand();
 
-void printer(int root_fl, double x_1[], double x_2[]);
-int inputer(double *a, double *b, double *c);
+enum roots linear_case(double b, double c, double x_1[]);
+enum roots square_case(double a, double b, double c, double x_1[], double x_2[]);
+enum roots solve(double a, double b, double c, double x_1[], double x_2[]);
+
+void square_equation_printer(int root_fl, double x_1[], double x_2[]);
+int square_equation_input(double *a, double *b, double *c);
 
 void a_lot_of_equations();
 void standard();
@@ -27,12 +24,12 @@ void standard();
 int main()
 {
     int choose = 0, fl = 0;
-    while (!fl)
+    while (choose != 1 and choose != 2 and !fl)
     {
         printf("Choose what you want\n1) Standard input\n2) Random input\n");
         fl = scanf("%d", &choose);
 
-        if (!fl)
+        if (choose != 1 and choose != 2 and !fl)
         {
             printf("Wrong input, try again\n");
         }
@@ -53,17 +50,25 @@ int main()
     return 0;
 }
 
+bool isZero(double a)
+{
+    return abs(a) < EPS;
+}
+double double_rand()
+{
+    return (rand() % 20001 - 10000) / (100.0);
+}
 void standard()
 {
     double a = 0, b = 0, c = 0;
-    int next = inputer(&a, &b, &c);
+    int next = square_equation_input(&a, &b, &c);
 
     if (next)
     {
         double x_1[2] = {0, 0}, x_2[2] = {0, 0};
         int root_fl = solve(a, b, c, x_1, x_2);
 
-        printer(root_fl, x_1, x_2);
+        square_equation_printer(root_fl, x_1, x_2);
     } else
     {
         printf("Try next time\n");
@@ -78,22 +83,22 @@ void a_lot_of_equations()
 
     for (int i = 0; i < equations; ++i)
     {
-        printf("\nHere is %d's equation\n", i+1);
+        printf("\nHere is %d equation\n", i+1);
 
-        double a = (rand() % 20001 - 10000) / (100.0),
-               b = (rand() % 20001 - 10000) / (100.0),
-               c = (rand() % 20001 - 10000) / (100.0);
+        double a = double_rand(),
+               b = double_rand(),
+               c = double_rand();
         printf("Your coefs: a = %.2lf, b = %.2lf, c = %.2lf\n", a, b, c);
 
         double x_1[2] = {0, 0}, x_2[2] = {0, 0};
         int root_fl = solve(a, b, c, x_1, x_2);
 
-        printer(root_fl, x_1, x_2);
+        square_equation_printer(root_fl, x_1, x_2);
     }
 
 }
 
-int inputer(double *a, double *b, double *c)
+int square_equation_input(double *a, double *b, double *c)
 {
     int counter = 0;
     bool fl = 0;
@@ -120,7 +125,7 @@ int inputer(double *a, double *b, double *c)
     return 1;
 }
 
-void printer(int root_fl, double x_1[], double x_2[])
+void square_equation_printer(int root_fl, double x_1[], double x_2[])
 {
     switch (root_fl)
     {
@@ -151,59 +156,59 @@ void printer(int root_fl, double x_1[], double x_2[])
     }
 }
 
-void basic(double b, double c, double x_1[], int *root_fl)
+enum roots linear_case(double b, double c, double x_1[])
 {
-    if (abs(b) < EPS)
+    if (isZero(b))
     {
-        if (abs(c) < EPS)
+        if (isZero(c))
         {
-            *root_fl = INFINITE;
+            return INFINITE;
         } else
         {
-            *root_fl = ZERO;
+            return ZERO;
         }
     } else
     {
         x_1[0] = (-c / b);
 
-        *root_fl = ONE;
+        return ONE;
     }
 }
-void advanced(double a, double b, double c, double x_1[], double x_2[], int *root_fl)
+enum roots square_case(double a, double b, double c, double x_1[], double x_2[])
 {
     double D = b * b - 4 * a * c;
     double sqrtD = sqrt(abs(D));
 
-    if (abs(D) < EPS)
+    if (isZero(a))
     {
         x_1[0] = (-b) / (2 * a);
         x_2[0] = x_1[0];
-        *root_fl = TWO_SIMILAR;
+        return TWO_SIMILAR;
     } else if (D > 0)
     {
         x_1[0] = (-b + sqrtD) / (2 * a);
         x_2[0] = (-b - sqrtD) / (2 * a);
-        *root_fl = TWO;
+        return TWO;
     } else
     {
         x_1[0] = (-b) / (2 * a);
         x_1[1] =  (sqrtD) / (2 * a);
-        x_2[0] = (-b) / (2 * a);
-        x_2[1] =  (sqrtD) / (2 * a);
-        *root_fl = COMPLEX;
+        x_2[0] = x_1[0];
+        x_2[1] =  -x_1[1];
+        return COMPLEX;
     }
 }
 
-int solve(double a, double b, double c, double x_1[], double x_2[])
+enum roots solve(double a, double b, double c, double x_1[], double x_2[])
 {
-    int root_fl = 0;
+    enum roots root_fl = NOPE;
 
-    if (abs(a) < EPS)
+    if (isZero(a))
     {
-        basic(b, c, x_1, &root_fl);
+        root_fl = linear_case(b, c, x_1);
     } else
     {
-        advanced(a, b, c, x_1, x_2, &root_fl);
+        root_fl = square_case(a, b, c, x_1, x_2);
     }
 
     return root_fl;
