@@ -6,36 +6,40 @@
 --Идеальное решение квадратного уравнения--
 */
 
-enum roots {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, NOPE};
+typedef enum {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, NOPE} roots ;
+typedef enum {Many_equations = 2, Standard = 1, Nope = 0} choose_type;
+
 const int  PATIENCE = 10;
 const double EPS = 0.000001;
-char s[100];
 
-bool isZero(double a);
+void pass_string();
+
+bool is_zero(double a);
+bool greater_zero(double a);
 double double_rand();
 
-enum roots linear_case(double b, double c, double x_1[]);
-enum roots square_case(double a, double b, double c, double x_1[], double x_2[]);
-enum roots solve(double a, double b, double c, double x_1[], double x_2[]);
+roots linear_case(double b, double c, double x_1[]);
+roots square_case(double a, double b, double c, double x_1[], double x_2[]);
+roots solve(double a, double b, double c, double x_1[], double x_2[]);
 
 void square_equation_printer(int root_fl, double x_1[], double x_2[]);
 int square_equation_input(double *a, double *b, double *c);
 
-int choose_variant();
-void a_lot_of_equations();
+choose_type choose_variant();
+void many_equations();
 void standard();
 
 int main()
 {
-    int chosen = choose_variant();
+    choose_type chosen = choose_variant();
 
     switch (chosen)
     {
-        case 1:
+        case Standard:
             standard();
             break;
-        case 2:
-            a_lot_of_equations();
+        case Many_equations:
+            many_equations();
             break;
         default:
             printf("Unknown command\n");
@@ -44,9 +48,16 @@ int main()
     return 0;
 }
 
-int choose_variant()
+void pass_string()
 {
-    int choose = 0, fl = 0;
+    while(getchar()!='\n')
+        continue;
+}
+
+choose_type choose_variant()
+{
+    choose_type choose = Nope;
+    int fl = 0;
     while (choose != 1 and choose != 2 and !fl)
     {
         printf("Choose what you want\n1) Standard input\n2) Random input\n");
@@ -55,16 +66,21 @@ int choose_variant()
         if (choose != 1 and choose != 2 and !fl)
         {
             printf("Wrong input, try again\n");
-            scanf("%s",s);
+            pass_string();
         }
     }
 
     return choose;
 }
 
-bool isZero(double a)
+
+bool is_zero(double a)
 {
     return abs(a) < EPS;
+}
+bool greater_zero(double a)
+{
+    return a > EPS;
 }
 double double_rand()
 {
@@ -88,7 +104,7 @@ void standard()
     }
 }
 
-void a_lot_of_equations()
+void many_equations()
 {
     int equations = 0;
     printf("Input amount of random equations\n");
@@ -122,7 +138,7 @@ int square_equation_input(double *a, double *b, double *c)
         if (scanf("%lf %lf %lf", a, b, c) < 3)
         {
             printf("Wrong input, try again \n");
-            scanf("%s",s);
+            pass_string();
             ++counter;
         } else
         {
@@ -171,11 +187,11 @@ void square_equation_printer(int root_fl, double x_1[], double x_2[])
     }
 }
 
-enum roots linear_case(double b, double c, double x_1[])
+roots linear_case(double b, double c, double x_1[])
 {
-    if (isZero(b))
+    if (is_zero(b))
     {
-        if (isZero(c))
+        if (is_zero(c))
         {
             return INFINITE;
         } else
@@ -189,17 +205,17 @@ enum roots linear_case(double b, double c, double x_1[])
         return ONE;
     }
 }
-enum roots square_case(double a, double b, double c, double x_1[], double x_2[])
+roots square_case(double a, double b, double c, double x_1[], double x_2[])
 {
     double D = b * b - 4 * a * c;
     double sqrtD = sqrt(abs(D));
 
-    if (isZero(D))
+    if (is_zero(D))
     {
         x_1[0] = (-b) / (2 * a);
         x_2[0] = x_1[0];
         return TWO_SIMILAR;
-    } else if (D > 0)
+    } else if (greater_zero(D))
     {
         x_1[0] = (-b + sqrtD) / (2 * a);
         x_2[0] = (-b - sqrtD) / (2 * a);
@@ -214,20 +230,20 @@ enum roots square_case(double a, double b, double c, double x_1[], double x_2[])
     }
 }
 
-enum roots solve(double a, double b, double c, double x_1[], double x_2[])
+roots solve(double a, double b, double c, double x_1[], double x_2[])
 {
 
     assert(isfinite(a));
     assert(isfinite(b));
     assert(isfinite(c));
 
-    assert(x_1!=NULL);
-    assert(x_2!=NULL);
-    assert(x_1!=x_2);
+    assert(x_1 != NULL);
+    assert(x_2 != NULL);
+    assert(x_1 != x_2);
 
-    enum roots root_fl = NOPE;
+    roots root_fl = NOPE;
 
-    if (isZero(a))
+    if (is_zero(a))
     {
         root_fl = linear_case(b, c, x_1);
     } else
