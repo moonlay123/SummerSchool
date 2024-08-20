@@ -21,10 +21,30 @@ enum roots solve(double a, double b, double c, double x_1[], double x_2[]);
 void square_equation_printer(int root_fl, double x_1[], double x_2[]);
 int square_equation_input(double *a, double *b, double *c);
 
+int choose_variant();
 void a_lot_of_equations();
 void standard();
 
 int main()
+{
+    int chosen = choose_variant();
+
+    switch (chosen)
+    {
+        case 1:
+            standard();
+            break;
+        case 2:
+            a_lot_of_equations();
+            break;
+        default:
+            printf("Unknown command\n");
+            break;
+    }
+    return 0;
+}
+
+int choose_variant()
 {
     int choose = 0, fl = 0;
     while (choose != 1 and choose != 2 and !fl)
@@ -39,19 +59,7 @@ int main()
         }
     }
 
-    switch (choose)
-    {
-        case 1:
-            standard();
-            break;
-        case 2:
-            a_lot_of_equations();
-            break;
-        default:
-            printf("Unknown command\n");
-            break;
-    }
-    return 0;
+    return choose;
 }
 
 bool isZero(double a)
