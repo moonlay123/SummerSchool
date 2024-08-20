@@ -5,8 +5,9 @@
 --Идеальное решение квадратного уравнения--
 */
 
-enum roots {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, PATIENCE, NOPE};
-const double EPS = 0.00001;
+enum roots {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, NOPE};
+const int  PATIENCE = 10;
+const double EPS = 0.000001;
 
 bool isZero(double a);
 double double_rand();
@@ -32,6 +33,7 @@ int main()
         if (choose != 1 and choose != 2 and !fl)
         {
             printf("Wrong input, try again\n");
+            getchar();
         }
     }
 
@@ -58,6 +60,7 @@ double double_rand()
 {
     return (rand() % 20001 - 10000) / (100.0);
 }
+
 void standard()
 {
     double a = 0, b = 0, c = 0;
@@ -110,6 +113,7 @@ int square_equation_input(double *a, double *b, double *c)
         if (scanf("%lf %lf %lf", a, b, c) < 3)
         {
             printf("Wrong input, try again \n");
+            getchar();
             ++counter;
         } else
         {
