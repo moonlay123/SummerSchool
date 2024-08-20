@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<math.h>
+#include<assert.h>
 
 /*
 --Идеальное решение квадратного уравнения--
@@ -64,7 +65,7 @@ double double_rand()
 
 void standard()
 {
-    double a = 0, b = 0, c = 0;
+    double a = NAN, b = NAN, c = NAN;
     int next = square_equation_input(&a, &b, &c);
 
     if (next)
@@ -142,18 +143,19 @@ void square_equation_printer(int root_fl, double x_1[], double x_2[])
             break;
         case TWO:
             printf("Two unique real roots\n");
-            printf("First root  %.2lf \nSecond root %.2lf\n", x_1[0], x_2[0]);
+            printf("First root  %.2lf\nSecond root %.2lf\n", x_1[0], x_2[0]);
             break;
         case INFINITE:
             printf("Infinite amount of roots\n");
             break;
         case TWO_SIMILAR:
             printf("Two similar real roots\n");
-            printf("Similar roots %.2lf", x_1[0]);
+            printf("Similar roots %.2lf and %.2lf", x_1[0], x_2[0]);
             break;
         case COMPLEX:
-            printf("Twp complex roots\n");
-            printf("First root  %.2lf + %.2lf i \nSecond root %.2lf - %.2lf i\n", x_1[0], abs(x_1[1]), x_2[0], abs(x_2[1]));
+            printf("Two complex roots\n");
+            printf("First root  %.2lf + %.2lf i\nSecond root %.2lf - %.2lf i\n",
+                    x_1[0], abs(x_1[1]), x_2[0], abs(x_2[1]));
             break;
         default:
             printf("Unsupported case");
@@ -206,6 +208,15 @@ enum roots square_case(double a, double b, double c, double x_1[], double x_2[])
 
 enum roots solve(double a, double b, double c, double x_1[], double x_2[])
 {
+
+    assert(isfinite(a));
+    assert(isfinite(b));
+    assert(isfinite(c));
+
+    assert(x_1!=NULL);
+    assert(x_2!=NULL);
+    assert(x_1!=x_2);
+
     enum roots root_fl = NOPE;
 
     if (isZero(a))
