@@ -149,9 +149,10 @@ void square_equation_printer(int root_fl, double x_1[], double x_2[])
             break;
         case TWO_SIMILAR:
             printf("Two similar real roots\n");
-            printf("%.2lf", x_1[0]);
+            printf("Similar roots %.2lf", x_1[0]);
             break;
         case COMPLEX:
+            printf("Twp complex roots\n");
             printf("First root  %.2lf + %.2lf i \nSecond root %.2lf - %.2lf i\n", x_1[0], abs(x_1[1]), x_2[0], abs(x_2[1]));
             break;
         default:
@@ -183,7 +184,7 @@ enum roots square_case(double a, double b, double c, double x_1[], double x_2[])
     double D = b * b - 4 * a * c;
     double sqrtD = sqrt(abs(D));
 
-    if (isZero(a))
+    if (isZero(D))
     {
         x_1[0] = (-b) / (2 * a);
         x_2[0] = x_1[0];
