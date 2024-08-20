@@ -73,7 +73,7 @@ double double_rand()
 
 void standard()
 {
-    double a = NAN, b = NAN, c = NAN;
+    double a = 0, b = 0, c = 0;
     int next = square_equation_input(&a, &b, &c);
 
     if (next)
