@@ -1,0 +1,385 @@
+\doxysection{C\+:/\+Users/pasha/\+Summer\+School/square.cpp File Reference}
+\hypertarget{square_8cpp}{}\label{square_8cpp}\index{C:/Users/pasha/SummerSchool/square.cpp@{C:/Users/pasha/SummerSchool/square.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \{ \newline
+\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3a7dbd60b3d9900fcbe4042e1824388f61}{TWO\+\_\+\+SIMILAR}}
+, \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3a6a1459101774b7f68e084098fa8bacbb}{INFINITE}}
+, \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3a5374e1234e4d55af346d6ae6263ad573}{COMPLEX}}
+, \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3ae117e3533122c80b262257b49b21cddf}{ZERO}}
+, \newline
+\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3a7a725f13af144bdef532d0389ba75e0d}{ONE}}
+, \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851}{TWO}}
+, \mbox{\hyperlink{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93ad3cd66408d8e3911855bf081159a909c}{NON\+\_\+\+TYPE}} = 0
+ \}
+\item 
+enum \mbox{\hyperlink{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93}{choose\+\_\+type}} \{ \mbox{\hyperlink{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93a6484befd4590d68d5e33e618e4b825d7}{MANY\+\_\+\+EQUATIONS}} = 2
+, \mbox{\hyperlink{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93a9de934790934fe831fe946c851e8338e}{STANDARD}} = 1
+, \mbox{\hyperlink{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93ad3cd66408d8e3911855bf081159a909c}{NON\+\_\+\+TYPE}} = 0
+ \}
+\item 
+enum \{ \mbox{\hyperlink{square_8cpp_a06fc87d81c62e9abb8790b6e5713c55bac7f69f7c9e5aea9b8f54cf02870e2bf8}{SUCCESS}} = 0
+, \mbox{\hyperlink{square_8cpp_a06fc87d81c62e9abb8790b6e5713c55baa5571864412c8275a2e18a931fddcaa6}{FAILURE}} = 1
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{square_8cpp_a0f056f9424e5dd7a4635048a5c010c3d}{clean\+\_\+char\+\_\+buffer}} ()
+\item 
+bool \mbox{\hyperlink{square_8cpp_ac11b13568d1fc1edd90bf73db8aca501}{is\+\_\+zero}} (double a)
+\item 
+bool \mbox{\hyperlink{square_8cpp_aaf0c6edc5d4d302967d36816d838a989}{greater\+\_\+zero}} (double a)
+\item 
+double \mbox{\hyperlink{square_8cpp_adc5c2119e8830fd87fc37940ba86254a}{double\+\_\+rand}} ()
+\item 
+\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \mbox{\hyperlink{square_8cpp_a09e20722141d2b1d2581df61ebd85eeb}{linear\+\_\+case}} (double b, double c, double x\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \mbox{\hyperlink{square_8cpp_ad52202900cc826c1e445e0d60ae71001}{square\+\_\+case}} (double a, double b, double c, double x\+\_\+1\mbox{[}$\,$\mbox{]}, double x\+\_\+2\mbox{[}$\,$\mbox{]})
+\item 
+\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \mbox{\hyperlink{square_8cpp_a0b168a7755a8e438c278501e8c816a85}{solve}} (double a, double b, double c, double x\+\_\+1\mbox{[}$\,$\mbox{]}, double x\+\_\+2\mbox{[}$\,$\mbox{]})
+\item 
+void \mbox{\hyperlink{square_8cpp_a6a0299e8c7a95c75980ddecd0c1a40e8}{square\+\_\+equation\+\_\+printer}} (int root\+\_\+fl, double x\+\_\+1\mbox{[}$\,$\mbox{]}, double x\+\_\+2\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{square_8cpp_a25dd390c772edc9d0d5bff979502faaf}{square\+\_\+equation\+\_\+input}} (double \texorpdfstring{$\ast$}{*}a, double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}c)
+\item 
+\mbox{\hyperlink{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93}{choose\+\_\+type}} \mbox{\hyperlink{square_8cpp_ad7391e6ff1ba1b6cdf15c05e1af457df}{choose\+\_\+variant}} ()
+\item 
+void \mbox{\hyperlink{square_8cpp_a61859bf9a33fb86ae0aa2b5e8a971896}{many\+\_\+equations}} ()
+\item 
+void \mbox{\hyperlink{square_8cpp_a0e09ffeb237a6d28969d7c099f352454}{standard}} ()
+\item 
+int \mbox{\hyperlink{square_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{square_8cpp_a965a01de7216caabbecae5c1f94af84e}{PATIENCE}} = 10
+\item 
+const double \mbox{\hyperlink{square_8cpp_afe01386a82fedc016455a43c20280a97}{EPS}} = 0.\+000001
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{square_8cpp_a06fc87d81c62e9abb8790b6e5713c55b}\doxysubsubsection{\texorpdfstring{anonymous enum}{anonymous enum}}
+{\footnotesize\ttfamily \label{square_8cpp_a06fc87d81c62e9abb8790b6e5713c55b} 
+anonymous enum}
+
+Enum of SUCCESS and FAILURE program tags \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SUCCESS@{SUCCESS}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!SUCCESS@{SUCCESS}}}\Hypertarget{square_8cpp_a06fc87d81c62e9abb8790b6e5713c55bac7f69f7c9e5aea9b8f54cf02870e2bf8}\label{square_8cpp_a06fc87d81c62e9abb8790b6e5713c55b} 
+SUCCESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FAILURE@{FAILURE}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!FAILURE@{FAILURE}}}\Hypertarget{square_8cpp_a06fc87d81c62e9abb8790b6e5713c55baa5571864412c8275a2e18a931fddcaa6}\label{square_8cpp_a06fc87d81c62e9abb8790b6e5713c55b} 
+FAILURE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93}\index{square.cpp@{square.cpp}!choose\_type@{choose\_type}}
+\index{choose\_type@{choose\_type}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{choose\_type}{choose\_type}}
+{\footnotesize\ttfamily \label{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93} 
+enum \mbox{\hyperlink{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93}{choose\+\_\+type}}}
+
+Enum of all program action types \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MANY\_EQUATIONS@{MANY\_EQUATIONS}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!MANY\_EQUATIONS@{MANY\_EQUATIONS}}}\Hypertarget{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93a6484befd4590d68d5e33e618e4b825d7}\label{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93} 
+MANY\+\_\+\+EQUATIONS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{STANDARD@{STANDARD}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!STANDARD@{STANDARD}}}\Hypertarget{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93a9de934790934fe831fe946c851e8338e}\label{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93} 
+STANDARD&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NON\_TYPE@{NON\_TYPE}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!NON\_TYPE@{NON\_TYPE}}}\Hypertarget{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93ad3cd66408d8e3911855bf081159a909c}\label{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93} 
+NON\+\_\+\+TYPE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}\index{square.cpp@{square.cpp}!roots\_type@{roots\_type}}
+\index{roots\_type@{roots\_type}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{roots\_type}{roots\_type}}
+{\footnotesize\ttfamily \label{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3} 
+enum \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}}}
+
+Enum of all root types in square equation \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO\_SIMILAR@{TWO\_SIMILAR}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!TWO\_SIMILAR@{TWO\_SIMILAR}}}\Hypertarget{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3a7dbd60b3d9900fcbe4042e1824388f61}\label{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3} 
+TWO\+\_\+\+SIMILAR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INFINITE@{INFINITE}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!INFINITE@{INFINITE}}}\Hypertarget{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3a6a1459101774b7f68e084098fa8bacbb}\label{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3} 
+INFINITE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COMPLEX@{COMPLEX}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!COMPLEX@{COMPLEX}}}\Hypertarget{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3a5374e1234e4d55af346d6ae6263ad573}\label{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3} 
+COMPLEX&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ZERO@{ZERO}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!ZERO@{ZERO}}}\Hypertarget{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3ae117e3533122c80b262257b49b21cddf}\label{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3} 
+ZERO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ONE@{ONE}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!ONE@{ONE}}}\Hypertarget{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3a7a725f13af144bdef532d0389ba75e0d}\label{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3} 
+ONE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TWO@{TWO}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!TWO@{TWO}}}\Hypertarget{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851}\label{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3} 
+TWO&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NON\_TYPE@{NON\_TYPE}!square.cpp@{square.cpp}}\index{square.cpp@{square.cpp}!NON\_TYPE@{NON\_TYPE}}}\Hypertarget{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93ad3cd66408d8e3911855bf081159a909c}\label{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3} 
+NON\+\_\+\+TYPE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{square_8cpp_ad7391e6ff1ba1b6cdf15c05e1af457df}\index{square.cpp@{square.cpp}!choose\_variant@{choose\_variant}}
+\index{choose\_variant@{choose\_variant}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{choose\_variant()}{choose\_variant()}}
+{\footnotesize\ttfamily \label{square_8cpp_ad7391e6ff1ba1b6cdf15c05e1af457df} 
+\mbox{\hyperlink{square_8cpp_a9af026261f5cfa59aa2bb1a497bd2f93}{choose\+\_\+type}} choose\+\_\+variant (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+function for choosing program actions \begin{DoxyReturn}{Returns}
+the selected program action 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00129}{129}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_a0f056f9424e5dd7a4635048a5c010c3d}\index{square.cpp@{square.cpp}!clean\_char\_buffer@{clean\_char\_buffer}}
+\index{clean\_char\_buffer@{clean\_char\_buffer}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{clean\_char\_buffer()}{clean\_char\_buffer()}}
+{\footnotesize\ttfamily \label{square_8cpp_a0f056f9424e5dd7a4635048a5c010c3d} 
+void clean\+\_\+char\+\_\+buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Clean char buffer 
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00123}{123}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_adc5c2119e8830fd87fc37940ba86254a}\index{square.cpp@{square.cpp}!double\_rand@{double\_rand}}
+\index{double\_rand@{double\_rand}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{double\_rand()}{double\_rand()}}
+{\footnotesize\ttfamily \label{square_8cpp_adc5c2119e8830fd87fc37940ba86254a} 
+double double\+\_\+rand (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Do random value double type \begin{DoxyReturn}{Returns}
+double random value 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00157}{157}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_aaf0c6edc5d4d302967d36816d838a989}\index{square.cpp@{square.cpp}!greater\_zero@{greater\_zero}}
+\index{greater\_zero@{greater\_zero}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{greater\_zero()}{greater\_zero()}}
+{\footnotesize\ttfamily \label{square_8cpp_aaf0c6edc5d4d302967d36816d838a989} 
+bool greater\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{a}{}\end{DoxyParamCaption})}
+
+Checks if a double value is greater than zero 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & double value need to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool value greater than zero of not 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00153}{153}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_ac11b13568d1fc1edd90bf73db8aca501}\index{square.cpp@{square.cpp}!is\_zero@{is\_zero}}
+\index{is\_zero@{is\_zero}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{is\_zero()}{is\_zero()}}
+{\footnotesize\ttfamily \label{square_8cpp_ac11b13568d1fc1edd90bf73db8aca501} 
+bool is\+\_\+zero (\begin{DoxyParamCaption}\item[{double}]{a}{}\end{DoxyParamCaption})}
+
+Checks if a double value is zero 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & double value need to check \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool value zero of not 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00149}{149}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_a09e20722141d2b1d2581df61ebd85eeb}\index{square.cpp@{square.cpp}!linear\_case@{linear\_case}}
+\index{linear\_case@{linear\_case}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{linear\_case()}{linear\_case()}}
+{\footnotesize\ttfamily \label{square_8cpp_a09e20722141d2b1d2581df61ebd85eeb} 
+\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} linear\+\_\+case (\begin{DoxyParamCaption}\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double}]{x}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+provide linear case of square equation 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b} & double b from square equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & double c from square equation \\
+\hline
+\mbox{\texttt{ out}}  & {\em x} & root from this case \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type of amount of roots 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00262}{262}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{square.cpp@{square.cpp}!main@{main}}
+\index{main@{main}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{square_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_a61859bf9a33fb86ae0aa2b5e8a971896}\index{square.cpp@{square.cpp}!many\_equations@{many\_equations}}
+\index{many\_equations@{many\_equations}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{many\_equations()}{many\_equations()}}
+{\footnotesize\ttfamily \label{square_8cpp_a61859bf9a33fb86ae0aa2b5e8a971896} 
+void many\+\_\+equations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Action with many randomly generated solves of square equation 
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00179}{179}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_a0b168a7755a8e438c278501e8c816a85}\index{square.cpp@{square.cpp}!solve@{solve}}
+\index{solve@{solve}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{solve()}{solve()}}
+{\footnotesize\ttfamily \label{square_8cpp_a0b168a7755a8e438c278501e8c816a85} 
+\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} solve (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double}]{x\+\_\+1}{\mbox{[}$\,$\mbox{]}, }\item[{double}]{x\+\_\+2}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+provide square case of square equation 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b} & double b from square equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & double c from square equation \\
+\hline
+\mbox{\texttt{ out}}  & {\em x\+\_\+1} & root from this case \\
+\hline
+\mbox{\texttt{ out}}  & {\em x\+\_\+2} & root from this case \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type of roots 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00305}{305}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_ad52202900cc826c1e445e0d60ae71001}\index{square.cpp@{square.cpp}!square\_case@{square\_case}}
+\index{square\_case@{square\_case}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{square\_case()}{square\_case()}}
+{\footnotesize\ttfamily \label{square_8cpp_ad52202900cc826c1e445e0d60ae71001} 
+\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} square\+\_\+case (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double}]{x\+\_\+1}{\mbox{[}$\,$\mbox{]}, }\item[{double}]{x\+\_\+2}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+provide square case of square equation 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b} & double b from square equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & double c from square equation \\
+\hline
+\mbox{\texttt{ out}}  & {\em x\+\_\+1} & root from this case \\
+\hline
+\mbox{\texttt{ out}}  & {\em x\+\_\+2} & root from this case \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+type of roots 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00280}{280}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_a25dd390c772edc9d0d5bff979502faaf}\index{square.cpp@{square.cpp}!square\_equation\_input@{square\_equation\_input}}
+\index{square\_equation\_input@{square\_equation\_input}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{square\_equation\_input()}{square\_equation\_input()}}
+{\footnotesize\ttfamily \label{square_8cpp_a25dd390c772edc9d0d5bff979502faaf} 
+int square\+\_\+equation\+\_\+input (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+input roots 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & double a from square equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & double b from square equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & double c from square equation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00202}{202}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_a6a0299e8c7a95c75980ddecd0c1a40e8}\index{square.cpp@{square.cpp}!square\_equation\_printer@{square\_equation\_printer}}
+\index{square\_equation\_printer@{square\_equation\_printer}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{square\_equation\_printer()}{square\_equation\_printer()}}
+{\footnotesize\ttfamily \label{square_8cpp_a6a0299e8c7a95c75980ddecd0c1a40e8} 
+void square\+\_\+equation\+\_\+printer (\begin{DoxyParamCaption}\item[{int}]{root\+\_\+fl}{, }\item[{double}]{x\+\_\+1}{\mbox{[}$\,$\mbox{]}, }\item[{double}]{x\+\_\+2}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+print roots 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em root\+\_\+fl} & info about type of roots \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+1} & double c from square equation \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+2} & double c from square equation \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00229}{229}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_a0e09ffeb237a6d28969d7c099f352454}\index{square.cpp@{square.cpp}!standard@{standard}}
+\index{standard@{standard}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{standard()}{standard()}}
+{\footnotesize\ttfamily \label{square_8cpp_a0e09ffeb237a6d28969d7c099f352454} 
+void standard (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Action with user-\/specified coefficients 
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00162}{162}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\Hypertarget{square_8cpp_afe01386a82fedc016455a43c20280a97}\index{square.cpp@{square.cpp}!EPS@{EPS}}
+\index{EPS@{EPS}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{EPS}{EPS}}
+{\footnotesize\ttfamily \label{square_8cpp_afe01386a82fedc016455a43c20280a97} 
+const double EPS = 0.\+000001}
+
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
+\Hypertarget{square_8cpp_a965a01de7216caabbecae5c1f94af84e}\index{square.cpp@{square.cpp}!PATIENCE@{PATIENCE}}
+\index{PATIENCE@{PATIENCE}!square.cpp@{square.cpp}}
+\doxysubsubsection{\texorpdfstring{PATIENCE}{PATIENCE}}
+{\footnotesize\ttfamily \label{square_8cpp_a965a01de7216caabbecae5c1f94af84e} 
+const int PATIENCE = 10}
+
+
+
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+
