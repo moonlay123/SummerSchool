@@ -8,6 +8,7 @@
 enum roots {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, NOPE};
 const int  PATIENCE = 10;
 const double EPS = 0.000001;
+char s[100];
 
 bool isZero(double a);
 double double_rand();
@@ -33,7 +34,7 @@ int main()
         if (choose != 1 and choose != 2 and !fl)
         {
             printf("Wrong input, try again\n");
-            getchar();
+            scanf("%s",s);
         }
     }
 
@@ -105,7 +106,6 @@ int square_equation_input(double *a, double *b, double *c)
 {
     int counter = 0;
     bool fl = 0;
-
     while (counter < PATIENCE and !fl)
     {
         printf("Enter coef in square equation\n");
@@ -113,7 +113,7 @@ int square_equation_input(double *a, double *b, double *c)
         if (scanf("%lf %lf %lf", a, b, c) < 3)
         {
             printf("Wrong input, try again \n");
-            getchar();
+            scanf("%s",s);
             ++counter;
         } else
         {
