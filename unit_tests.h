@@ -1,7 +1,6 @@
-#include "square.h"
 #ifndef unit_tests
 #define unit_tests
-#endif
+#include "square.h"
 
 /*!
 Check correctness of solving square equation and print if it's not correct
@@ -86,3 +85,5 @@ Running all the created tests
 \return correctness of tests
 */
 int run_all_tests();
+
+#endif

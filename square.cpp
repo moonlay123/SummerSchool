@@ -3,6 +3,16 @@
 #include <assert.h>
 #include "square.h"
 
+void complex_swap(double *x_1, double *x_2)
+{
+    double temp = x_1[0];
+    x_1[0] = x_2[0];
+    x_2[0] = temp;
+
+    temp = x_1[1];
+    x_1[1] = x_2[1];
+    x_2[1] = temp;
+}
 
 void sort_complex(double *x_1, double *x_2)
 {
@@ -10,16 +20,14 @@ void sort_complex(double *x_1, double *x_2)
     {
         if (greater_zero(x_1[1] - x_2[1]))
         {
-            std::swap(x_1[0], x_2[0]);
-            std::swap(x_1[1], x_2[1]);
+            complex_swap(x_1, x_2);
         } else
         {
             return;
         }
     } else if (greater_zero(x_1[0] - x_2[0]))
     {
-        std::swap(x_1[0], x_2[0]);
-        std::swap(x_1[1], x_2[1]);
+        complex_swap(x_1, x_2);
     } else
     {
         return;
@@ -51,25 +59,6 @@ void clean_char_buffer()
 {
     while(getchar() != '\n')
         continue;
-}
-
-int choose_variant()
-{
-    int choose = NON_TYPE;
-    int fl = 0;
-    while (choose != 1 and choose != 2 and !fl)
-    {
-        printf("Choose what you want\n1) Standard input\n2) Random input\n");
-        fl = scanf("%d", &choose);
-
-        if (choose != 1 and choose != 2 and !fl)
-        {
-            printf("Wrong input, try again\n");
-            clean_char_buffer();
-        }
-    }
-
-    return choose;
 }
 
 

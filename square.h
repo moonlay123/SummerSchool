@@ -1,15 +1,10 @@
 #ifndef square
 #define square
-#endif
+
 /*!
     Enum of all root types in square equation
 */
 typedef enum {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, NON_ROOT_TYPE = 0} roots_type;
-
-/*!
-    Enum of all program action types
-*/
-typedef enum {MANY_EQUATIONS = 2, STANDARD = 1, NON_TYPE = 0} choose_type;
 
 /*!
     Enum of SUCCESS and FAILURE program tags
@@ -17,6 +12,13 @@ typedef enum {MANY_EQUATIONS = 2, STANDARD = 1, NON_TYPE = 0} choose_type;
 enum {SUCCESS = 0, FAILURE = 1};
 const int NUMBER_OF_TRIES = 10;
 const double EPS = 0.01;
+
+/*!
+swap complex numbers
+\param[in] x_1 first complex number
+\param[in] x_2 second complex number
+*/
+void complex_swap(double *x_1, double *x_2);
 
 /*!
 Clean char buffer
@@ -118,12 +120,6 @@ Input roots
 int square_equation_input(double *a, double *b, double *c);
 
 /*!
-Function for choosing program actions
-\return the selected program action
-*/
-int choose_variant();
-
-/*!
 Action with many randomly generated solves of square equation
 */
 void many_equations();
@@ -132,3 +128,4 @@ void many_equations();
 Action with user-specified coefficients
 */
 void standard();
+#endif
