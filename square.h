@@ -1,4 +1,6 @@
-#pragma once
+#ifndef square
+#define square
+#endif
 /*!
     Enum of all root types in square equation
 */

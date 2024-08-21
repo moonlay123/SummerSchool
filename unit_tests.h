@@ -1,5 +1,7 @@
 #include "square.h"
-#pragma once
+#ifndef unit_tests
+#define unit_tests
+#endif
 
 /*!
 Check correctness of solving square equation and print if it's not correct
