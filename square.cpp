@@ -5,7 +5,7 @@
 /*!
     Enum of all root types in square equation
 */
-typedef enum {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, NON_TYPE} roots_type;
+typedef enum {TWO_SIMILAR, INFINITE, COMPLEX, ZERO, ONE, TWO, NON_ROOT_TYPE = 0} roots_type;
 /*!
     Enum of all program action types
 */
@@ -35,13 +35,43 @@ Checks if a double value is greater than zero
 bool greater_zero(double a);
 
 /*!
+Counts distance between two complex numbers
+\param[in] x_1 first complex number
+\param[in] x_2 second complex number
+\return double distance betwen x_1 and x_2
+*/
+double distance_between_complex(double *x_1, double *x_2);
+
+/*!
+Check if two complex numbers are similar
+\param[in] x_1 first complex number
+\param[in] x_2 second complex number
+\return bool value of similarity
+*/
+bool complex_are_similar(double *x_1, double *x_2);
+
+/*!
+Sorting complex numbers by their real values and if their are equal sort by complex
+\param[in] x_1 complex number
+\param[in] x_2 complex number
+*/
+void sort_complex(double *x_1, double *x_2);
+
+/*!
 Do random value double type
 \return double random value
 */
 double double_rand();
-
 /*!
-provide linear case of square equation
+Calculating Discriminant of square equation
+\param[in]  a double b from square equation
+\param[in]  b double c from square equation
+\param[in]  c double b from square equation
+\return calculated discriminant
+*/
+double calculate_D(double a, double b, double c);
+/*!
+Provide linear case of square equation
 \param[in]  b double b from square equation
 \param[in]  c double c from square equation
 \param[out] x root from this case
@@ -50,7 +80,7 @@ provide linear case of square equation
 roots_type linear_case(double b, double c, double x[]);
 
 /*!
-provide square case of square equation
+Provide square case of square equation
 \param[in]  b double b from square equation
 \param[in]  c double c from square equation
 \param[out] x_1 root from this case
@@ -60,7 +90,7 @@ provide square case of square equation
 roots_type square_case(double a, double b, double c, double x_1[], double x_2[]);
 
 /*!
-provide square case of square equation
+Provide square case of square equation
 \param[in]  b double b from square equation
 \param[in]  c double c from square equation
 \param[out] x_1 root from this case
@@ -70,7 +100,7 @@ provide square case of square equation
 roots_type solve(double a, double b, double c, double x_1[], double x_2[]);
 
 /*!
-print roots
+Print roots
 \param[in]  root_fl info about type of roots
 \param[in]  x_1 double c from square equation
 \param[in]  x_2 double c from square equation
@@ -78,7 +108,7 @@ print roots
 void square_equation_printer(int root_fl, double x_1[], double x_2[]);
 
 /*!
-input roots
+Input roots
 \param[in]  a double a from square equation
 \param[in]  b double b from square equation
 \param[in]  c double c from square equation
@@ -86,7 +116,7 @@ input roots
 int square_equation_input(double *a, double *b, double *c);
 
 /*!
-function for choosing program actions
+Function for choosing program actions
 \return the selected program action
 */
 choose_type choose_variant();
@@ -101,7 +131,9 @@ Action with user-specified coefficients
 */
 void standard();
 
-int main()
+
+
+/*int main()
 {
     choose_type note = choose_variant();
 
@@ -118,6 +150,50 @@ int main()
             break;
     }
     return SUCCESS;
+}*/
+
+
+void sort_complex(double *x_1, double *x_2)
+{
+    if (is_zero(x_1[0] - x_2[0]))
+    {
+        if (greater_zero(x_1[1] - x_2[1]))
+        {
+            std::swap(x_1[0], x_2[0]);
+            std::swap(x_1[1], x_2[1]);
+        } else
+        {
+            return;
+        }
+    } else if (greater_zero(x_1[0] - x_2[0]))
+    {
+        std::swap(x_1[0], x_2[0]);
+        std::swap(x_1[1], x_2[1]);
+    } else
+    {
+        return;
+    }
+}
+
+double calculate_D(double a, double b, double c)
+{
+    return b * b - 4 * a * c;
+}
+
+double distance_between_complex(double *x_1, double *x_2)
+{
+    return sqrt((x_1[0] - x_2[0]) * (x_1[0] - x_2[0]) + (x_1[1] - x_2[1]) * (x_1[1] - x_2[1]));
+}
+
+bool complex_are_similar(double *x_1, double *x_2)
+{
+    if (is_zero(x_1[1] - x_2[1]))
+    {
+        return is_zero(x_1[0] - x_2[0]);
+    } else
+    {
+        return is_zero(distance_between_complex(x_1, x_2));
+    }
 }
 
 void clean_char_buffer()
@@ -279,7 +355,7 @@ roots_type linear_case(double b, double c, double x[])
 }
 roots_type square_case(double a, double b, double c, double x_1[], double x_2[])
 {
-    double D = b * b - 4 * a * c;
+    double D = calculate_D(a, b, c);
     double sqrtD = sqrt(abs(D));
 
     if (is_zero(D))
@@ -312,7 +388,7 @@ roots_type solve(double a, double b, double c, double x_1[], double x_2[])
     assert(x_2 != NULL);
     assert(x_1 != x_2);
 
-    roots_type root_fl = NON_TYPE;
+    roots_type root_fl = NON_ROOT_TYPE;
 
     if (is_zero(a))
     {

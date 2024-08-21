@@ -1,0 +1,4 @@
+C:/Users/pasha/SummerSchool/Build/CMakeFiles/square.dir
+C:/Users/pasha/SummerSchool/Build/CMakeFiles/main.dir
+C:/Users/pasha/SummerSchool/Build/CMakeFiles/edit_cache.dir
+C:/Users/pasha/SummerSchool/Build/CMakeFiles/rebuild_cache.dir
