@@ -108,13 +108,13 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3a7a725f13af144bdef532d0389ba75e0d">ONE</a>
 , <a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851">TWO</a>
-, <a class="el" href="#a9af026261f5cfa59aa2bb1a497bd2f93ad3cd66408d8e3911855bf081159a909c">NON_TYPE</a> = 0
+, <a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3addd1e71e238184e40dc073fec27e27c8">NON_ROOT_TYPE</a> = 0
 <br />
  }</td></tr>
 <tr class="separator:a98df0a5ae6ff7dc84cfcf1863112d2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9af026261f5cfa59aa2bb1a497bd2f93" id="r_a9af026261f5cfa59aa2bb1a497bd2f93"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9af026261f5cfa59aa2bb1a497bd2f93">choose_type</a> { <a class="el" href="#a9af026261f5cfa59aa2bb1a497bd2f93a6484befd4590d68d5e33e618e4b825d7">MANY_EQUATIONS</a> = 2
 , <a class="el" href="#a9af026261f5cfa59aa2bb1a497bd2f93a9de934790934fe831fe946c851e8338e">STANDARD</a> = 1
-, <a class="el" href="#a9af026261f5cfa59aa2bb1a497bd2f93ad3cd66408d8e3911855bf081159a909c">NON_TYPE</a> = 0
+, <a class="el" href="#a9af026261f5cfa59aa2bb1a497bd2f93a388e687825deef54499e2cbd6a980199">NON_TYPE</a> = 0
  }</td></tr>
 <tr class="separator:a9af026261f5cfa59aa2bb1a497bd2f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b" id="r_a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a06fc87d81c62e9abb8790b6e5713c55bac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a> = 0
@@ -130,8 +130,16 @@ Functions</h2></td></tr>
 <tr class="separator:ac11b13568d1fc1edd90bf73db8aca501"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf0c6edc5d4d302967d36816d838a989" id="r_aaf0c6edc5d4d302967d36816d838a989"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf0c6edc5d4d302967d36816d838a989">greater_zero</a> (double a)</td></tr>
 <tr class="separator:aaf0c6edc5d4d302967d36816d838a989"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5305eacc9cdc3d0b670102e056a77b1" id="r_ae5305eacc9cdc3d0b670102e056a77b1"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae5305eacc9cdc3d0b670102e056a77b1">distance_between_complex</a> (double *x_1, double *x_2)</td></tr>
+<tr class="separator:ae5305eacc9cdc3d0b670102e056a77b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0271663bc69528424c46eb6953c81a7b" id="r_a0271663bc69528424c46eb6953c81a7b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0271663bc69528424c46eb6953c81a7b">complex_are_similar</a> (double *x_1, double *x_2)</td></tr>
+<tr class="separator:a0271663bc69528424c46eb6953c81a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a519ded7a15b93ff0e23b38d8e627854d" id="r_a519ded7a15b93ff0e23b38d8e627854d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a519ded7a15b93ff0e23b38d8e627854d">sort_complex</a> (double *x_1, double *x_2)</td></tr>
+<tr class="separator:a519ded7a15b93ff0e23b38d8e627854d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc5c2119e8830fd87fc37940ba86254a" id="r_adc5c2119e8830fd87fc37940ba86254a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc5c2119e8830fd87fc37940ba86254a">double_rand</a> ()</td></tr>
 <tr class="separator:adc5c2119e8830fd87fc37940ba86254a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae6315f9de4d2e740583fa0b47a3ed160" id="r_ae6315f9de4d2e740583fa0b47a3ed160"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae6315f9de4d2e740583fa0b47a3ed160">calculate_D</a> (double a, double b, double c)</td></tr>
+<tr class="separator:ae6315f9de4d2e740583fa0b47a3ed160"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09e20722141d2b1d2581df61ebd85eeb" id="r_a09e20722141d2b1d2581df61ebd85eeb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">roots_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a09e20722141d2b1d2581df61ebd85eeb">linear_case</a> (double b, double c, double x[])</td></tr>
 <tr class="separator:a09e20722141d2b1d2581df61ebd85eeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad52202900cc826c1e445e0d60ae71001" id="r_ad52202900cc826c1e445e0d60ae71001"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">roots_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad52202900cc826c1e445e0d60ae71001">square_case</a> (double a, double b, double c, double x_1[], double x_2[])</td></tr>
@@ -148,8 +156,6 @@ Functions</h2></td></tr>
 <tr class="separator:a61859bf9a33fb86ae0aa2b5e8a971896"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e09ffeb237a6d28969d7c099f352454" id="r_a0e09ffeb237a6d28969d7c099f352454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e09ffeb237a6d28969d7c099f352454">standard</a> ()</td></tr>
 <tr class="separator:a0e09ffeb237a6d28969d7c099f352454"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae66f6b31b5ad750f1fe042a706a4e3d4" id="r_ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a> ()</td></tr>
-<tr class="separator:ae66f6b31b5ad750f1fe042a706a4e3d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -195,7 +201,7 @@ Variables</h2></td></tr>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9af026261f5cfa59aa2bb1a497bd2f93a6484befd4590d68d5e33e618e4b825d7" name="a9af026261f5cfa59aa2bb1a497bd2f93a6484befd4590d68d5e33e618e4b825d7"></a>MANY_EQUATIONS&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a9af026261f5cfa59aa2bb1a497bd2f93a9de934790934fe831fe946c851e8338e" name="a9af026261f5cfa59aa2bb1a497bd2f93a9de934790934fe831fe946c851e8338e"></a>STANDARD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9af026261f5cfa59aa2bb1a497bd2f93ad3cd66408d8e3911855bf081159a909c" name="a9af026261f5cfa59aa2bb1a497bd2f93ad3cd66408d8e3911855bf081159a909c"></a>NON_TYPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a9af026261f5cfa59aa2bb1a497bd2f93a388e687825deef54499e2cbd6a980199" name="a9af026261f5cfa59aa2bb1a497bd2f93a388e687825deef54499e2cbd6a980199"></a>NON_TYPE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00012">12</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
@@ -221,7 +227,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3ae117e3533122c80b262257b49b21cddf" name="a98df0a5ae6ff7dc84cfcf1863112d2c3ae117e3533122c80b262257b49b21cddf"></a>ZERO&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3a7a725f13af144bdef532d0389ba75e0d" name="a98df0a5ae6ff7dc84cfcf1863112d2c3a7a725f13af144bdef532d0389ba75e0d"></a>ONE&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851" name="a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851"></a>TWO&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a9af026261f5cfa59aa2bb1a497bd2f93ad3cd66408d8e3911855bf081159a909c" name="a9af026261f5cfa59aa2bb1a497bd2f93ad3cd66408d8e3911855bf081159a909c"></a>NON_TYPE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3addd1e71e238184e40dc073fec27e27c8" name="a98df0a5ae6ff7dc84cfcf1863112d2c3addd1e71e238184e40dc073fec27e27c8"></a>NON_ROOT_TYPE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00008">8</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
@@ -229,6 +235,43 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ae6315f9de4d2e740583fa0b47a3ed160" name="ae6315f9de4d2e740583fa0b47a3ed160"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae6315f9de4d2e740583fa0b47a3ed160">&#9670;&#160;</a></span>calculate_D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double calculate_D </td>
+          <td>(</td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>b</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double</td>          <td class="paramname"><span class="paramname"><em>c</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculating Discriminant of square equation </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>double b from square equation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>double c from square equation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>double b from square equation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>calculated discriminant </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00178">178</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
 <a id="ad7391e6ff1ba1b6cdf15c05e1af457df" name="ad7391e6ff1ba1b6cdf15c05e1af457df"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7391e6ff1ba1b6cdf15c05e1af457df">&#9670;&#160;</a></span>choose_variant()</h2>
 
@@ -243,9 +286,9 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>function for choosing program actions </p><dl class="section return"><dt>Returns</dt><dd>the selected program action </dd></dl>
+<p>Function for choosing program actions </p><dl class="section return"><dt>Returns</dt><dd>the selected program action </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00129">129</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00205">205</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -265,7 +308,69 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Clean char buffer </p>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00123">123</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00199">199</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0271663bc69528424c46eb6953c81a7b" name="a0271663bc69528424c46eb6953c81a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0271663bc69528424c46eb6953c81a7b">&#9670;&#160;</a></span>complex_are_similar()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool complex_are_similar </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x_2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Check if two complex numbers are similar </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_1</td><td>first complex number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_2</td><td>second complex number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>bool value of similarity </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00188">188</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ae5305eacc9cdc3d0b670102e056a77b1" name="ae5305eacc9cdc3d0b670102e056a77b1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5305eacc9cdc3d0b670102e056a77b1">&#9670;&#160;</a></span>distance_between_complex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double distance_between_complex </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x_2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Counts distance between two complex numbers </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_1</td><td>first complex number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_2</td><td>second complex number </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double distance betwen x_1 and x_2 </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00183">183</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -285,7 +390,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Do random value double type </p><dl class="section return"><dt>Returns</dt><dd>double random value </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00157">157</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00233">233</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -311,7 +416,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool value greater than zero of not </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00153">153</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00229">229</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -337,7 +442,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>bool value zero of not </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00149">149</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00225">225</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -364,7 +469,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>provide linear case of square equation </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Provide linear case of square equation </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>double b from square equation </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>double c from square equation </td></tr>
@@ -374,26 +479,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>type of amount of roots </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00262">262</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
-
-</div>
-</div>
-<a id="ae66f6b31b5ad750f1fe042a706a4e3d4" name="ae66f6b31b5ad750f1fe042a706a4e3d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae66f6b31b5ad750f1fe042a706a4e3d4">&#9670;&#160;</a></span>main()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">int main </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00104">104</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00338">338</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -413,7 +499,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Action with many randomly generated solves of square equation </p>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00179">179</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00255">255</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -450,7 +536,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>provide square case of square equation </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Provide square case of square equation </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>double b from square equation </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>double c from square equation </td></tr>
@@ -461,7 +547,37 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>type of roots </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00305">305</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00381">381</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a519ded7a15b93ff0e23b38d8e627854d" name="a519ded7a15b93ff0e23b38d8e627854d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a519ded7a15b93ff0e23b38d8e627854d">&#9670;&#160;</a></span>sort_complex()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sort_complex </td>
+          <td>(</td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *</td>          <td class="paramname"><span class="paramname"><em>x_2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Sorting complex numbers by their real values and if their are equal sort by complex </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_1</td><td>complex number </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_2</td><td>complex number </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00156">156</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -498,7 +614,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>provide square case of square equation </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Provide square case of square equation </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>double b from square equation </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>double c from square equation </td></tr>
@@ -509,7 +625,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>type of roots </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00280">280</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00356">356</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -536,7 +652,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>input roots </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Input roots </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>double a from square equation </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>double b from square equation </td></tr>
@@ -545,7 +661,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00202">202</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00278">278</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -572,7 +688,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>print roots </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Print roots </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">root_fl</td><td>info about type of roots </td></tr>
     <tr><td class="paramdir">[in]</td><td class="paramname">x_1</td><td>double c from square equation </td></tr>
@@ -581,7 +697,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00229">229</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00305">305</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
@@ -601,7 +717,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>Action with user-specified coefficients </p>
 
-<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00162">162</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00238">238</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
 
 </div>
 </div>
