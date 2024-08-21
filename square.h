@@ -119,7 +119,7 @@ int square_equation_input(double *a, double *b, double *c);
 Function for choosing program actions
 \return the selected program action
 */
-choose_type choose_variant();
+int choose_variant();
 
 /*!
 Action with many randomly generated solves of square equation

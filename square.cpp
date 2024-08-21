@@ -53,9 +53,9 @@ void clean_char_buffer()
         continue;
 }
 
-choose_type choose_variant()
+int choose_variant()
 {
-    choose_type choose = NON_TYPE;
+    int choose = NON_TYPE;
     int fl = 0;
     while (choose != 1 and choose != 2 and !fl)
     {
