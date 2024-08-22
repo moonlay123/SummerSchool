@@ -3,6 +3,28 @@
 #include <assert.h>
 #include "unit_tests.h"
 
+void put_test_to_file(unit_test data)
+{
+    FILE *fp;
+    if ((fp = fopen("tests", "a+")) == NULL)
+    {
+        exit(EXIT_FAILURE);
+    }
+
+    int lines_counter = 1;
+    while (!feof(fp))
+    {
+        if (fgetc(fp) == '\n')
+            lines_counter++;
+    }
+
+    fprintf(fp, "%d %lf %lf %lf %lf %lf %lf %lf %d\n", lines_counter,
+                data.coefs.a, data.coefs.b, data.coefs.c,
+                data.expected_x_1.real, data.expected_x_1.imaginary,
+                data.expected_x_2.real, data.expected_x_2.imaginary,
+                data.expected_root_type);
+    fclose(fp);
+}
 test_bufer read_file()
 {
     FILE *fp;
@@ -19,23 +41,22 @@ test_bufer read_file()
     roots_type expected_root_type = NON_ROOT_TYPE;
     int expected_root_int = NON_ROOT_TYPE;
 
-    fscanf(fp, "%d", &test_counter);
-
-    test_bufer tests = {.size = test_counter};
-    for (int i = 0; i < test_counter; ++i)
-    {
-        fscanf(fp, "%d %lf %lf %lf %lf %lf %lf %lf %d", &number_of_test,
+    test_bufer tests;
+    while(fscanf(fp, "%d %lf %lf %lf %lf %lf %lf %lf %d", &number_of_test,
                 &coefs.a, &coefs.b, &coefs.c,
                 &expected_x_1.real, &expected_x_1.imaginary,
                 &expected_x_2.real, &expected_x_2.imaginary,
-                &expected_root_int);
-
+                &expected_root_int) == 9)
+    {
         convert_roots_type(expected_root_int, &expected_root_type);
 
         unit_test input_unit_test = {number_of_test, coefs, expected_x_1, expected_x_2, expected_root_type};
-        tests.tests[i] = input_unit_test;
+        tests.tests[test_counter++] = input_unit_test;
     }
 
+    tests.size = test_counter;
+
+    fclose(fp);
     return tests;
 }
 void convert_roots_type(int expected_root_int, roots_type *expected_root_type)

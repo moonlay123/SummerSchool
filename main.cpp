@@ -19,6 +19,9 @@ int main()
         case UNIT_TESTS:
             run_all_tests();
             break;
+        case INPUT_UNIT_TEST:
+            put_test_to_file(create_test_from_input());
+            break;
         case NON_TYPE:
             printf("No choose\n");
             break;
@@ -33,12 +36,14 @@ choose_type choose_variant()
 {
     int choose = NON_TYPE;
     int fl = 0;
-    while (choose != STANDARD and choose != MANY_EQUATIONS and choose != UNIT_TESTS and !fl)
+    while (choose != STANDARD and choose != MANY_EQUATIONS and choose != UNIT_TESTS
+                                                and choose != INPUT_UNIT_TEST and !fl)
     {
-        printf("Choose what you want\n1) Standard input\n2) Random input\n3) Unit tests\n");
+        printf("Choose what you want\n1) Standard input\n2) Random input\n3) Unit tests\n4) Input your unit test\n");
         fl = scanf("%d", &choose);
 
-        if (choose != STANDARD and choose != MANY_EQUATIONS and choose != UNIT_TESTS and !fl)
+        if (choose != STANDARD and choose != MANY_EQUATIONS and choose != UNIT_TESTS
+                                                and choose != INPUT_UNIT_TEST and !fl)
         {
             printf("Wrong input, try again\n");
             clean_char_buffer();
@@ -57,6 +62,9 @@ choose_type choose_variant()
             break;
         case UNIT_TESTS:
             return UNIT_TESTS;
+            break;
+        case INPUT_UNIT_TEST:
+            return INPUT_UNIT_TEST;
             break;
         default:
             return NON_TYPE;
