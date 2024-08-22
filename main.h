@@ -3,7 +3,7 @@
 /*!
     Enum of all program action types
 */
-typedef enum {INPUT_UNIT_TEST = 4, UNIT_TESTS = 3, MANY_EQUATIONS = 2, STANDARD = 1, NON_TYPE = 0} choose_type;
+typedef enum {EXIT = 5, INPUT_UNIT_TEST = 4, UNIT_TESTS = 3, MANY_EQUATIONS = 2, STANDARD = 1, NON_TYPE = 0} choose_type;
 
 /*!
 Function for choosing program actions

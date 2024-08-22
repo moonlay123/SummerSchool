@@ -1,5 +1,6 @@
 #ifndef square
 #define square
+#include "console_painting.h"
 #include "complex.h"
 
 /*!
@@ -94,4 +95,5 @@ void many_equations();
 Action with user-specified coefficients
 */
 void standard();
+
 #endif

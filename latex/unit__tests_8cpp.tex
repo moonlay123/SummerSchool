@@ -7,6 +7,18 @@
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
+void \mbox{\hyperlink{unit__tests_8cpp_a72c4789d8f8096ccc085ebeba7cbd33b}{put\+\_\+test\+\_\+to\+\_\+file}} (\mbox{\hyperlink{structunit__test}{unit\+\_\+test}} data)
+\item 
+\mbox{\hyperlink{structtest__bufer}{test\+\_\+bufer}} \mbox{\hyperlink{unit__tests_8cpp_a9aadc2afeaecd04db3af7d889aad602f}{read\+\_\+file}} ()
+\item 
+void \mbox{\hyperlink{unit__tests_8cpp_a8335a27dd7c51e1b92838c5efbd10614}{convert\+\_\+roots\+\_\+type}} (int expected\+\_\+root\+\_\+int, \mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \texorpdfstring{$\ast$}{*}expected\+\_\+root\+\_\+type)
+\item 
+void \mbox{\hyperlink{unit__tests_8cpp_a022b3d8c5b6e432bf043c4bdb7b38ac8}{input\+\_\+roots\+\_\+type}} (\mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \texorpdfstring{$\ast$}{*}expected\+\_\+root\+\_\+type)
+\item 
+void \mbox{\hyperlink{unit__tests_8cpp_a32ab5f224d8f763ac7b553d00c220975}{input\+\_\+roots}} (\mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}x\+\_\+1, \mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}x\+\_\+2)
+\item 
+\mbox{\hyperlink{structunit__test}{unit\+\_\+test}} \mbox{\hyperlink{unit__tests_8cpp_ab5edb3ea1a7d43de3c21e95a634bd9f1}{create\+\_\+test\+\_\+from\+\_\+input}} ()
+\item 
 int \mbox{\hyperlink{unit__tests_8cpp_a58ba76e955d0946cccff57d47d3a7d49}{full\+\_\+test}} (\mbox{\hyperlink{structunit__test}{unit\+\_\+test}} data)
 \item 
 bool \mbox{\hyperlink{unit__tests_8cpp_a95e2530b44df74d92fbb1241ff2f6f49}{check\+\_\+test\+\_\+correctness}} (\mbox{\hyperlink{structunit__test}{unit\+\_\+test}} data, \mbox{\hyperlink{structcomplex}{complex}} received\+\_\+x\+\_\+1, \mbox{\hyperlink{structcomplex}{complex}} received\+\_\+x\+\_\+2, \mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} received\+\_\+root\+\_\+type)
@@ -40,7 +52,34 @@ bool value of test correctness
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00184}{184}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+\Hypertarget{unit__tests_8cpp_a8335a27dd7c51e1b92838c5efbd10614}\index{unit\_tests.cpp@{unit\_tests.cpp}!convert\_roots\_type@{convert\_roots\_type}}
+\index{convert\_roots\_type@{convert\_roots\_type}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{convert\_roots\_type()}{convert\_roots\_type()}}
+{\footnotesize\ttfamily \label{unit__tests_8cpp_a8335a27dd7c51e1b92838c5efbd10614} 
+void convert\+\_\+roots\+\_\+type (\begin{DoxyParamCaption}\item[{int}]{expected\+\_\+root\+\_\+int}{, }\item[{\mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \texorpdfstring{$\ast$}{*}}]{expected\+\_\+root\+\_\+type}{}\end{DoxyParamCaption})}
+
+Convert expected root type from int format 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em expected\+\_\+root\+\_\+int} & int format of expected\+\_\+root\+\_\+type \\
+\hline
+\mbox{\texttt{ out}}  & {\em expected\+\_\+root\+\_\+type} & roots\+\_\+type format \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+\Hypertarget{unit__tests_8cpp_ab5edb3ea1a7d43de3c21e95a634bd9f1}\index{unit\_tests.cpp@{unit\_tests.cpp}!create\_test\_from\_input@{create\_test\_from\_input}}
+\index{create\_test\_from\_input@{create\_test\_from\_input}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{create\_test\_from\_input()}{create\_test\_from\_input()}}
+{\footnotesize\ttfamily \label{unit__tests_8cpp_ab5edb3ea1a7d43de3c21e95a634bd9f1} 
+\mbox{\hyperlink{structunit__test}{unit\+\_\+test}} create\+\_\+test\+\_\+from\+\_\+input (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Create \doxylink{structunit__test}{unit\+\_\+test} from input data 
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00148}{148}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
 
 \Hypertarget{unit__tests_8cpp_a58ba76e955d0946cccff57d47d3a7d49}\index{unit\_tests.cpp@{unit\_tests.cpp}!full\_test@{full\_test}}
 \index{full\_test@{full\_test}!unit\_tests.cpp@{unit\_tests.cpp}}
@@ -58,7 +97,39 @@ correctness of test
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00166}{166}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+\Hypertarget{unit__tests_8cpp_a32ab5f224d8f763ac7b553d00c220975}\index{unit\_tests.cpp@{unit\_tests.cpp}!input\_roots@{input\_roots}}
+\index{input\_roots@{input\_roots}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{input\_roots()}{input\_roots()}}
+{\footnotesize\ttfamily \label{unit__tests_8cpp_a32ab5f224d8f763ac7b553d00c220975} 
+void input\+\_\+roots (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}}]{x\+\_\+1}{, }\item[{\mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}}]{x\+\_\+2}{}\end{DoxyParamCaption})}
+
+Input expected roots from console 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x\+\_\+1} & address of expected root \\
+\hline
+\mbox{\texttt{ in}}  & {\em x\+\_\+2} & address of expected root \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+\Hypertarget{unit__tests_8cpp_a022b3d8c5b6e432bf043c4bdb7b38ac8}\index{unit\_tests.cpp@{unit\_tests.cpp}!input\_roots\_type@{input\_roots\_type}}
+\index{input\_roots\_type@{input\_roots\_type}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{input\_roots\_type()}{input\_roots\_type()}}
+{\footnotesize\ttfamily \label{unit__tests_8cpp_a022b3d8c5b6e432bf043c4bdb7b38ac8} 
+void input\+\_\+roots\+\_\+type (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \texorpdfstring{$\ast$}{*}}]{expected\+\_\+root\+\_\+type}{}\end{DoxyParamCaption})}
+
+Input expected root type from console 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em expected\+\_\+root\+\_\+type} & address of expected root type \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00094}{94}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
 
 \Hypertarget{unit__tests_8cpp_a8b994870a132e05f97f6ed462756cefc}\index{unit\_tests.cpp@{unit\_tests.cpp}!print\_results@{print\_results}}
 \index{print\_results@{print\_results}!unit\_tests.cpp@{unit\_tests.cpp}}
@@ -79,7 +150,30 @@ print all received and expected values of incorrect test
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00204}{204}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+\Hypertarget{unit__tests_8cpp_a72c4789d8f8096ccc085ebeba7cbd33b}\index{unit\_tests.cpp@{unit\_tests.cpp}!put\_test\_to\_file@{put\_test\_to\_file}}
+\index{put\_test\_to\_file@{put\_test\_to\_file}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{put\_test\_to\_file()}{put\_test\_to\_file()}}
+{\footnotesize\ttfamily \label{unit__tests_8cpp_a72c4789d8f8096ccc085ebeba7cbd33b} 
+void put\+\_\+test\+\_\+to\+\_\+file (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structunit__test}{unit\+\_\+test}}}]{data}{}\end{DoxyParamCaption})}
+
+Input your test to specified file 
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+
+\Hypertarget{unit__tests_8cpp_a9aadc2afeaecd04db3af7d889aad602f}\index{unit\_tests.cpp@{unit\_tests.cpp}!read\_file@{read\_file}}
+\index{read\_file@{read\_file}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{read\_file()}{read\_file()}}
+{\footnotesize\ttfamily \label{unit__tests_8cpp_a9aadc2afeaecd04db3af7d889aad602f} 
+\mbox{\hyperlink{structtest__bufer}{test\+\_\+bufer}} read\+\_\+file (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Read file \begin{DoxyReturn}{Returns}
+\doxylink{structtest__bufer}{test\+\_\+bufer} of tests in file 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
 
 \Hypertarget{unit__tests_8cpp_ae361531e05b616a7b36f007582048de8}\index{unit\_tests.cpp@{unit\_tests.cpp}!run\_all\_tests@{run\_all\_tests}}
 \index{run\_all\_tests@{run\_all\_tests}!unit\_tests.cpp@{unit\_tests.cpp}}
@@ -92,5 +186,5 @@ correctness of tests
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00216}{216}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
 

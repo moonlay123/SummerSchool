@@ -1,8 +1,5 @@
-#include <stdio.h>
-#include <assert.h>
-#include <math.h>
-#include "complex.h"
 #include "square.h"
+#include "complex.h"
 
 
 double calculate_Discriminant(coefficients coefs)

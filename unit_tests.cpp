@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <math.h>
-#include <assert.h>
 #include "unit_tests.h"
 
 void put_test_to_file(unit_test data)
@@ -59,6 +56,7 @@ test_bufer read_file()
     fclose(fp);
     return tests;
 }
+
 void convert_roots_type(int expected_root_int, roots_type *expected_root_type)
 {
     switch (expected_root_int)
@@ -223,6 +221,6 @@ int run_all_tests()
         fl += full_test(all_tests.tests[i]) == FAILURE ? FAILURE : SUCCESS;
     }
 
-    printf("Tests ended with %d failure(s)", fl);
+    printf("Tests ended with %d failure(s)\n", fl);
     return fl;
 }

@@ -1,6 +1,5 @@
 #ifndef unit_tests
 #define unit_tests
-#include <math.h>
 #include "square.h"
 
 /*!
@@ -112,4 +111,5 @@ Input expected roots from console
 \param[in] x_2 address of expected root
 */
 void input_roots(complex *x_1, complex *x_2);
+
 #endif
