@@ -1,58 +1,13 @@
 #include <stdio.h>
-#include <math.h>
 #include <assert.h>
+#include <math.h>
+#include "complex.h"
 #include "square.h"
 
-void complex_swap(double *x_1, double *x_2)
-{
-    double temp = x_1[0];
-    x_1[0] = x_2[0];
-    x_2[0] = temp;
 
-    temp = x_1[1];
-    x_1[1] = x_2[1];
-    x_2[1] = temp;
-}
-
-void sort_complex(double *x_1, double *x_2)
+double calculate_Discriminant(coefficients coefs)
 {
-    if (is_zero(x_1[0] - x_2[0]))
-    {
-        if (greater_zero(x_1[1] - x_2[1]))
-        {
-            complex_swap(x_1, x_2);
-        } else
-        {
-            return;
-        }
-    } else if (greater_zero(x_1[0] - x_2[0]))
-    {
-        complex_swap(x_1, x_2);
-    } else
-    {
-        return;
-    }
-}
-
-double calculate_D(double a, double b, double c)
-{
-    return b * b - 4 * a * c;
-}
-
-double distance_between_complex(double *x_1, double *x_2)
-{
-    return sqrt((x_1[0] - x_2[0]) * (x_1[0] - x_2[0]) + (x_1[1] - x_2[1]) * (x_1[1] - x_2[1]));
-}
-
-bool complex_are_similar(double *x_1, double *x_2)
-{
-    if (is_zero(x_1[1] - x_2[1]))
-    {
-        return is_zero(x_1[0] - x_2[0]);
-    } else
-    {
-        return is_zero(distance_between_complex(x_1, x_2));
-    }
+    return coefs.b * coefs.b - 4 * coefs.a * coefs.c;
 }
 
 void clean_char_buffer()
@@ -61,15 +16,6 @@ void clean_char_buffer()
         continue;
 }
 
-
-bool is_zero(double a)
-{
-    return abs(a) < EPS;
-}
-bool greater_zero(double a)
-{
-    return a > EPS;
-}
 double double_rand()
 {
     return (rand() % 20001 - 10000) / (100.0);
@@ -77,13 +23,13 @@ double double_rand()
 
 void standard()
 {
-    double a = 0, b = 0, c = 0;
-    int next = square_equation_input(&a, &b, &c);
+    coefficients coefs = {0, 0, 0};
+    int next = square_equation_input(&coefs);
 
     if (next == SUCCESS)
     {
-        double x_1[2] = {0, 0}, x_2[2] = {0, 0};
-        int root_fl = solve(a, b, c, x_1, x_2);
+        complex x_1 = {0, 0}, x_2 = {0, 0};
+        int root_fl = solve(coefs, &x_1, &x_2);
 
         square_equation_printer(root_fl, x_1, x_2);
     } else
@@ -102,20 +48,18 @@ void many_equations()
     {
         printf("\nHere is %d equation\n", i+1);
 
-        double a = double_rand(),
-               b = double_rand(),
-               c = double_rand();
-        printf("Your coefs: a = %.2lf, b = %.2lf, c = %.2lf\n", a, b, c);
+        coefficients coefs = {double_rand(), double_rand(), double_rand()};
+        printf("Your coefs: a = %.2lf, b = %.2lf, c = %.2lf\n", coefs.a, coefs.b, coefs.c);
 
-        double x_1[2] = {0, 0}, x_2[2] = {0, 0};
-        int root_fl = solve(a, b, c, x_1, x_2);
+        complex x_1 = {0, 0}, x_2 = {0, 0};
+        int root_fl = solve(coefs, &x_1, &x_2);
 
         square_equation_printer(root_fl, x_1, x_2);
     }
 
 }
 
-int square_equation_input(double *a, double *b, double *c)
+int square_equation_input(coefficients *coefs)
 {
     int counter = 0;
     bool fl = 0;
@@ -123,7 +67,7 @@ int square_equation_input(double *a, double *b, double *c)
     {
         printf("Enter coef in square equation\n");
 
-        if (scanf("%lf %lf %lf", a, b, c) < 3)
+        if (scanf("%lf %lf %lf", &coefs->a, &coefs->b, &coefs->c) < 3)
         {
             printf("Wrong input, try again \n");
             clean_char_buffer();
@@ -142,7 +86,7 @@ int square_equation_input(double *a, double *b, double *c)
     return SUCCESS;
 }
 
-void square_equation_printer(int root_fl, double x_1[], double x_2[])
+void square_equation_printer(int root_fl, complex x_1, complex x_2)
 {
     switch (root_fl)
     {
@@ -151,23 +95,23 @@ void square_equation_printer(int root_fl, double x_1[], double x_2[])
             break;
         case ONE:
             printf("Only one real root\n");
-            printf("%.2lf", x_1[0]);
+            printf("%.2lf", x_1.real);
             break;
         case TWO:
             printf("Two unique real roots\n");
-            printf("First root  %.2lf\nSecond root %.2lf\n", x_1[0], x_2[0]);
+            printf("First root  %.2lf\nSecond root %.2lf\n", x_1.real, x_2.real);
             break;
-        case INFINITE:
+        case INFINITES:
             printf("Infinite amount of roots\n");
             break;
         case TWO_SIMILAR:
             printf("Two similar real roots\n");
-            printf("Similar roots %.2lf and %.2lf", x_1[0], x_2[0]);
+            printf("Similar roots %.2lf and %.2lf", x_1.real, x_2.real);
             break;
         case COMPLEX:
             printf("Two complex roots\n");
             printf("First root  %.2lf + %.2lf i\nSecond root %.2lf - %.2lf i\n",
-                    x_1[0], abs(x_1[1]), x_2[0], abs(x_2[1]));
+                    x_1.complex, abs(x_1.complex), x_2.complex, abs(x_2.complex));
             break;
         default:
             printf("Unsupported case");
@@ -175,54 +119,54 @@ void square_equation_printer(int root_fl, double x_1[], double x_2[])
     }
 }
 
-roots_type linear_case(double b, double c, double x[])
+roots_type linear_case(coefficients coefs, complex *x)
 {
-    if (is_zero(b))
+    if (is_zero(coefs.b))
     {
-        if (is_zero(c))
+        if (is_zero(coefs.c))
         {
-            return INFINITE;
+            return INFINITES;
         } else
         {
             return ZERO;
         }
     } else
     {
-        x[0] = (-c / b);
+        x->real = (-coefs.c / coefs.b);
 
         return ONE;
     }
 }
-roots_type square_case(double a, double b, double c, double x_1[], double x_2[])
+roots_type square_case(coefficients coefs, complex *x_1, complex *x_2)
 {
-    double D = calculate_D(a, b, c);
+    double D = calculate_Discriminant(coefs);
     double sqrtD = sqrt(abs(D));
 
     if (is_zero(D))
     {
-        x_1[0] = (-b) / (2 * a);
-        x_2[0] = x_1[0];
+        x_1->real = (-coefs.b) / (2 * coefs.a);
+        x_2->real = x_1->real;
         return TWO_SIMILAR;
     } else if (greater_zero(D))
     {
-        x_1[0] = (-b + sqrtD) / (2 * a);
-        x_2[0] = (-b - sqrtD) / (2 * a);
+        x_1->real = (-coefs.b + sqrtD) / (2 * coefs.a);
+        x_2->real = (-coefs.b - sqrtD) / (2 * coefs.a);
         return TWO;
     } else
     {
-        x_1[0] = (-b) / (2 * a);
-        x_1[1] = (sqrtD) / (2 * a);
-        x_2[0] = x_1[0];
-        x_2[1] = -x_1[1];
+        x_1->real = (-coefs.b) / (2 * coefs.a);
+        x_1->complex = (sqrtD) / (2 * coefs.a);
+        x_2->real = x_1->real;
+        x_2->complex = -x_1->complex;
         return COMPLEX;
     }
 }
 
-roots_type solve(double a, double b, double c, double x_1[], double x_2[])
+roots_type solve(coefficients coefs, complex *x_1, complex *x_2)
 {
-    assert(isfinite(a));
-    assert(isfinite(b));
-    assert(isfinite(c));
+    assert(isfinite(coefs.a));
+    assert(isfinite(coefs.b));
+    assert(isfinite(coefs.c));
 
     assert(x_1 != NULL);
     assert(x_2 != NULL);
@@ -230,12 +174,12 @@ roots_type solve(double a, double b, double c, double x_1[], double x_2[])
 
     roots_type root_fl = NON_ROOT_TYPE;
 
-    if (is_zero(a))
+    if (is_zero(coefs.a))
     {
-        root_fl = linear_case(b, c, x_1);
+        root_fl = linear_case(coefs, x_1);
     } else
     {
-        root_fl = square_case(a, b, c, x_1, x_2);
+        root_fl = square_case(coefs, x_1, x_2);
     }
 
     return root_fl;

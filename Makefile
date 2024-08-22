@@ -2,4 +2,4 @@ FLAGS=-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal 
 
 
 all:
-	g++ square.cpp unit_tests.cpp main.cpp -o main $(FLAGS)
+	g++ complex.cpp square.cpp unit_tests.cpp main.cpp -o main $(FLAGS)

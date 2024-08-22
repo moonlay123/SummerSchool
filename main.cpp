@@ -1,6 +1,7 @@
+//#include "TXLib.h"
 #include <stdio.h>
 #include "unit_tests.h"
-#include "square.h"
+
 /*!
     Enum of all program action types
 */
@@ -11,10 +12,12 @@ Function for choosing program actions
 \return the selected program action
 */
 choose_type choose_variant();
+
+
 int main()
 {
-
     choose_type note = choose_variant();
+
     switch (note)
     {
         case STANDARD:
@@ -53,16 +56,16 @@ choose_type choose_variant()
     }
     switch (choose)
     {
-        case 0:
+        case NON_TYPE:
             return NON_TYPE;
             break;
-        case 1:
+        case STANDARD:
             return STANDARD;
             break;
-        case 2:
+        case MANY_EQUATIONS:
             return MANY_EQUATIONS;
             break;
-        case 3:
+        case UNIT_TESTS:
             return UNIT_TESTS;
             break;
         default:
