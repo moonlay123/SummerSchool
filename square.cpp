@@ -111,7 +111,7 @@ void square_equation_printer(int root_fl, complex x_1, complex x_2)
         case COMPLEX:
             printf("Two complex roots\n");
             printf("First root  %.2lf + %.2lf i\nSecond root %.2lf - %.2lf i\n",
-                    x_1.complex, abs(x_1.complex), x_2.complex, abs(x_2.complex));
+                    x_1.real, abs(x_1.imaginary), x_2.real, abs(x_2.imaginary));
             break;
         default:
             printf("Unsupported case");
@@ -155,9 +155,9 @@ roots_type square_case(coefficients coefs, complex *x_1, complex *x_2)
     } else
     {
         x_1->real = (-coefs.b) / (2 * coefs.a);
-        x_1->complex = (sqrtD) / (2 * coefs.a);
+        x_1->imaginary = (sqrtD) / (2 * coefs.a);
         x_2->real = x_1->real;
-        x_2->complex = -x_1->complex;
+        x_2->imaginary = -x_1->imaginary;
         return COMPLEX;
     }
 }

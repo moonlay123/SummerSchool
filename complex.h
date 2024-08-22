@@ -8,7 +8,7 @@ struct complex
 {
     /*@{*/
     double real; /*!< contains real value of complex number  */
-    double complex; /*!< contains complex value of complex number  */
+    double imaginary; /*!< contains imaginary value of complex number  */
     /*@}*/
 };
 

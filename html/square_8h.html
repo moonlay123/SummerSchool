@@ -85,11 +85,415 @@ $(function(){ initResizable(false); });
 </div><!-- top -->
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">square.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &quot;<a class="el" href="complex_8h_source.html">complex.h</a>&quot;</code><br />
+</div>
 <p><a href="square_8h_source.html">Go to the source code of this file.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcoefficients.html">coefficients</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a98df0a5ae6ff7dc84cfcf1863112d2c3" id="r_a98df0a5ae6ff7dc84cfcf1863112d2c3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">roots_type</a> { <br />
+&#160;&#160;<a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3a7dbd60b3d9900fcbe4042e1824388f61">TWO_SIMILAR</a>
+, <a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3a326b2689e27358ccec00bf762bfb204c">INFINITES</a>
+, <a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3a5374e1234e4d55af346d6ae6263ad573">COMPLEX</a>
+, <a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3ae117e3533122c80b262257b49b21cddf">ZERO</a>
+, <br />
+&#160;&#160;<a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3a7a725f13af144bdef532d0389ba75e0d">ONE</a>
+, <a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851">TWO</a>
+, <a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3addd1e71e238184e40dc073fec27e27c8">NON_ROOT_TYPE</a> = 0
+<br />
+ }</td></tr>
+<tr class="separator:a98df0a5ae6ff7dc84cfcf1863112d2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a06fc87d81c62e9abb8790b6e5713c55b" id="r_a06fc87d81c62e9abb8790b6e5713c55b"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a06fc87d81c62e9abb8790b6e5713c55bac7f69f7c9e5aea9b8f54cf02870e2bf8">SUCCESS</a> = 0
+, <a class="el" href="#a06fc87d81c62e9abb8790b6e5713c55baa5571864412c8275a2e18a931fddcaa6">FAILURE</a> = 1
+ }</td></tr>
+<tr class="separator:a06fc87d81c62e9abb8790b6e5713c55b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:a0f056f9424e5dd7a4635048a5c010c3d" id="r_a0f056f9424e5dd7a4635048a5c010c3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f056f9424e5dd7a4635048a5c010c3d">clean_char_buffer</a> ()</td></tr>
+<tr class="separator:a0f056f9424e5dd7a4635048a5c010c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adc5c2119e8830fd87fc37940ba86254a" id="r_adc5c2119e8830fd87fc37940ba86254a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc5c2119e8830fd87fc37940ba86254a">double_rand</a> ()</td></tr>
+<tr class="separator:adc5c2119e8830fd87fc37940ba86254a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd56e9faa50a671f45f557c3b4885ea" id="r_a0dd56e9faa50a671f45f557c3b4885ea"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0dd56e9faa50a671f45f557c3b4885ea">calculate_Discriminant</a> (<a class="el" href="structcoefficients.html">coefficients</a> coefs)</td></tr>
+<tr class="separator:a0dd56e9faa50a671f45f557c3b4885ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb65beb3a2a871b931510b3075e8c126" id="r_afb65beb3a2a871b931510b3075e8c126"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">roots_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb65beb3a2a871b931510b3075e8c126">linear_case</a> (<a class="el" href="structcoefficients.html">coefficients</a> coefs, <a class="el" href="structcomplex.html">complex</a> *x)</td></tr>
+<tr class="separator:afb65beb3a2a871b931510b3075e8c126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a54525952b1be4b186bcc9ed344bf09" id="r_a6a54525952b1be4b186bcc9ed344bf09"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">roots_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a54525952b1be4b186bcc9ed344bf09">square_case</a> (<a class="el" href="structcoefficients.html">coefficients</a> coefs, <a class="el" href="structcomplex.html">complex</a> *x_1, <a class="el" href="structcomplex.html">complex</a> *x_2)</td></tr>
+<tr class="separator:a6a54525952b1be4b186bcc9ed344bf09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb931f32160cf80969ffc3e09250780a" id="r_afb931f32160cf80969ffc3e09250780a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">roots_type</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afb931f32160cf80969ffc3e09250780a">solve</a> (<a class="el" href="structcoefficients.html">coefficients</a> coefs, <a class="el" href="structcomplex.html">complex</a> *x_1, <a class="el" href="structcomplex.html">complex</a> *x_2)</td></tr>
+<tr class="separator:afb931f32160cf80969ffc3e09250780a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a89ab139a3490bc1b5bdb70bfe5941109" id="r_a89ab139a3490bc1b5bdb70bfe5941109"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89ab139a3490bc1b5bdb70bfe5941109">square_equation_printer</a> (int root_fl, <a class="el" href="structcomplex.html">complex</a> x_1, <a class="el" href="structcomplex.html">complex</a> x_2)</td></tr>
+<tr class="separator:a89ab139a3490bc1b5bdb70bfe5941109"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a854f03ace21262dc39e1551e1129b5fd" id="r_a854f03ace21262dc39e1551e1129b5fd"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a854f03ace21262dc39e1551e1129b5fd">square_equation_input</a> (<a class="el" href="structcoefficients.html">coefficients</a> *coefs)</td></tr>
+<tr class="separator:a854f03ace21262dc39e1551e1129b5fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61859bf9a33fb86ae0aa2b5e8a971896" id="r_a61859bf9a33fb86ae0aa2b5e8a971896"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a61859bf9a33fb86ae0aa2b5e8a971896">many_equations</a> ()</td></tr>
+<tr class="separator:a61859bf9a33fb86ae0aa2b5e8a971896"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0e09ffeb237a6d28969d7c099f352454" id="r_a0e09ffeb237a6d28969d7c099f352454"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0e09ffeb237a6d28969d7c099f352454">standard</a> ()</td></tr>
+<tr class="separator:a0e09ffeb237a6d28969d7c099f352454"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a9c93bc28a41f41ba8144583d32b1d962" id="r_a9c93bc28a41f41ba8144583d32b1d962"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c93bc28a41f41ba8144583d32b1d962">NUMBER_OF_TRIES</a> = 10</td></tr>
+<tr class="separator:a9c93bc28a41f41ba8144583d32b1d962"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a06fc87d81c62e9abb8790b6e5713c55b" name="a06fc87d81c62e9abb8790b6e5713c55b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a06fc87d81c62e9abb8790b6e5713c55b">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enum of SUCCESS and FAILURE program tags </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bac7f69f7c9e5aea9b8f54cf02870e2bf8" name="a06fc87d81c62e9abb8790b6e5713c55bac7f69f7c9e5aea9b8f54cf02870e2bf8"></a>SUCCESS&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55baa5571864412c8275a2e18a931fddcaa6" name="a06fc87d81c62e9abb8790b6e5713c55baa5571864412c8275a2e18a931fddcaa6"></a>FAILURE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="square_8h_source.html#l00023">23</a> of file <a class="el" href="square_8h_source.html">square.h</a>.</p>
+
+</div>
+</div>
+<a id="a98df0a5ae6ff7dc84cfcf1863112d2c3" name="a98df0a5ae6ff7dc84cfcf1863112d2c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">&#9670;&#160;</a></span>roots_type</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">roots_type</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Enum of all root types in square equation </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3a7dbd60b3d9900fcbe4042e1824388f61" name="a98df0a5ae6ff7dc84cfcf1863112d2c3a7dbd60b3d9900fcbe4042e1824388f61"></a>TWO_SIMILAR&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3a326b2689e27358ccec00bf762bfb204c" name="a98df0a5ae6ff7dc84cfcf1863112d2c3a326b2689e27358ccec00bf762bfb204c"></a>INFINITES&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3a5374e1234e4d55af346d6ae6263ad573" name="a98df0a5ae6ff7dc84cfcf1863112d2c3a5374e1234e4d55af346d6ae6263ad573"></a>COMPLEX&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3ae117e3533122c80b262257b49b21cddf" name="a98df0a5ae6ff7dc84cfcf1863112d2c3ae117e3533122c80b262257b49b21cddf"></a>ZERO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3a7a725f13af144bdef532d0389ba75e0d" name="a98df0a5ae6ff7dc84cfcf1863112d2c3a7a725f13af144bdef532d0389ba75e0d"></a>ONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851" name="a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851"></a>TWO&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a98df0a5ae6ff7dc84cfcf1863112d2c3addd1e71e238184e40dc073fec27e27c8" name="a98df0a5ae6ff7dc84cfcf1863112d2c3addd1e71e238184e40dc073fec27e27c8"></a>NON_ROOT_TYPE&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="square_8h_source.html#l00018">18</a> of file <a class="el" href="square_8h_source.html">square.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a0dd56e9faa50a671f45f557c3b4885ea" name="a0dd56e9faa50a671f45f557c3b4885ea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd56e9faa50a671f45f557c3b4885ea">&#9670;&#160;</a></span>calculate_Discriminant()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double calculate_Discriminant </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcoefficients.html">coefficients</a></td>          <td class="paramname"><span class="paramname"><em>coefs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Calculating Discriminant of square equation </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>double a from square equation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>double b from square equation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>double c from square equation </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>calculated discriminant </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00008">8</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0f056f9424e5dd7a4635048a5c010c3d" name="a0f056f9424e5dd7a4635048a5c010c3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f056f9424e5dd7a4635048a5c010c3d">&#9670;&#160;</a></span>clean_char_buffer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void clean_char_buffer </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Clean char buffer </p>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00013">13</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="adc5c2119e8830fd87fc37940ba86254a" name="adc5c2119e8830fd87fc37940ba86254a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc5c2119e8830fd87fc37940ba86254a">&#9670;&#160;</a></span>double_rand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double double_rand </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Do random value double type </p><dl class="section return"><dt>Returns</dt><dd>double random value </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00019">19</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afb65beb3a2a871b931510b3075e8c126" name="afb65beb3a2a871b931510b3075e8c126"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb65beb3a2a871b931510b3075e8c126">&#9670;&#160;</a></span>linear_case()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">roots_type</a> linear_case </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcoefficients.html">coefficients</a></td>          <td class="paramname"><span class="paramname"><em>coefs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcomplex.html">complex</a> *</td>          <td class="paramname"><span class="paramname"><em>x</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Provide linear case of square equation </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>double b from square equation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>double c from square equation </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x</td><td>root from this case </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>type of amount of roots </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00122">122</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a61859bf9a33fb86ae0aa2b5e8a971896" name="a61859bf9a33fb86ae0aa2b5e8a971896"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a61859bf9a33fb86ae0aa2b5e8a971896">&#9670;&#160;</a></span>many_equations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void many_equations </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Action with many randomly generated solves of square equation </p>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00041">41</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afb931f32160cf80969ffc3e09250780a" name="afb931f32160cf80969ffc3e09250780a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb931f32160cf80969ffc3e09250780a">&#9670;&#160;</a></span>solve()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">roots_type</a> solve </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcoefficients.html">coefficients</a></td>          <td class="paramname"><span class="paramname"><em>coefs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcomplex.html">complex</a> *</td>          <td class="paramname"><span class="paramname"><em>x_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcomplex.html">complex</a> *</td>          <td class="paramname"><span class="paramname"><em>x_2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Provide square case of square equation </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>double b from square equation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>double c from square equation </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x_1</td><td>root from this case </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x_2</td><td>root from this case </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>type of roots </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00165">165</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a6a54525952b1be4b186bcc9ed344bf09" name="a6a54525952b1be4b186bcc9ed344bf09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a54525952b1be4b186bcc9ed344bf09">&#9670;&#160;</a></span>square_case()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a98df0a5ae6ff7dc84cfcf1863112d2c3">roots_type</a> square_case </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcoefficients.html">coefficients</a></td>          <td class="paramname"><span class="paramname"><em>coefs</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcomplex.html">complex</a> *</td>          <td class="paramname"><span class="paramname"><em>x_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcomplex.html">complex</a> *</td>          <td class="paramname"><span class="paramname"><em>x_2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Provide square case of square equation </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>double b from square equation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>double c from square equation </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x_1</td><td>root from this case </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">x_2</td><td>root from this case </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>type of roots </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00140">140</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a854f03ace21262dc39e1551e1129b5fd" name="a854f03ace21262dc39e1551e1129b5fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a854f03ace21262dc39e1551e1129b5fd">&#9670;&#160;</a></span>square_equation_input()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int square_equation_input </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structcoefficients.html">coefficients</a> *</td>          <td class="paramname"><span class="paramname"><em>coefs</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Input roots </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>double a from square equation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>double b from square equation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">c</td><td>double c from square equation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00062">62</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a89ab139a3490bc1b5bdb70bfe5941109" name="a89ab139a3490bc1b5bdb70bfe5941109"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a89ab139a3490bc1b5bdb70bfe5941109">&#9670;&#160;</a></span>square_equation_printer()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void square_equation_printer </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>root_fl</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcomplex.html">complex</a></td>          <td class="paramname"><span class="paramname"><em>x_1</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcomplex.html">complex</a></td>          <td class="paramname"><span class="paramname"><em>x_2</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Print roots </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">root_fl</td><td>info about type of roots </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_1</td><td>double c from square equation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">x_2</td><td>double c from square equation </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00089">89</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a0e09ffeb237a6d28969d7c099f352454" name="a0e09ffeb237a6d28969d7c099f352454"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0e09ffeb237a6d28969d7c099f352454">&#9670;&#160;</a></span>standard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void standard </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Action with user-specified coefficients </p>
+
+<p class="definition">Definition at line <a class="el" href="square_8cpp_source.html#l00024">24</a> of file <a class="el" href="square_8cpp_source.html">square.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a9c93bc28a41f41ba8144583d32b1d962" name="a9c93bc28a41f41ba8144583d32b1d962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c93bc28a41f41ba8144583d32b1d962">&#9670;&#160;</a></span>NUMBER_OF_TRIES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int NUMBER_OF_TRIES = 10</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="square_8h_source.html#l00024">24</a> of file <a class="el" href="square_8h_source.html">square.h</a>.</p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -3,40 +3,34 @@
 {\ttfamily \#include $<$stdio.\+h$>$}\newline
 {\ttfamily \#include $<$math.\+h$>$}\newline
 {\ttfamily \#include $<$assert.\+h$>$}\newline
-{\ttfamily \#include "{}square.\+cpp"{}}\newline
+{\ttfamily \#include "{}unit\+\_\+tests.\+h"{}}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-int \mbox{\hyperlink{unit__tests_8cpp_a54cd25672b8b2765336e39d53cb26090}{unit\+\_\+test}} (int number\+\_\+of\+\_\+test, double a, double b, double c, double \texorpdfstring{$\ast$}{*}expected\+\_\+x\+\_\+1, double \texorpdfstring{$\ast$}{*}expected\+\_\+x\+\_\+2, \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} expected\+\_\+root\+\_\+type)
+int \mbox{\hyperlink{unit__tests_8cpp_a58ba76e955d0946cccff57d47d3a7d49}{full\+\_\+test}} (\mbox{\hyperlink{structunit__test}{unit\+\_\+test}} data)
 \item 
-bool \mbox{\hyperlink{unit__tests_8cpp_ace0ba65b7ba21c21c90663c9c59c7bce}{check\+\_\+test\+\_\+correctness}} (double \texorpdfstring{$\ast$}{*}expected\+\_\+x\+\_\+1, double \texorpdfstring{$\ast$}{*}received\+\_\+x\+\_\+1, double \texorpdfstring{$\ast$}{*}expected\+\_\+x\+\_\+2, double \texorpdfstring{$\ast$}{*}received\+\_\+x\+\_\+2, \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} expected\+\_\+root\+\_\+type, \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} received\+\_\+root\+\_\+type)
+bool \mbox{\hyperlink{unit__tests_8cpp_a95e2530b44df74d92fbb1241ff2f6f49}{check\+\_\+test\+\_\+correctness}} (\mbox{\hyperlink{structunit__test}{unit\+\_\+test}} data, \mbox{\hyperlink{structcomplex}{complex}} received\+\_\+x\+\_\+1, \mbox{\hyperlink{structcomplex}{complex}} received\+\_\+x\+\_\+2, \mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} received\+\_\+root\+\_\+type)
 \item 
-void \mbox{\hyperlink{unit__tests_8cpp_af965838e3b183dd9fbaefd14cd656db8}{print\+\_\+expected\+\_\+received}} (int number\+\_\+of\+\_\+test, double a, double b, double c, double \texorpdfstring{$\ast$}{*}expected\+\_\+x\+\_\+1, double \texorpdfstring{$\ast$}{*}received\+\_\+x\+\_\+1, double \texorpdfstring{$\ast$}{*}expected\+\_\+x\+\_\+2, double \texorpdfstring{$\ast$}{*}received\+\_\+x\+\_\+2, \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} expected\+\_\+root\+\_\+type, \mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} received\+\_\+root\+\_\+type)
+void \mbox{\hyperlink{unit__tests_8cpp_a8b994870a132e05f97f6ed462756cefc}{print\+\_\+results}} (\mbox{\hyperlink{structunit__test}{unit\+\_\+test}} data, \mbox{\hyperlink{structcomplex}{complex}} received\+\_\+x\+\_\+1, \mbox{\hyperlink{structcomplex}{complex}} received\+\_\+x\+\_\+2, \mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} received\+\_\+root\+\_\+type)
 \item 
 int \mbox{\hyperlink{unit__tests_8cpp_ae361531e05b616a7b36f007582048de8}{run\+\_\+all\+\_\+tests}} ()
-\item 
-int \mbox{\hyperlink{unit__tests_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
-\Hypertarget{unit__tests_8cpp_ace0ba65b7ba21c21c90663c9c59c7bce}\index{unit\_tests.cpp@{unit\_tests.cpp}!check\_test\_correctness@{check\_test\_correctness}}
+\Hypertarget{unit__tests_8cpp_a95e2530b44df74d92fbb1241ff2f6f49}\index{unit\_tests.cpp@{unit\_tests.cpp}!check\_test\_correctness@{check\_test\_correctness}}
 \index{check\_test\_correctness@{check\_test\_correctness}!unit\_tests.cpp@{unit\_tests.cpp}}
 \doxysubsubsection{\texorpdfstring{check\_test\_correctness()}{check\_test\_correctness()}}
-{\footnotesize\ttfamily \label{unit__tests_8cpp_ace0ba65b7ba21c21c90663c9c59c7bce} 
-bool check\+\_\+test\+\_\+correctness (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{expected\+\_\+x\+\_\+1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{received\+\_\+x\+\_\+1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{expected\+\_\+x\+\_\+2}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{received\+\_\+x\+\_\+2}{, }\item[{\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}}}]{expected\+\_\+root\+\_\+type}{, }\item[{\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}}}]{received\+\_\+root\+\_\+type}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{unit__tests_8cpp_a95e2530b44df74d92fbb1241ff2f6f49} 
+bool check\+\_\+test\+\_\+correctness (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structunit__test}{unit\+\_\+test}}}]{data}{, }\item[{\mbox{\hyperlink{structcomplex}{complex}}}]{received\+\_\+x\+\_\+1}{, }\item[{\mbox{\hyperlink{structcomplex}{complex}}}]{received\+\_\+x\+\_\+2}{, }\item[{\mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}}}]{received\+\_\+root\+\_\+type}{}\end{DoxyParamCaption})}
 
 Check test solve correctness 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em expected\+\_\+x\+\_\+1} & expected root of square equation \\
+\mbox{\texttt{ in}}  & {\em data} & \doxylink{structunit__test}{unit\+\_\+test} data \\
 \hline
 \mbox{\texttt{ in}}  & {\em received\+\_\+x\+\_\+1} & received root of square equation \\
 \hline
-\mbox{\texttt{ in}}  & {\em expected\+\_\+x\+\_\+2} & expected root of square equation \\
-\hline
 \mbox{\texttt{ in}}  & {\em received\+\_\+x\+\_\+2} & received root of square equation \\
-\hline
-\mbox{\texttt{ in}}  & {\em expected\+\_\+root\+\_\+type} & expected type of root \\
 \hline
 \mbox{\texttt{ in}}  & {\em received\+\_\+root\+\_\+type} & expected type of root, returns from solve of square equation \\
 \hline
@@ -46,50 +40,46 @@ bool value of test correctness
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00092}{92}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
 
-\Hypertarget{unit__tests_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{unit\_tests.cpp@{unit\_tests.cpp}!main@{main}}
-\index{main@{main}!unit\_tests.cpp@{unit\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{main()}{main()}}
-{\footnotesize\ttfamily \label{unit__tests_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
-int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+\Hypertarget{unit__tests_8cpp_a58ba76e955d0946cccff57d47d3a7d49}\index{unit\_tests.cpp@{unit\_tests.cpp}!full\_test@{full\_test}}
+\index{full\_test@{full\_test}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{full\_test()}{full\_test()}}
+{\footnotesize\ttfamily \label{unit__tests_8cpp_a58ba76e955d0946cccff57d47d3a7d49} 
+int full\+\_\+test (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structunit__test}{unit\+\_\+test}}}]{data}{}\end{DoxyParamCaption})}
+
+Creates full test 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em data} & \doxylink{structunit__test}{unit\+\_\+test} data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+correctness of test 
+\end{DoxyReturn}
 
 
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
 
-Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
-
-\Hypertarget{unit__tests_8cpp_af965838e3b183dd9fbaefd14cd656db8}\index{unit\_tests.cpp@{unit\_tests.cpp}!print\_expected\_received@{print\_expected\_received}}
-\index{print\_expected\_received@{print\_expected\_received}!unit\_tests.cpp@{unit\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{print\_expected\_received()}{print\_expected\_received()}}
-{\footnotesize\ttfamily \label{unit__tests_8cpp_af965838e3b183dd9fbaefd14cd656db8} 
-void print\+\_\+expected\+\_\+received (\begin{DoxyParamCaption}\item[{int}]{number\+\_\+of\+\_\+test}{, }\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{expected\+\_\+x\+\_\+1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{received\+\_\+x\+\_\+1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{expected\+\_\+x\+\_\+2}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{received\+\_\+x\+\_\+2}{, }\item[{\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}}}]{expected\+\_\+root\+\_\+type}{, }\item[{\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}}}]{received\+\_\+root\+\_\+type}{}\end{DoxyParamCaption})}
+\Hypertarget{unit__tests_8cpp_a8b994870a132e05f97f6ed462756cefc}\index{unit\_tests.cpp@{unit\_tests.cpp}!print\_results@{print\_results}}
+\index{print\_results@{print\_results}!unit\_tests.cpp@{unit\_tests.cpp}}
+\doxysubsubsection{\texorpdfstring{print\_results()}{print\_results()}}
+{\footnotesize\ttfamily \label{unit__tests_8cpp_a8b994870a132e05f97f6ed462756cefc} 
+void print\+\_\+results (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structunit__test}{unit\+\_\+test}}}]{data}{, }\item[{\mbox{\hyperlink{structcomplex}{complex}}}]{received\+\_\+x\+\_\+1}{, }\item[{\mbox{\hyperlink{structcomplex}{complex}}}]{received\+\_\+x\+\_\+2}{, }\item[{\mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}}}]{received\+\_\+root\+\_\+type}{}\end{DoxyParamCaption})}
 
 print all received and expected values of incorrect test 
 \begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em number\+\_\+of\+\_\+test} & number of test \\
-\hline
-\mbox{\texttt{ in}}  & {\em a} & double b from square equation \\
-\hline
-\mbox{\texttt{ in}}  & {\em b} & double c from square equation \\
-\hline
-\mbox{\texttt{ in}}  & {\em c} & double b from square equation \\
-\hline
-\mbox{\texttt{ in}}  & {\em expected\+\_\+x\+\_\+1} & expected root of square equation \\
+\mbox{\texttt{ in}}  & {\em data} & \doxylink{structunit__test}{unit\+\_\+test} data \\
 \hline
 \mbox{\texttt{ in}}  & {\em received\+\_\+x\+\_\+1} & received root of square equation \\
 \hline
-\mbox{\texttt{ in}}  & {\em expected\+\_\+x\+\_\+2} & expected root of square equation \\
-\hline
 \mbox{\texttt{ in}}  & {\em received\+\_\+x\+\_\+2} & received root of square equation \\
-\hline
-\mbox{\texttt{ in}}  & {\em expected\+\_\+root\+\_\+type} & expected type of root \\
 \hline
 \mbox{\texttt{ in}}  & {\em received\+\_\+root\+\_\+type} & expected type of root, returns from solve of square equation \\
 \hline
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00112}{112}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
 
 \Hypertarget{unit__tests_8cpp_ae361531e05b616a7b36f007582048de8}\index{unit\_tests.cpp@{unit\_tests.cpp}!run\_all\_tests@{run\_all\_tests}}
 \index{run\_all\_tests@{run\_all\_tests}!unit\_tests.cpp@{unit\_tests.cpp}}
@@ -102,35 +92,5 @@ correctness of tests
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00125}{125}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
-
-\Hypertarget{unit__tests_8cpp_a54cd25672b8b2765336e39d53cb26090}\index{unit\_tests.cpp@{unit\_tests.cpp}!unit\_test@{unit\_test}}
-\index{unit\_test@{unit\_test}!unit\_tests.cpp@{unit\_tests.cpp}}
-\doxysubsubsection{\texorpdfstring{unit\_test()}{unit\_test()}}
-{\footnotesize\ttfamily \label{unit__tests_8cpp_a54cd25672b8b2765336e39d53cb26090} 
-int unit\+\_\+test (\begin{DoxyParamCaption}\item[{int}]{number\+\_\+of\+\_\+test}{, }\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{expected\+\_\+x\+\_\+1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{expected\+\_\+x\+\_\+2}{, }\item[{\mbox{\hyperlink{square_8cpp_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}}}]{expected\+\_\+root\+\_\+type}{}\end{DoxyParamCaption})}
-
-Check correctness of solving square equation and print if it\textquotesingle{}s not correct 
-\begin{DoxyParams}[1]{Parameters}
-\mbox{\texttt{ in}}  & {\em number\+\_\+of\+\_\+test} & number of test \\
-\hline
-\mbox{\texttt{ in}}  & {\em a} & double b from square equation \\
-\hline
-\mbox{\texttt{ in}}  & {\em b} & double c from square equation \\
-\hline
-\mbox{\texttt{ in}}  & {\em c} & double b from square equation \\
-\hline
-\mbox{\texttt{ in}}  & {\em expected\+\_\+x\+\_\+1} & expected root of square equation \\
-\hline
-\mbox{\texttt{ in}}  & {\em expected\+\_\+x\+\_\+2} & expected root of square equation \\
-\hline
-\mbox{\texttt{ in}}  & {\em expected\+\_\+root\+\_\+type} & expected type of root \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-correctness of test 
-\end{DoxyReturn}
-
-
-Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00068}{68}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
+Definition at line \mbox{\hyperlink{unit__tests_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{unit__tests_8cpp_source}{unit\+\_\+tests.\+cpp}}.
 

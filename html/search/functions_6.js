@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['print_5fexpected_5freceived_0',['print_expected_received',['../unit__tests_8cpp.html#af965838e3b183dd9fbaefd14cd656db8',1,'unit_tests.cpp']]]
+  ['linear_5fcase_0',['linear_case',['../square_8cpp.html#afb65beb3a2a871b931510b3075e8c126',1,'linear_case(coefficients coefs, complex *x):&#160;square.cpp'],['../square_8h.html#afb65beb3a2a871b931510b3075e8c126',1,'linear_case(coefficients coefs, complex *x):&#160;square.cpp']]]
 ];

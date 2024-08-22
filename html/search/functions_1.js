@@ -1,5 +1,9 @@
 var searchData=
 [
-  ['distance_5fbetween_5fcomplex_0',['distance_between_complex',['../square_8cpp.html#ae5305eacc9cdc3d0b670102e056a77b1',1,'square.cpp']]],
-  ['double_5frand_1',['double_rand',['../square_8cpp.html#adc5c2119e8830fd87fc37940ba86254a',1,'square.cpp']]]
+  ['calculate_5fdiscriminant_0',['calculate_Discriminant',['../square_8cpp.html#a0dd56e9faa50a671f45f557c3b4885ea',1,'calculate_Discriminant(coefficients coefs):&#160;square.cpp'],['../square_8h.html#a0dd56e9faa50a671f45f557c3b4885ea',1,'calculate_Discriminant(coefficients coefs):&#160;square.cpp']]],
+  ['check_5ftest_5fcorrectness_1',['check_test_correctness',['../unit__tests_8cpp.html#a95e2530b44df74d92fbb1241ff2f6f49',1,'check_test_correctness(unit_test data, complex received_x_1, complex received_x_2, roots_type received_root_type):&#160;unit_tests.cpp'],['../unit__tests_8h.html#a95e2530b44df74d92fbb1241ff2f6f49',1,'check_test_correctness(unit_test data, complex received_x_1, complex received_x_2, roots_type received_root_type):&#160;unit_tests.cpp']]],
+  ['choose_5fvariant_2',['choose_variant',['../main_8cpp.html#ad7391e6ff1ba1b6cdf15c05e1af457df',1,'choose_variant():&#160;main.cpp'],['../main_8h.html#ad7391e6ff1ba1b6cdf15c05e1af457df',1,'choose_variant():&#160;main.cpp']]],
+  ['clean_5fchar_5fbuffer_3',['clean_char_buffer',['../square_8cpp.html#a0f056f9424e5dd7a4635048a5c010c3d',1,'clean_char_buffer():&#160;square.cpp'],['../square_8h.html#a0f056f9424e5dd7a4635048a5c010c3d',1,'clean_char_buffer():&#160;square.cpp']]],
+  ['complex_5fare_5fsimilar_4',['complex_are_similar',['../complex_8cpp.html#acc2d0cf69957f971d4f0e1ea2e156a20',1,'complex_are_similar(complex x_1, complex x_2):&#160;complex.cpp'],['../complex_8h.html#acc2d0cf69957f971d4f0e1ea2e156a20',1,'complex_are_similar(complex x_1, complex x_2):&#160;complex.cpp']]],
+  ['complex_5fswap_5',['complex_swap',['../complex_8cpp.html#af73ae1bb7d523064f95f20bf7a8b838d',1,'complex_swap(complex *x_1, complex *x_2):&#160;complex.cpp'],['../complex_8h.html#af73ae1bb7d523064f95f20bf7a8b838d',1,'complex_swap(complex *x_1, complex *x_2):&#160;complex.cpp']]]
 ];

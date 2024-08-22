@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main_0',['main',['../unit__tests_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'unit_tests.cpp']]],
-  ['many_5fequations_1',['MANY_EQUATIONS',['../square_8cpp.html#a9af026261f5cfa59aa2bb1a497bd2f93a6484befd4590d68d5e33e618e4b825d7',1,'square.cpp']]],
-  ['many_5fequations_2',['many_equations',['../square_8cpp.html#a61859bf9a33fb86ae0aa2b5e8a971896',1,'square.cpp']]]
+  ['getenv_5fs_0',['getenv_s',['../_t_x_lib_8h.html#a1e5c70dbf1cdd61a60dbea116d7e3696',1,'TXLib.h']]],
+  ['greater_5fzero_1',['greater_zero',['../complex_8cpp.html#aaf0c6edc5d4d302967d36816d838a989',1,'greater_zero(double a):&#160;complex.cpp'],['../complex_8h.html#aaf0c6edc5d4d302967d36816d838a989',1,'greater_zero(double a):&#160;complex.cpp']]]
 ];

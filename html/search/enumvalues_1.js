@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['failure_0',['FAILURE',['../square_8cpp.html#a06fc87d81c62e9abb8790b6e5713c55baa5571864412c8275a2e18a931fddcaa6',1,'square.cpp']]]
+  ['combobox_0',['COMBOBOX',['../group___dialogs.html#gga077745aacfb8431d6529e20ad67d1674aeb6d73055f99e0170907c4352dd1c448',1,'txDialog']]],
+  ['complex_1',['COMPLEX',['../square_8h.html#a98df0a5ae6ff7dc84cfcf1863112d2c3a5374e1234e4d55af346d6ae6263ad573',1,'square.h']]]
 ];

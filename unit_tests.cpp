@@ -18,7 +18,7 @@ int full_test(unit_test data)
 
         return FAILURE;
     }
-
+    printf("Test %d end with SUCCESS \n\n", data.number_of_test);
     return SUCCESS;
 }
 
@@ -45,53 +45,26 @@ bool check_test_correctness(unit_test data,
 void print_results(unit_test data, complex received_x_1, complex received_x_2, roots_type received_root_type)
 {
     printf("\nTest %d with coefs a = %lf, b = %lf, c = %lf\n"
-           "Expected values: root_type = %d, x_1 = %lf + %lf i, x_2 = %lf + %lf i\n"
-           "Received values: root_type = %d, x_1 = %lf + %lf i, x_2 = %lf + %lf i\n\n",
+           "Expected values: root_type = %d, x_1 = %lf - %lf i, x_2 = %lf + %lf i\n"
+           "Received values: root_type = %d, x_1 = %lf - %lf i, x_2 = %lf + %lf i\n\n",
             data.number_of_test, data.coefs.a, data.coefs.b, data.coefs.c,
-            data.expected_root_type, data.expected_x_1.real, data.expected_x_1.complex,
-            data.expected_x_2.real, data.expected_x_2.complex,
-            received_root_type, received_x_1.real, received_x_1.complex, received_x_2.real, received_x_2.complex);
+            data.expected_root_type, data.expected_x_1.real, abs(data.expected_x_1.imaginary),
+            data.expected_x_2.real, data.expected_x_2.imaginary,
+            received_root_type, received_x_1.real, abs(received_x_1.imaginary),
+            received_x_2.real, received_x_2.imaginary);
 }
 
 int run_all_tests()
 {
-    const int MAX_TESTS = 50;
-    unit_test tests[MAX_TESTS];
-    int uk = 0;
+    int fl = 0;
 
-    int fl = SUCCESS;
-    // can realise with file system
-    tests[uk++] = {1, {1, 2, 1}, {-1, 0}, {-1, 0}, TWO_SIMILAR};
+    test_bufer all_tests;
 
-    tests[uk++] = {2, {1, 2, 3}, {-2.0/2, -sqrt(8.0)/2}, {-2.0/2, sqrt(8.0)/2}, COMPLEX};
-
-    tests[uk++] = {3, {5, -4, -1}, {1, 0}, {-1.0/5, 0}, TWO};
-
-    tests[uk++] = {4, {0.5, -2, 1.5}, {1, 0}, {3, 0}, TWO};
-
-    tests[uk++] = {5, {0, 0, 0}, {0, 0}, {0, 0}, INFINITES};
-
-    tests[uk++] = {6, {0.000000000000000001, 0, 1.15125161717}, {0, 0}, {0, 0}, ZERO};
-
-    tests[uk++] = {7, {0, 2, 1}, {0, 0}, {-1/2.0, 0}, ONE};
-
-    tests[uk++] = {8, {1.3, 7.1, -17.157}, {1.8139852069763645, 0}, {-7.275523668514825, 0}, TWO};
-
-    tests[uk++] = {9, {1, 0, 0}, {0, 0}, {0, 0}, TWO_SIMILAR};
-
-    tests[uk++] = {10, {1.00000000000000000001, 0, 0.99999999999999999999999999999}, {0, 1}, {0, -1}, COMPLEX};
-
-    tests[uk++] = {11, {1, 1650.73138, -28606.9796525}, {17.151616, 0}, {-1667.8883, 0}, TWO};
-
-    tests[uk++] = {12, {1, 2, 2}, {-1, -1}, {-1, 1}, COMPLEX};
-
-    tests[uk++] = {13, {13.515, -0.627, 15.632}, {0.023196448391, 1.07522216044}, {0.023196448391, -1.07522216044}, COMPLEX};
-
-    tests[uk++] = {14, {0, 2, 125}, {0, 0}, {-1/2.0, 0}, ONE};
-
-    for (int i=0; i < uk; ++i)
+    for (int i = 0; i < all_tests.size; ++i)
     {
-        fl = !(full_test(tests[i]) == SUCCESS);
+        fl += full_test(all_tests.tests[i]) == FAILURE ? FAILURE : SUCCESS;
     }
+
+    printf("Tests ended with %d failure(s)", fl);
     return fl;
 }

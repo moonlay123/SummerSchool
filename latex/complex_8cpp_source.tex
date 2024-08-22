@@ -1,0 +1,64 @@
+\doxysection{complex.\+cpp}
+\hypertarget{complex_8cpp_source}{}\label{complex_8cpp_source}\mbox{\hyperlink{complex_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ <math.h>}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{complex_8h}{complex.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00004}\mbox{\hyperlink{complex_8cpp_af73ae1bb7d523064f95f20bf7a8b838d}{00004}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{complex_8cpp_af73ae1bb7d523064f95f20bf7a8b838d}{complex\_swap}}(\mbox{\hyperlink{structcomplex}{complex}}\ *x\_1,\ \mbox{\hyperlink{structcomplex}{complex}}\ *x\_2)}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keywordtype}{double}\ temp\ =\ x\_1-\/>\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}};}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00007}00007\ \ \ \ \ x\_1-\/>\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}}\ =\ x\_2-\/>\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}};}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00008}00008\ \ \ \ \ x\_2-\/>\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}}\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00010}00010\ \ \ \ \ temp\ =\ x\_1-\/>\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}};}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00011}00011\ \ \ \ \ x\_1-\/>\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}}\ =\ x\_2-\/>\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}};}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00012}00012\ \ \ \ \ x\_2-\/>\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}}\ =\ temp;}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00013}00013\ \}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00015}\mbox{\hyperlink{complex_8cpp_a7fdcaac09387c6e1cefb9fa16959c92c}{00015}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{complex_8cpp_a7fdcaac09387c6e1cefb9fa16959c92c}{sort\_complex}}(\mbox{\hyperlink{structcomplex}{complex}}\ *x\_1,\ \mbox{\hyperlink{structcomplex}{complex}}\ *x\_2)}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{complex_8cpp_ac11b13568d1fc1edd90bf73db8aca501}{is\_zero}}(x\_1-\/>\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}}\ -\/\ x\_2-\/>\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}}))}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00018}00018\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{complex_8cpp_aaf0c6edc5d4d302967d36816d838a989}{greater\_zero}}(x\_1-\/>\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}}\ -\/\ x\_2-\/>\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}}))}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{complex_8cpp_af73ae1bb7d523064f95f20bf7a8b838d}{complex\_swap}}(x\_1,\ x\_2);}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00026}00026\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{complex_8cpp_aaf0c6edc5d4d302967d36816d838a989}{greater\_zero}}(x\_1-\/>\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}}\ -\/\ x\_2-\/>\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}}))}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00027}00027\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{complex_8cpp_af73ae1bb7d523064f95f20bf7a8b838d}{complex\_swap}}(x\_1,\ x\_2);}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00029}00029\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00030}00030\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00035}\mbox{\hyperlink{complex_8cpp_a33176e6c7772623d9e2be63cf57984a4}{00035}}\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{complex_8cpp_a33176e6c7772623d9e2be63cf57984a4}{distance\_between\_complex}}(\mbox{\hyperlink{structcomplex}{complex}}\ x\_1,\ \mbox{\hyperlink{structcomplex}{complex}}\ x\_2)}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{return}\ sqrt((x\_1.\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}}\ -\/\ x\_2.\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}})\ *\ (x\_1.\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}}\ -\/\ x\_2.\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}})\ +}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (x\_1.\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}}\ -\/\ x\_2.\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}})\ *\ (x\_1.\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}}\ -\/\ x\_2.\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}}));}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00041}\mbox{\hyperlink{complex_8cpp_acc2d0cf69957f971d4f0e1ea2e156a20}{00041}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{complex_8cpp_acc2d0cf69957f971d4f0e1ea2e156a20}{complex\_are\_similar}}(\mbox{\hyperlink{structcomplex}{complex}}\ x\_1,\ \mbox{\hyperlink{structcomplex}{complex}}\ x\_2)}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00042}00042\ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{complex_8cpp_ac11b13568d1fc1edd90bf73db8aca501}{is\_zero}}(x\_1.\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}}-\/\ x\_2.\mbox{\hyperlink{structcomplex_a92dcee8df01cf892620da47f14b8e102}{imaginary}}))}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00044}00044\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{complex_8cpp_ac11b13568d1fc1edd90bf73db8aca501}{is\_zero}}(x\_1.\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}}\ -\/\ x\_2.\mbox{\hyperlink{structcomplex_a51c821fcf95975271abfc49311e983d4}{real}});}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00046}00046\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00047}00047\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{complex_8cpp_ac11b13568d1fc1edd90bf73db8aca501}{is\_zero}}(\mbox{\hyperlink{complex_8cpp_a33176e6c7772623d9e2be63cf57984a4}{distance\_between\_complex}}(x\_1,\ x\_2));}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00052}\mbox{\hyperlink{complex_8cpp_ac11b13568d1fc1edd90bf73db8aca501}{00052}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{complex_8cpp_ac11b13568d1fc1edd90bf73db8aca501}{is\_zero}}(\textcolor{keywordtype}{double}\ a)}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00053}00053\ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{return}\ abs(a)\ <\ \mbox{\hyperlink{complex_8h_afe01386a82fedc016455a43c20280a97}{EPS}};}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00055}00055\ \}}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00056}\mbox{\hyperlink{complex_8cpp_aaf0c6edc5d4d302967d36816d838a989}{00056}}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{complex_8cpp_aaf0c6edc5d4d302967d36816d838a989}{greater\_zero}}(\textcolor{keywordtype}{double}\ a)}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00057}00057\ \{}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00058}00058\ \ \ \ \ \textcolor{keywordflow}{return}\ a\ >\ \mbox{\hyperlink{complex_8h_afe01386a82fedc016455a43c20280a97}{EPS}};}
+\DoxyCodeLine{\Hypertarget{complex_8cpp_source_l00059}00059\ \}}
+
+\end{DoxyCode}

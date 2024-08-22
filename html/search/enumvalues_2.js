@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['infinite_0',['INFINITE',['../square_8cpp.html#a98df0a5ae6ff7dc84cfcf1863112d2c3a6a1459101774b7f68e084098fa8bacbb',1,'square.cpp']]]
+  ['dialog_0',['DIALOG',['../group___dialogs.html#gga077745aacfb8431d6529e20ad67d1674a4c775f01785801b0b11ec0cd5bdd7230',1,'txDialog']]]
 ];

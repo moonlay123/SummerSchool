@@ -7,7 +7,9 @@ Struct defining coefs of square equation
 */
 struct coefficients
 {
-    double a, b, c; /*!< coefs of square equation*/
+    double a, /*!< a of square equation*/
+    b, /*!< b of square equation*/
+    c; /*!< c of square equation*/
 };
 
 /*!

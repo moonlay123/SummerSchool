@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['two_0',['TWO',['../square_8cpp.html#a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851',1,'square.cpp']]],
-  ['two_5fsimilar_1',['TWO_SIMILAR',['../square_8cpp.html#a98df0a5ae6ff7dc84cfcf1863112d2c3a7dbd60b3d9900fcbe4042e1824388f61',1,'square.cpp']]]
+  ['many_5fequations_0',['MANY_EQUATIONS',['../main_8h.html#a9af026261f5cfa59aa2bb1a497bd2f93a6484befd4590d68d5e33e618e4b825d7',1,'main.h']]]
 ];

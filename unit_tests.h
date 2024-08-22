@@ -1,5 +1,6 @@
 #ifndef unit_tests
 #define unit_tests
+#include <math.h>
 #include "square.h"
 
 /*!
@@ -15,6 +16,31 @@ struct unit_test
     /*@}*/
 };
 
+const int MAX_TESTS = 50;
+
+struct test_bufer
+{
+    int size = 15;
+    unit_test tests[MAX_TESTS]=
+    {
+        {1, {1, 2, 1}, {-1, 0}, {-1, 0}, TWO_SIMILAR},
+        {2, {1, 2, 3}, {-2.0/2, -sqrt(8.0)/2}, {-2.0/2, sqrt(8.0)/2}, COMPLEX},
+        {3, {5, -4, -1}, {1, 0}, {-1.0/5, 0}, TWO},
+        {4, {0.5, -2, 1.5}, {1, 0}, {3, 0}, TWO},
+        {5, {0, 0, 0}, {0, 0}, {0, 0}, INFINITES},
+        {6, {0.000000000000000001, 0, 1.15125161717}, {0, 0}, {0, 0}, ZERO},
+        {7, {0, 2, 1}, {0, 0}, {-1/2.0, 0}, ONE},
+        {8, {1.3, 7.1, -17.157}, {1.8139852069763645, 0}, {-7.275523668514825, 0}, TWO},
+        {9, {1, 0, 0}, {0, 0}, {0, 0}, TWO_SIMILAR},
+        {10, {1.00000000000000000001, 0, 0.99999999999999999999999999999}, {0, 1}, {0, -1}, COMPLEX},
+        {11, {1, 1650.73138, -28606.9796525}, {17.151616, 0}, {-1667.8883, 0}, TWO},
+        {12, {1, 2, 2}, {-1, -1}, {-1, 1}, COMPLEX},
+        {13, {13.515, -0.627, 15.632}, {0.023196448391, 1.07522216044}, {0.023196448391, -1.07522216044}, COMPLEX},
+        {14, {0, 2, 125}, {0, 0}, {-1/2.0, 0}, ONE},
+        {15, {1, 2, 125}, {-1, -11.135529}, {-1, 11.135529}, COMPLEX}
+    };
+
+};
 
 /*!
 Check test solve correctness
@@ -50,10 +76,5 @@ Running all the created tests
 \return correctness of tests
 */
 int run_all_tests();
-
-/*!
-Creates unit_test with your data
-*/
-void create_unit_test(unit_test data);
 
 #endif

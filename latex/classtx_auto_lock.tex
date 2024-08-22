@@ -1,0 +1,180 @@
+\doxysection{tx\+Auto\+Lock Class Reference}
+\hypertarget{classtx_auto_lock}{}\label{classtx_auto_lock}\index{txAutoLock@{txAutoLock}}
+
+
+Класс для автоматической блокировки и разблокировки критической секции.  
+
+
+
+
+{\ttfamily \#include $<$TXLib.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classtx_auto_lock_a61feaeca08bc74354fae1dc8ef55b31a}{tx\+Auto\+Lock}} (CRITICAL\+\_\+\+SECTION \texorpdfstring{$\ast$}{*}cs, bool mandatory=true)
+\begin{DoxyCompactList}\small\item\em Конструктор, блокирует критическую секцию \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtx_auto_lock_a7cf59bdea297feba1a8a1695657817b9}{tx\+Auto\+Lock}} (bool mandatory=true)
+\begin{DoxyCompactList}\small\item\em Конструктор для блокировки холста TXLib \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtx_auto_lock_a65ee5bd5cf2560f863a2c8caf26ceb81}{\texorpdfstring{$\sim$}{\string~}tx\+Auto\+Lock}} ()
+\begin{DoxyCompactList}\small\item\em Деструктор, разблокирует секцию \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classtx_auto_lock_a67b76affb3b5d35fa419ac234144038b}{operator bool}} () const
+\begin{DoxyCompactList}\small\item\em Позволяет проверить, заблокировалась секция или нет @usage См. в tx\+Auto\+Lock\+::\+Auto\+Lock (CRITICAL\+\_\+\+SECTION\&, bool) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+CRITICAL\+\_\+\+SECTION \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classtx_auto_lock_a331135d21727f8d293dc9e112ebc59c5}{cs\+\_\+}}
+\begin{DoxyCompactList}\small\item\em Блокируемая критическая секция \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс для автоматической блокировки и разблокировки критической секции. 
+
+\begin{DoxyVerb}     Начиная с <a href=http://progbook.ru/2008/08/03/sovremennoe-proektirovanie-na-c-andrejj.html>
+     Александреску,</a> его пишут все и он прост, как пробка: в конструкторе -- EnterCriticalSection(),
+     в деструкторе -- LeaveCriticalSection(). Это @c RAII в чистом виде: вы никогда не забудете разблочить
+     секцию and your thread show will always go on.
+
+     Некоторые добавления: есть возможность вызвать TryEnterCriticalSection(), и, если она не заблочила
+     секцию, деструктор ее не разблочивает. Есть оператор для проверки, заблочилась ли секция или нет
+     (см. конструкторы класса и оператор @c bool).
+\end{DoxyVerb}
+
+
+\begin{DoxyNote}{Note}
+Класс не инициализирует и не удаляет критическую секцию. Только синхронизирует. Остальное сами-\/сами \+:)
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\doxylink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock()}, \doxylink{group___misc_ga8fe4ec4c66cb69ce337747fe65dd0cc6}{tx\+Unlock()}, \doxylink{group___misc_gafdd807831b131ba38d5856b6ee4e8287}{tx\+GDI()} 
+\end{DoxySeeAlso}
+
+
+Definition at line \mbox{\hyperlink{_t_x_lib_8h_source_l06357}{6357}} of file \mbox{\hyperlink{_t_x_lib_8h_source}{TXLib.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classtx_auto_lock_a61feaeca08bc74354fae1dc8ef55b31a}\index{txAutoLock@{txAutoLock}!txAutoLock@{txAutoLock}}
+\index{txAutoLock@{txAutoLock}!txAutoLock@{txAutoLock}}
+\doxysubsubsection{\texorpdfstring{txAutoLock()}{txAutoLock()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{classtx_auto_lock_a61feaeca08bc74354fae1dc8ef55b31a} 
+\mbox{\hyperlink{classtx_auto_lock}{tx\+Auto\+Lock}} (\begin{DoxyParamCaption}\item[{CRITICAL\+\_\+\+SECTION \texorpdfstring{$\ast$}{*}}]{cs}{, }\item[{bool}]{mandatory}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Конструктор, блокирует критическую секцию 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cs} & Критическая секция для блокировки. \\
+\hline
+{\em mandatory} & {\itshape Если {\ttfamily true}, то блокировать обязательно (Enter\+Critical\+Section). ~\newline
+ Если {\ttfamily false}, то только пытаться блокировать (Try\+Enter\+Critical\+Section). ~\newline
+ Если не указано, то блокировка обязательна.} @usage 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{CRITICAL\_SECTION\ cs\ =\ \{\};\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ This\ is\ not\ a\ Counter\ Strike}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ foo()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classtx_auto_lock}{txAutoLock}}\ lock\ (\&cs);\ \ \ \ \ \ \ \ \textcolor{comment}{//\ Здесь\ вызовется EnterCriticalSection()}}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ а здесь LeaveCriticalsection()}}
+\DoxyCodeLine{}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ bar()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classtx_auto_lock}{txAutoLock}}\ lock\ (\&cs,\ \textcolor{keyword}{false});\ \textcolor{comment}{//\ TryEnterCriticalSection()}}
+\DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{if}\ (!lock)\ \textcolor{keywordflow}{return};\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ну не смогла}}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ \}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_t_x_lib_8h_source_l06388}{6388}} of file \mbox{\hyperlink{_t_x_lib_8h_source}{TXLib.\+h}}.
+
+\Hypertarget{classtx_auto_lock_a7cf59bdea297feba1a8a1695657817b9}\index{txAutoLock@{txAutoLock}!txAutoLock@{txAutoLock}}
+\index{txAutoLock@{txAutoLock}!txAutoLock@{txAutoLock}}
+\doxysubsubsection{\texorpdfstring{txAutoLock()}{txAutoLock()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{classtx_auto_lock_a7cf59bdea297feba1a8a1695657817b9} 
+\mbox{\hyperlink{classtx_auto_lock}{tx\+Auto\+Lock}} (\begin{DoxyParamCaption}\item[{bool}]{mandatory}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [explicit]}}
+
+
+
+Конструктор для блокировки холста TXLib 
+
+
+\begin{DoxyParams}{Parameters}
+{\em mandatory} & {\itshape Если {\ttfamily true}, то блокировать {\bfseries{обязательно}}, как в \doxylink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock} (true). ~\newline
+ Если {\ttfamily false}, то только {\bfseries{пытаться}} блокировать, как в \doxylink{group___misc_ga532fa8a55c4f3d4f94ff0fdceae732b2}{tx\+Lock} (false). ~\newline
+ Если не указано, то блокировка обязательна.} @usage 
+\begin{DoxyCode}{1}
+\DoxyCodeLine{\textcolor{keywordtype}{void}\ foobar()}
+\DoxyCodeLine{\ \ \ \ \{}
+\DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{classtx_auto_lock}{txAutoLock}}\ lock;\ \ \ \ \ \ \textcolor{comment}{//\ Здесь\ вызовется txLock()}}
+\DoxyCodeLine{\ \ \ \ ...}
+\DoxyCodeLine{\ \ \ \ \}\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ а здесь txUnlock()}}
+
+\end{DoxyCode}
+ \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_t_x_lib_8h_source_l06412}{6412}} of file \mbox{\hyperlink{_t_x_lib_8h_source}{TXLib.\+h}}.
+
+\Hypertarget{classtx_auto_lock_a65ee5bd5cf2560f863a2c8caf26ceb81}\index{txAutoLock@{txAutoLock}!````~txAutoLock@{\texorpdfstring{$\sim$}{\string~}txAutoLock}}
+\index{````~txAutoLock@{\texorpdfstring{$\sim$}{\string~}txAutoLock}!txAutoLock@{txAutoLock}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}txAutoLock()}{\string~txAutoLock()}}
+{\footnotesize\ttfamily \label{classtx_auto_lock_a65ee5bd5cf2560f863a2c8caf26ceb81} 
+\texorpdfstring{$\sim$}{\string~}\mbox{\hyperlink{classtx_auto_lock}{tx\+Auto\+Lock}} (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Деструктор, разблокирует секцию 
+
+
+
+Definition at line \mbox{\hyperlink{_t_x_lib_8h_source_l06422}{6422}} of file \mbox{\hyperlink{_t_x_lib_8h_source}{TXLib.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classtx_auto_lock_a67b76affb3b5d35fa419ac234144038b}\index{txAutoLock@{txAutoLock}!operator bool@{operator bool}}
+\index{operator bool@{operator bool}!txAutoLock@{txAutoLock}}
+\doxysubsubsection{\texorpdfstring{operator bool()}{operator bool()}}
+{\footnotesize\ttfamily \label{classtx_auto_lock_a67b76affb3b5d35fa419ac234144038b} 
+operator bool (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Позволяет проверить, заблокировалась секция или нет @usage См. в tx\+Auto\+Lock\+::\+Auto\+Lock (CRITICAL\+\_\+\+SECTION\&, bool) 
+
+
+
+Definition at line \mbox{\hyperlink{_t_x_lib_8h_source_l06433}{6433}} of file \mbox{\hyperlink{_t_x_lib_8h_source}{TXLib.\+h}}.
+
+
+
+\doxysubsection{Field Documentation}
+\Hypertarget{classtx_auto_lock_a331135d21727f8d293dc9e112ebc59c5}\index{txAutoLock@{txAutoLock}!cs\_@{cs\_}}
+\index{cs\_@{cs\_}!txAutoLock@{txAutoLock}}
+\doxysubsubsection{\texorpdfstring{cs\_}{cs\_}}
+{\footnotesize\ttfamily \label{classtx_auto_lock_a331135d21727f8d293dc9e112ebc59c5} 
+CRITICAL\+\_\+\+SECTION\texorpdfstring{$\ast$}{*} cs\+\_\+}
+
+
+
+Блокируемая критическая секция 
+
+
+
+Definition at line \mbox{\hyperlink{_t_x_lib_8h_source_l06443}{6443}} of file \mbox{\hyperlink{_t_x_lib_8h_source}{TXLib.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_t_x_lib_8h}{TXLib.\+h}}\end{DoxyCompactItemize}

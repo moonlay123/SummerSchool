@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_5fcase_0',['linear_case',['../square_8cpp.html#a09e20722141d2b1d2581df61ebd85eeb',1,'square.cpp']]]
+  ['greater_5fzero_0',['greater_zero',['../complex_8cpp.html#aaf0c6edc5d4d302967d36816d838a989',1,'greater_zero(double a):&#160;complex.cpp'],['../complex_8h.html#aaf0c6edc5d4d302967d36816d838a989',1,'greater_zero(double a):&#160;complex.cpp']]]
 ];
