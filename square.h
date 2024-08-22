@@ -15,13 +15,12 @@ struct coefficients
 /*!
     Enum of all root types in square equation
 */
-typedef enum {TWO_SIMILAR, INFINITES, COMPLEX, ZERO, ONE, TWO, NON_ROOT_TYPE = 0} roots_type;
+typedef enum {TWO_SIMILAR = 6, INFINITES = 5, COMPLEX = 4, ZERO = 3, ONE = 2, TWO = 1, NON_ROOT_TYPE = 0} roots_type;
 
 /*!
     Enum of SUCCESS and FAILURE program tags
 */
 enum {SUCCESS = 0, FAILURE = 1};
-const int NUMBER_OF_TRIES = 10;
 
 /*!
 Clean char buffer

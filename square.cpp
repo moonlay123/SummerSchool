@@ -63,7 +63,7 @@ int square_equation_input(coefficients *coefs)
 {
     int counter = 0;
     bool fl = 0;
-    while (counter < NUMBER_OF_TRIES and !fl)
+    while (!fl)
     {
         printf("Enter coef in square equation\n");
 
@@ -76,11 +76,6 @@ int square_equation_input(coefficients *coefs)
         {
             fl = 1;
         }
-    }
-
-    if (counter == NUMBER_OF_TRIES)
-    {
-        return FAILURE;
     }
 
     return SUCCESS;

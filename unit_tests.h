@@ -20,9 +20,9 @@ const int MAX_TESTS = 50;
 
 struct test_bufer
 {
-    int size = 15;
-    unit_test tests[MAX_TESTS]=
-    {
+    int size;
+    unit_test tests[MAX_TESTS];
+    /*{
         {1, {1, 2, 1}, {-1, 0}, {-1, 0}, TWO_SIMILAR},
         {2, {1, 2, 3}, {-2.0/2, -sqrt(8.0)/2}, {-2.0/2, sqrt(8.0)/2}, COMPLEX},
         {3, {5, -4, -1}, {1, 0}, {-1.0/5, 0}, TWO},
@@ -38,7 +38,7 @@ struct test_bufer
         {13, {13.515, -0.627, 15.632}, {0.023196448391, 1.07522216044}, {0.023196448391, -1.07522216044}, COMPLEX},
         {14, {0, 2, 125}, {0, 0}, {-1/2.0, 0}, ONE},
         {15, {1, 2, 125}, {-1, -11.135529}, {-1, 11.135529}, COMPLEX}
-    };
+    };*/
 
 };
 
@@ -77,4 +77,39 @@ Running all the created tests
 */
 int run_all_tests();
 
+/*!
+Input your test to specified file
+*/
+void put_test_to_file(unit_test data);
+
+/*!
+Read file
+\return test_bufer of tests in file
+*/
+test_bufer read_file();
+
+/*!
+Create unit_test from input data
+*/
+unit_test create_test_from_input();
+
+/*!
+Input expected root type from console
+\param[in] expected_root_type address of expected root type
+*/
+void input_roots_type(roots_type *expected_root_type);
+
+/*!
+Convert expected root type from int format
+\param[in]  expected_root_int int format of expected_root_type
+\param[out] expected_root_type roots_type format
+*/
+void convert_roots_type(int expected_root_int, roots_type *expected_root_type);
+
+/*!
+Input expected roots from console
+\param[in] x_1 address of expected root
+\param[in] x_2 address of expected root
+*/
+void input_roots(complex *x_1, complex *x_2);
 #endif
