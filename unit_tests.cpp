@@ -55,35 +55,43 @@ void print_results(unit_test data, complex received_x_1, complex received_x_2, r
 
 int run_all_tests()
 {
+    const int MAX_TESTS = 50;
+    unit_test tests[MAX_TESTS];
+    int uk = 0;
+
     int fl = SUCCESS;
+    // can realise with file system
+    tests[uk++] = {1, {1, 2, 1}, {-1, 0}, {-1, 0}, TWO_SIMILAR};
 
-    fl = !(full_test({1, {1, 2, 1}, {-1, 0}, {-1, 0}, TWO_SIMILAR}) == SUCCESS);
+    tests[uk++] = {2, {1, 2, 3}, {-2.0/2, -sqrt(8.0)/2}, {-2.0/2, sqrt(8.0)/2}, COMPLEX};
 
-    fl = !(full_test({2, {1, 2, 3}, {-2.0/2, -sqrt(8.0)/2}, {-2.0/2, sqrt(8.0)/2}, COMPLEX}) == SUCCESS);
+    tests[uk++] = {3, {5, -4, -1}, {1, 0}, {-1.0/5, 0}, TWO};
 
-    fl = !(full_test({3, {5, -4, -1}, {1, 0}, {-1.0/5, 0}, TWO}) == SUCCESS);
+    tests[uk++] = {4, {0.5, -2, 1.5}, {1, 0}, {3, 0}, TWO};
 
-    fl = !(full_test({4, {0.5, -2, 1.5}, {1, 0}, {3, 0}, TWO}) == SUCCESS);
+    tests[uk++] = {5, {0, 0, 0}, {0, 0}, {0, 0}, INFINITES};
 
-    fl = !(full_test({5, {0, 0, 0}, {0, 0}, {0, 0}, INFINITES}) == SUCCESS);
+    tests[uk++] = {6, {0.000000000000000001, 0, 1.15125161717}, {0, 0}, {0, 0}, ZERO};
 
-    fl = !(full_test({6, {0.000000000000000001, 0, 1.15125161717}, {0, 0}, {0, 0}, ZERO}) == SUCCESS);
+    tests[uk++] = {7, {0, 2, 1}, {0, 0}, {-1/2.0, 0}, ONE};
 
-    fl = !(full_test({7, {0, 2, 1}, {0, 0}, {-1/2.0, 0}, ONE}) == SUCCESS);
+    tests[uk++] = {8, {1.3, 7.1, -17.157}, {1.8139852069763645, 0}, {-7.275523668514825, 0}, TWO};
 
-    fl = !(full_test({8, {1.3, 7.1, -17.157}, {1.8139852069763645, 0}, {-7.275523668514825, 0}, TWO}) == SUCCESS);
+    tests[uk++] = {9, {1, 0, 0}, {0, 0}, {0, 0}, TWO_SIMILAR};
 
-    fl = !(full_test({9, {1, 0, 0}, {0, 0}, {0, 0}, TWO_SIMILAR}) == SUCCESS);
+    tests[uk++] = {10, {1.00000000000000000001, 0, 0.99999999999999999999999999999}, {0, 1}, {0, -1}, COMPLEX};
 
-    fl = !(full_test({10, {1.00000000000000000001, 0, 0.99999999999999999999999999999}, {0, 1}, {0, -1}, COMPLEX}) == SUCCESS);
+    tests[uk++] = {11, {1, 1650.73138, -28606.9796525}, {17.151616, 0}, {-1667.8883, 0}, TWO};
 
-    fl = !(full_test({11, {1, 1650.73138, -28606.9796525}, {17.151616, 0}, {-1667.8883, 0}, TWO}) == SUCCESS);
+    tests[uk++] = {12, {1, 2, 2}, {-1, -1}, {-1, 1}, COMPLEX};
 
-    fl = !(full_test({12, {1, 2, 2}, {-1, -1}, {-1, 1}, COMPLEX}) == SUCCESS);
+    tests[uk++] = {13, {13.515, -0.627, 15.632}, {0.023196448391, 1.07522216044}, {0.023196448391, -1.07522216044}, COMPLEX};
 
-    fl = !(full_test({13, {13.515, -0.627, 15.632}, {0.023196448391, 1.07522216044}, {0.023196448391, -1.07522216044}, COMPLEX}) == SUCCESS);
+    tests[uk++] = {14, {0, 2, 125}, {0, 0}, {-1/2.0, 0}, ONE};
 
-    fl = !(full_test({14, {0, 2, 125}, {0, 0}, {-1/2.0, 0}, ONE}) == SUCCESS);
-
+    for (int i=0; i < uk; ++i)
+    {
+        fl = !(full_test(tests[i]) == SUCCESS);
+    }
     return fl;
 }

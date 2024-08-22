@@ -51,4 +51,9 @@ Running all the created tests
 */
 int run_all_tests();
 
+/*!
+Creates unit_test with your data
+*/
+void create_unit_test(unit_test data);
+
 #endif
