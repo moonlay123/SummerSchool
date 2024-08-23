@@ -1188,3 +1188,96 @@ Run file:	C:\Users\pasha\SummerSchool\main.exe
 Directory:	C:\Users\pasha\SummerSchool
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\pasha\SummerSchool\main.exe, файл: main.cpp, строка: 87, функция: void file_flag(char**, int, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "files_uk >= files_size".
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x00007FF6151604A8 (64-bit), Flags: Cmdre0, Thread: 0x42FC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	TXLib/../TXLib.h
+Compiled:	Aug 23 2024 17:47:36, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 12.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Aug 23 2024 19:40:09
+
+Run file:	C:\Users\pasha\SummerSchool\main.exe
+Directory:	C:\Users\pasha\SummerSchool
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\pasha\SummerSchool\main.exe, файл: main.cpp, строка: 88, функция: void file_flag(char**, int, int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "files_uk >= files_size".
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x00007FF791A704A8 (64-bit), Flags: Cmdre0, Thread: 0x41D4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	TXLib/../TXLib.h
+Compiled:	Aug 23 2024 17:47:36, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 12.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Aug 23 2024 19:42:06
+
+Run file:	C:\Users\pasha\SummerSchool\main.exe
+Directory:	C:\Users\pasha\SummerSchool
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: C:\Users\pasha\SummerSchool\main.exe, файл: main.cpp, строка: 43, функция: int main(int, char**),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "files_uk == file_flag_counts".
+
+#1: TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400], Instance: 0x00007FF6820304A8 (64-bit), Flags: Cmdre0, Thread: 0x2C6C (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 173, Date: 2024-06-23 22:37:05 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	TXLib/../TXLib.h
+Compiled:	Aug 23 2024 17:47:36, GNU g++ 13.2.0, std=201703L, MinGW-W64 Runtime 12.0.0 (alpha - rev. 0) 0000-00-00, 64-bit, DEBUG
+Started:	Aug 23 2024 19:52:53
+
+Run file:	C:\Users\pasha\SummerSchool\main.exe
+Directory:	C:\Users\pasha\SummerSchool
+
+--------------------------------------------------

@@ -96,4 +96,9 @@ Action with user-specified coefficients
 */
 void standard();
 
+/*!
+Function takes coefs of square equation and print solution
+\param[in] coefs coefs of square equation
+*/
+void solve_with_print(coefficients coefs);
 #endif

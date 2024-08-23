@@ -3,9 +3,10 @@ FLAGS=-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal 
 COMP = g++
 
 SOURCES = $(wildcard *.cpp)
-OBJECTS = $(wildcard TXLib/*.o)
+OBJECTS = $(wildcard objects/*.o)
 MOVE_OBJECTS = $(wildcard *.o)
 EXECUTABLE = main
+TX_LIB = txlib
 look:
 	echo $(SOURCES)
 
@@ -14,17 +15,25 @@ link: $(OBJECTS)
 
 obj: $(SOURCES)
 	$(COMP) $(FLAGS) $(SOURCES) -c
+	make copy
+
+tx: $(TX_LIB)
+	$(COMP) $(FLAGS) -c TXLib/$<.cpp -o objects/$<.o
 
 all: $(SOURCES)
 	$(COMP) $(SOURCES) -o main $(FLAGS)
 
 %.o: %.cpp
-	$(COMP) $(FLAGS) -c $< -o TXlib/$@
+	$(COMP) $(FLAGS) -c $< -o objects/$@
 
 copy: $(MOVE_OBJECTS)
-	mv $(MOVE_OBJECTS) TXLib/
+	mv $(MOVE_OBJECTS) objects/
 clean:
 	rm *.exe
 
 clean_obj:
-	rm *.o
+	rm objects/*.o
+
+clean_all:
+	make clean_obj
+	make clean

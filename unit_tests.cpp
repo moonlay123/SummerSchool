@@ -172,7 +172,7 @@ int full_test(unit_test data)
     sort_complex(&data.expected_x_1, &data.expected_x_2);
     sort_complex(&received_x_1, &received_x_2);
 
-    if (check_test_correctness(data, received_x_1, received_x_2, received_root_type) == FAILURE)
+    if (!check_test_correctness(data, received_x_1, received_x_2, received_root_type))
     {
         print_results(data, received_x_1, received_x_2, received_root_type);
 
@@ -194,21 +194,19 @@ bool check_test_correctness(unit_test data,
         if (received_root_type == NON_ROOT_TYPE or
             received_root_type == INFINITES or received_root_type == ZERO)
         {
-            return SUCCESS;
-        } else if ((complex_are_similar(data.expected_x_1, received_x_1) and
-            complex_are_similar(data.expected_x_2, received_x_2)) or
-            (received_root_type == ONE and
-            (complex_are_similar(data.expected_x_1, received_x_1) or
-            complex_are_similar(data.expected_x_2, received_x_2))))
+            return true;
+        } else if (received_root_type == TWO_SIMILAR or received_root_type == COMPLEX or received_root_type == TWO)
         {
-            return SUCCESS;
+            return (complex_are_similar(data.expected_x_1, received_x_1) and
+                    complex_are_similar(data.expected_x_2, received_x_2));
         } else
         {
-            return FAILURE;
+            return  (complex_are_similar(data.expected_x_1, received_x_1) or
+                    complex_are_similar(data.expected_x_2, received_x_2));
         }
     } else
     {
-        return FAILURE;
+        return false;
     }
 }
 

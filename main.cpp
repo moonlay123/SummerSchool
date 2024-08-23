@@ -1,16 +1,134 @@
 #include "unit_tests.h"
 #include "main.h"
 
-int main()
+int compare(const void *a, const void *b)
+{
+    int l = *((const int *) a);
+    int r = *((const int *) b);
+    return l-r;
+}
+
+int main(int argc, char *argv[])
+{
+    ++argv; --argc;
+    int *queue = (int *) calloc(argc, sizeof(int));
+
+    int files_uk = 0, file_flag_counts = 0;
+    char **files = (char **) calloc(argc, sizeof(char *));
+
+    basic_color();
+    for (int i = 0; i < argc; ++i)
+    {
+        if (!strcmp(argv[i], "-menu"))
+        {
+            queue[i] = MENU;
+        } else if(!strcmp(argv[i], "-rand"))
+        {
+            queue[i] = RAND_COLOR;
+        } else if(!strcmp(argv[i], "-file"))
+        {
+            queue[i] = FILE_FLAG;
+            ++file_flag_counts;
+        } else if(argv[i][0] != '-')
+        {
+            files[files_uk++] = argv[i];
+            queue[i] = NOTHING;
+        } else if(!strcmp(argv[i], "-clean"))
+        {
+            queue[i] = CLEAN_CONSOLE;
+        }
+        else
+        {
+            queue[i] = NOTHING;
+        }
+    }
+
+    assert(files_uk == file_flag_counts);
+
+    qsort(queue, argc, sizeof(int), compare);
+
+    flag_actions(files, queue, argc, files_uk);
+
+    txSetConsoleAttr (0x00);
+
+
+    return SUCCESS;
+}
+
+void flag_actions(char **files, int *queue, int argc, int files_size)
+{
+    int files_uk = 0;
+    for(int i = 0; i < argc; ++i)
+    {
+        switch (queue[i])
+        {
+            case NOTHING:
+                break;
+            case EXIT_FLAG:
+                break;
+            case HELP:
+                break;
+            case RAND_COLOR:
+                random_color();
+                break;
+            case FILE_FLAG:
+                file_flag(files, files_size, files_uk++);
+                break;
+            case MENU:
+                menu();
+                break;
+            case CLEAN_CONSOLE:
+                txClearConsole();
+                break;
+            default:
+                help();
+                break;
+        }
+    }
+
+    free(queue);
+    free(files);
+}
+
+void file_flag(char ** files, int files_size, int files_uk)
+{
+    assert(files_uk < files_size);
+    assert(files[files_uk] != NULL);
+
+    FILE *fp;
+    if ((fp = fopen(files[files_uk], "r")) == NULL)
+    {
+        error_color();
+        printf("No file with name %s", files[files_uk]);
+        basic_color();
+
+        return;
+    }
+
+    coefficients coefs = {0, 0, 0};
+    if (fscanf(fp, "%lf %lf %lf", &coefs.a, &coefs.b, &coefs.c) < 3)
+    {
+        error_color();
+        printf("Wrong file structure, it must looks like a b c of square equation");
+        basic_color();
+    }
+
+    solve_with_print(coefs);
+}
+
+void help()
+{
+    unexpected_color();
+    printf("I'm too lazy to write it, see in new versions");
+    basic_color();
+}
+
+void menu()
 {
     bool fl = 0;
 
-    basic_color();
-
     while (!fl)
     {
-        basic_color();
-
         choose_type note = choose_variant();
 
         switch (note)
@@ -42,11 +160,6 @@ int main()
                 break;
         }
     }
-
-    txSetConsoleAttr (0x00);
-    txClearConsole ();
-
-    return SUCCESS;
 }
 
 choose_type choose_variant()

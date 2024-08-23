@@ -25,16 +25,21 @@ void standard()
 
     if (next == SUCCESS)
     {
-        complex x_1 = {0, 0}, x_2 = {0, 0};
-        int root_fl = solve(coefs, &x_1, &x_2);
-
-        square_equation_printer(root_fl, x_1, x_2);
+        solve_with_print(coefs);
     } else
     {
         failure_color();
         printf("Try next time");
         basic_color();
     }
+}
+
+void solve_with_print(coefficients coefs)
+{
+    complex x_1 = {0, 0}, x_2 = {0, 0};
+    int root_fl = solve(coefs, &x_1, &x_2);
+
+    square_equation_printer(root_fl, x_1, x_2);
 }
 
 void many_equations()
