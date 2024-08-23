@@ -1,14 +1,15 @@
 #include "unit_tests.h"
 #include "main.h"
 
-
 int main()
 {
     bool fl = 0;
 
+    basic_color();
+
     while (!fl)
     {
-        random_color();
+        basic_color();
 
         choose_type note = choose_variant();
 
@@ -27,18 +28,22 @@ int main()
                 put_test_to_file(create_test_from_input());
                 break;
             case NON_TYPE:
+                error_color();
                 printf("No choose\n");
                 break;
             case EXIT:
                 fl = 1;
                 break;
             default:
+                unexpected_color();
                 printf("Unknown command\n");
                 break;
         }
     }
 
-    txSetConsoleAttr(0x07);
+    txSetConsoleAttr(0x00);
+    txClearConsole();
+
     return SUCCESS;
 }
 
@@ -49,12 +54,16 @@ choose_type choose_variant()
     while (choose != STANDARD and choose != MANY_EQUATIONS and choose != UNIT_TESTS
                                                 and choose != INPUT_UNIT_TEST and choose != EXIT and !fl)
     {
+        basic_color();
+
         printf("Choose what you want\n1) Standard input\n2) Random input\n3) Unit tests\n4) Input your unit test\n5) Exit program\n");
         fl = scanf("%d", &choose);
 
         if (choose != STANDARD and choose != MANY_EQUATIONS and choose != UNIT_TESTS
                                                 and choose != INPUT_UNIT_TEST and choose != EXIT and !fl)
         {
+            failure_color();
+
             printf("Wrong input, try again\n");
             clean_char_buffer();
         }

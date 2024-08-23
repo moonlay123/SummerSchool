@@ -31,6 +31,8 @@ void standard()
         square_equation_printer(root_fl, x_1, x_2);
     } else
     {
+        failure_color();
+
         printf("Try next time\n");
     }
 }
@@ -38,6 +40,8 @@ void standard()
 void many_equations()
 {
     int equations = 0;
+    basic_color();
+
     printf("Input amount of random equations\n");
     scanf("%d", &equations);
 
@@ -60,12 +64,17 @@ int square_equation_input(coefficients *coefs)
 {
     int counter = 0;
     bool fl = 0;
+
     while (!fl)
     {
+        basic_color();
+
         printf("Enter coef in square equation\n");
 
         if (scanf("%lf %lf %lf", &coefs->a, &coefs->b, &coefs->c) < 3)
         {
+            failure_color();
+
             printf("Wrong input, try again \n");
             clean_char_buffer();
             ++counter;
@@ -80,6 +89,9 @@ int square_equation_input(coefficients *coefs)
 
 void square_equation_printer(int root_fl, complex x_1, complex x_2)
 {
+
+    basic_color();
+
     switch (root_fl)
     {
         case ZERO:
@@ -106,9 +118,12 @@ void square_equation_printer(int root_fl, complex x_1, complex x_2)
                     x_1.real, abs(x_1.imaginary), x_2.real, abs(x_2.imaginary));
             break;
         default:
+            unexpected_color();
             printf("Unsupported case");
             break;
     }
+
+    basic_color();
 }
 
 roots_type linear_case(coefficients coefs, complex *x)
