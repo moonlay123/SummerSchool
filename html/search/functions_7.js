@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
-  ['many_5fequations_1',['many_equations',['../square_8cpp.html#a61859bf9a33fb86ae0aa2b5e8a971896',1,'many_equations():&#160;square.cpp'],['../square_8h.html#a61859bf9a33fb86ae0aa2b5e8a971896',1,'many_equations():&#160;square.cpp']]],
-  ['max_2',['max',['../group___misc.html#ga60e2e94829d2c0abec61188ec92471c4',1,'TXLib.h']]],
-  ['min_3',['min',['../group___misc.html#gac1c42461c60ad97ef9c030cfd566f732',1,'TXLib.h']]]
+  ['in_0',['In',['../group___misc.html#ga1298dbfaaff41786f77c7cd302d73c31',1,'In(Tx x, Ta a, Tb b) tx_nodiscard tx_deprecated:&#160;TXLib.h'],['../_t_x_lib_8h.html#a103314e92b676ac59ad94c394a32ad5e',1,'In(std::nomeow_t, Tx x, Ta a, Tb b) tx_nodiscard tx_deprecated:&#160;TXLib.h'],['../group___misc.html#gadfae620e55d8798711d4a0c72f6af99e',1,'In(const POINT &amp;pt, const RECT &amp;rect) tx_nodiscard tx_deprecated:&#160;TXLib.h'],['../group___misc.html#ga5f6ca2eaa2ff152301239bcefbda5dfe',1,'In(const COORD &amp;pt, const SMALL_RECT &amp;rect) tx_nodiscard tx_deprecated:&#160;TXLib.h'],['../_t_x_lib_8h.html#ad85b31d3eea536468b15fc00c368d15f',1,'In(std::nomeow_t, const POINT &amp;pt, const RECT &amp;rect) tx_nodiscard tx_deprecated:&#160;TXLib.h'],['../_t_x_lib_8h.html#a285a5b7014ed644c4624a8a05037310c',1,'In(std::nomeow_t, const COORD &amp;pt, const SMALL_RECT &amp;rect) tx_nodiscard tx_deprecated:&#160;TXLib.h']]],
+  ['input_5froots_1',['input_roots',['../unit__tests_8cpp.html#a32ab5f224d8f763ac7b553d00c220975',1,'input_roots(complex *x_1, complex *x_2):&#160;unit_tests.cpp'],['../unit__tests_8h.html#a32ab5f224d8f763ac7b553d00c220975',1,'input_roots(complex *x_1, complex *x_2):&#160;unit_tests.cpp']]],
+  ['input_5froots_5ftype_2',['input_roots_type',['../unit__tests_8cpp.html#a022b3d8c5b6e432bf043c4bdb7b38ac8',1,'input_roots_type(roots_type *expected_root_type):&#160;unit_tests.cpp'],['../unit__tests_8h.html#a022b3d8c5b6e432bf043c4bdb7b38ac8',1,'input_roots_type(roots_type *expected_root_type):&#160;unit_tests.cpp']]],
+  ['is_5fzero_3',['is_zero',['../complex_8cpp.html#ac11b13568d1fc1edd90bf73db8aca501',1,'is_zero(double a):&#160;complex.cpp'],['../complex_8h.html#ac11b13568d1fc1edd90bf73db8aca501',1,'is_zero(double a):&#160;complex.cpp']]]
 ];

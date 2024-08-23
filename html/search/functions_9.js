@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['print_5fresults_0',['print_results',['../unit__tests_8cpp.html#a8b994870a132e05f97f6ed462756cefc',1,'print_results(unit_test data, complex received_x_1, complex received_x_2, roots_type received_root_type):&#160;unit_tests.cpp'],['../unit__tests_8h.html#a8b994870a132e05f97f6ed462756cefc',1,'print_results(unit_test data, complex received_x_1, complex received_x_2, roots_type received_root_type):&#160;unit_tests.cpp']]],
-  ['put_5ftest_5fto_5ffile_1',['put_test_to_file',['../unit__tests_8cpp.html#a72c4789d8f8096ccc085ebeba7cbd33b',1,'put_test_to_file(unit_test data):&#160;unit_tests.cpp'],['../unit__tests_8h.html#a72c4789d8f8096ccc085ebeba7cbd33b',1,'put_test_to_file(unit_test data):&#160;unit_tests.cpp']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['many_5fequations_1',['many_equations',['../square_8cpp.html#a61859bf9a33fb86ae0aa2b5e8a971896',1,'many_equations():&#160;square.cpp'],['../square_8h.html#a61859bf9a33fb86ae0aa2b5e8a971896',1,'many_equations():&#160;square.cpp']]],
+  ['max_2',['max',['../group___misc.html#ga60e2e94829d2c0abec61188ec92471c4',1,'TXLib.h']]],
+  ['min_3',['min',['../group___misc.html#gac1c42461c60ad97ef9c030cfd566f732',1,'TXLib.h']]]
 ];

@@ -16,9 +16,11 @@ var searchData=
   ['complex_2eh_13',['complex.h',['../complex_8h.html',1,'']]],
   ['complex_5fare_5fsimilar_14',['complex_are_similar',['../complex_8cpp.html#acc2d0cf69957f971d4f0e1ea2e156a20',1,'complex_are_similar(complex x_1, complex x_2):&#160;complex.cpp'],['../complex_8h.html#acc2d0cf69957f971d4f0e1ea2e156a20',1,'complex_are_similar(complex x_1, complex x_2):&#160;complex.cpp']]],
   ['complex_5fswap_15',['complex_swap',['../complex_8cpp.html#af73ae1bb7d523064f95f20bf7a8b838d',1,'complex_swap(complex *x_1, complex *x_2):&#160;complex.cpp'],['../complex_8h.html#af73ae1bb7d523064f95f20bf7a8b838d',1,'complex_swap(complex *x_1, complex *x_2):&#160;complex.cpp']]],
-  ['control_16',['CONTROL',['../group___dialogs.html#ga077745aacfb8431d6529e20ad67d1674',1,'txDialog']]],
-  ['convert_5froots_5ftype_17',['convert_roots_type',['../unit__tests_8cpp.html#a8335a27dd7c51e1b92838c5efbd10614',1,'convert_roots_type(int expected_root_int, roots_type *expected_root_type):&#160;unit_tests.cpp'],['../unit__tests_8h.html#a8335a27dd7c51e1b92838c5efbd10614',1,'convert_roots_type(int expected_root_int, roots_type *expected_root_type):&#160;unit_tests.cpp']]],
-  ['create_5ftest_5ffrom_5finput_18',['create_test_from_input',['../unit__tests_8cpp.html#ab5edb3ea1a7d43de3c21e95a634bd9f1',1,'create_test_from_input():&#160;unit_tests.cpp'],['../unit__tests_8h.html#ab5edb3ea1a7d43de3c21e95a634bd9f1',1,'create_test_from_input():&#160;unit_tests.cpp']]],
-  ['cs_5f_19',['cs_',['../classtx_auto_lock.html#a331135d21727f8d293dc9e112ebc59c5',1,'txAutoLock']]],
-  ['ctime_5fs_20',['ctime_s',['../_t_x_lib_8h.html#a94373a5bdb217343574c9851bb84cd2d',1,'TXLib.h']]]
+  ['console_5fpainting_2ecpp_16',['console_painting.cpp',['../console__painting_8cpp.html',1,'']]],
+  ['console_5fpainting_2eh_17',['console_painting.h',['../console__painting_8h.html',1,'']]],
+  ['control_18',['CONTROL',['../group___dialogs.html#ga077745aacfb8431d6529e20ad67d1674',1,'txDialog']]],
+  ['convert_5froots_5ftype_19',['convert_roots_type',['../unit__tests_8cpp.html#a8335a27dd7c51e1b92838c5efbd10614',1,'convert_roots_type(int expected_root_int, roots_type *expected_root_type):&#160;unit_tests.cpp'],['../unit__tests_8h.html#a8335a27dd7c51e1b92838c5efbd10614',1,'convert_roots_type(int expected_root_int, roots_type *expected_root_type):&#160;unit_tests.cpp']]],
+  ['create_5ftest_5ffrom_5finput_20',['create_test_from_input',['../unit__tests_8cpp.html#ab5edb3ea1a7d43de3c21e95a634bd9f1',1,'create_test_from_input():&#160;unit_tests.cpp'],['../unit__tests_8h.html#ab5edb3ea1a7d43de3c21e95a634bd9f1',1,'create_test_from_input():&#160;unit_tests.cpp']]],
+  ['cs_5f_21',['cs_',['../classtx_auto_lock.html#a331135d21727f8d293dc9e112ebc59c5',1,'txAutoLock']]],
+  ['ctime_5fs_22',['ctime_s',['../_t_x_lib_8h.html#a94373a5bdb217343574c9851bb84cd2d',1,'TXLib.h']]]
 ];

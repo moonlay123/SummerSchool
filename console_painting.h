@@ -1,6 +1,6 @@
 #ifndef PAINT
 #define PAINT
-
+#define TX_COMPILED
 #include "TXLib.h"
 
 /*!

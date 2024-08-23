@@ -1,10 +1,7 @@
 \doxysection{square.\+cpp File Reference}
 \hypertarget{square_8cpp}{}\label{square_8cpp}\index{square.cpp@{square.cpp}}
-{\ttfamily \#include $<$stdio.\+h$>$}\newline
-{\ttfamily \#include $<$assert.\+h$>$}\newline
-{\ttfamily \#include $<$math.\+h$>$}\newline
-{\ttfamily \#include "{}complex.\+h"{}}\newline
 {\ttfamily \#include "{}square.\+h"{}}\newline
+{\ttfamily \#include "{}complex.\+h"{}}\newline
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -22,7 +19,7 @@ int \mbox{\hyperlink{square_8cpp_a854f03ace21262dc39e1551e1129b5fd}{square\+\_\+
 \item 
 void \mbox{\hyperlink{square_8cpp_a89ab139a3490bc1b5bdb70bfe5941109}{square\+\_\+equation\+\_\+printer}} (int root\+\_\+fl, \mbox{\hyperlink{structcomplex}{complex}} x\+\_\+1, \mbox{\hyperlink{structcomplex}{complex}} x\+\_\+2)
 \item 
-\mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \mbox{\hyperlink{square_8cpp_afb65beb3a2a871b931510b3075e8c126}{linear\+\_\+case}} (\mbox{\hyperlink{structcoefficients}{coefficients}} coefs, \mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}x)
+\mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \mbox{\hyperlink{square_8cpp_a20ead253206fe973445caad498add770}{linear\+\_\+case}} (\mbox{\hyperlink{structcoefficients}{coefficients}} coefs, \mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}x\+\_\+1, \mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}x\+\_\+2)
 \item 
 \mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} \mbox{\hyperlink{square_8cpp_a6a54525952b1be4b186bcc9ed344bf09}{square\+\_\+case}} (\mbox{\hyperlink{structcoefficients}{coefficients}} coefs, \mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}x\+\_\+1, \mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}x\+\_\+2)
 \item 
@@ -51,7 +48,7 @@ calculated discriminant
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{square_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
 
 \Hypertarget{square_8cpp_a0f056f9424e5dd7a4635048a5c010c3d}\index{square.cpp@{square.cpp}!clean\_char\_buffer@{clean\_char\_buffer}}
 \index{clean\_char\_buffer@{clean\_char\_buffer}!square.cpp@{square.cpp}}
@@ -61,7 +58,7 @@ void clean\+\_\+char\+\_\+buffer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCapt
 
 Clean char buffer 
 
-Definition at line \mbox{\hyperlink{square_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
 
 \Hypertarget{square_8cpp_adc5c2119e8830fd87fc37940ba86254a}\index{square.cpp@{square.cpp}!double\_rand@{double\_rand}}
 \index{double\_rand@{double\_rand}!square.cpp@{square.cpp}}
@@ -74,13 +71,13 @@ double random value
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{square_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
 
-\Hypertarget{square_8cpp_afb65beb3a2a871b931510b3075e8c126}\index{square.cpp@{square.cpp}!linear\_case@{linear\_case}}
+\Hypertarget{square_8cpp_a20ead253206fe973445caad498add770}\index{square.cpp@{square.cpp}!linear\_case@{linear\_case}}
 \index{linear\_case@{linear\_case}!square.cpp@{square.cpp}}
 \doxysubsubsection{\texorpdfstring{linear\_case()}{linear\_case()}}
-{\footnotesize\ttfamily \label{square_8cpp_afb65beb3a2a871b931510b3075e8c126} 
-\mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} linear\+\_\+case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcoefficients}{coefficients}}}]{coefs}{, }\item[{\mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}}]{x}{}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{square_8cpp_a20ead253206fe973445caad498add770} 
+\mbox{\hyperlink{square_8h_a98df0a5ae6ff7dc84cfcf1863112d2c3}{roots\+\_\+type}} linear\+\_\+case (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structcoefficients}{coefficients}}}]{coefs}{, }\item[{\mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}}]{x\+\_\+1}{, }\item[{\mbox{\hyperlink{structcomplex}{complex}} \texorpdfstring{$\ast$}{*}}]{x\+\_\+2}{}\end{DoxyParamCaption})}
 
 Provide linear case of square equation 
 \begin{DoxyParams}[1]{Parameters}
@@ -96,7 +93,7 @@ type of amount of roots
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{square_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
 
 \Hypertarget{square_8cpp_a61859bf9a33fb86ae0aa2b5e8a971896}\index{square.cpp@{square.cpp}!many\_equations@{many\_equations}}
 \index{many\_equations@{many\_equations}!square.cpp@{square.cpp}}
@@ -106,7 +103,7 @@ void many\+\_\+equations (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Action with many randomly generated solves of square equation 
 
-Definition at line \mbox{\hyperlink{square_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
 
 \Hypertarget{square_8cpp_afb931f32160cf80969ffc3e09250780a}\index{square.cpp@{square.cpp}!solve@{solve}}
 \index{solve@{solve}!square.cpp@{square.cpp}}
@@ -130,7 +127,7 @@ type of roots
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{square_8cpp_source_l00160}{160}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00187}{187}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
 
 \Hypertarget{square_8cpp_a6a54525952b1be4b186bcc9ed344bf09}\index{square.cpp@{square.cpp}!square\_case@{square\_case}}
 \index{square\_case@{square\_case}!square.cpp@{square.cpp}}
@@ -154,7 +151,7 @@ type of roots
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{square_8cpp_source_l00135}{135}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00162}{162}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
 
 \Hypertarget{square_8cpp_a854f03ace21262dc39e1551e1129b5fd}\index{square.cpp@{square.cpp}!square\_equation\_input@{square\_equation\_input}}
 \index{square\_equation\_input@{square\_equation\_input}!square.cpp@{square.cpp}}
@@ -173,7 +170,7 @@ Input roots
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{square_8cpp_source_l00062}{62}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00063}{63}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
 
 \Hypertarget{square_8cpp_a89ab139a3490bc1b5bdb70bfe5941109}\index{square.cpp@{square.cpp}!square\_equation\_printer@{square\_equation\_printer}}
 \index{square\_equation\_printer@{square\_equation\_printer}!square.cpp@{square.cpp}}
@@ -192,7 +189,7 @@ Print roots
 \end{DoxyParams}
 
 
-Definition at line \mbox{\hyperlink{square_8cpp_source_l00084}{84}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
 
 \Hypertarget{square_8cpp_a0e09ffeb237a6d28969d7c099f352454}\index{square.cpp@{square.cpp}!standard@{standard}}
 \index{standard@{standard}!square.cpp@{square.cpp}}
@@ -202,5 +199,5 @@ void standard (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
 
 Action with user-\/specified coefficients 
 
-Definition at line \mbox{\hyperlink{square_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
+Definition at line \mbox{\hyperlink{square_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{square_8cpp_source}{square.\+cpp}}.
 

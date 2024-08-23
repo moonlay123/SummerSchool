@@ -62,6 +62,8 @@ void many_equations()
 
 int square_equation_input(coefficients *coefs)
 {
+    assert( coefs);
+
     int counter = 0;
     bool fl = 0;
 

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linear_5fcase_0',['linear_case',['../square_8cpp.html#afb65beb3a2a871b931510b3075e8c126',1,'linear_case(coefficients coefs, complex *x):&#160;square.cpp'],['../square_8h.html#afb65beb3a2a871b931510b3075e8c126',1,'linear_case(coefficients coefs, complex *x):&#160;square.cpp']]]
+  ['greater_5fzero_0',['greater_zero',['../complex_8cpp.html#aaf0c6edc5d4d302967d36816d838a989',1,'greater_zero(double a):&#160;complex.cpp'],['../complex_8h.html#aaf0c6edc5d4d302967d36816d838a989',1,'greater_zero(double a):&#160;complex.cpp']]]
 ];

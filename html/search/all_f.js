@@ -21,6 +21,7 @@ var searchData=
   ['strtok_5fs_18',['strtok_s',['../_t_x_lib_8h.html#a7c6e0c0ae31b262c6d4402d0fdabdfe9',1,'TXLib.h']]],
   ['style_19',['style',['../structtx_dialog_1_1_layout.html#a7e39a7a8f3d68749766e46dd311f41fd',1,'txDialog::Layout']]],
   ['success_20',['SUCCESS',['../square_8h.html#a06fc87d81c62e9abb8790b6e5713c55bac7f69f7c9e5aea9b8f54cf02870e2bf8',1,'square.h']]],
-  ['sx_21',['sx',['../structtx_dialog_1_1_layout.html#ad412d3c503fde76edb4b79e9bb5bdee4',1,'txDialog::Layout']]],
-  ['sy_22',['sy',['../structtx_dialog_1_1_layout.html#a0153fced86e1addd87ec429590e82741',1,'txDialog::Layout']]]
+  ['success_5fcolor_21',['success_color',['../console__painting_8cpp.html#a85ca0251ecee2836e1ed6e16ff0d5877',1,'success_color():&#160;console_painting.cpp'],['../console__painting_8h.html#a85ca0251ecee2836e1ed6e16ff0d5877',1,'success_color():&#160;console_painting.cpp']]],
+  ['sx_22',['sx',['../structtx_dialog_1_1_layout.html#ad412d3c503fde76edb4b79e9bb5bdee4',1,'txDialog::Layout']]],
+  ['sy_23',['sy',['../structtx_dialog_1_1_layout.html#a0153fced86e1addd87ec429590e82741',1,'txDialog::Layout']]]
 ];

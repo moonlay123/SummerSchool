@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['greater_5fzero_0',['greater_zero',['../complex_8cpp.html#aaf0c6edc5d4d302967d36816d838a989',1,'greater_zero(double a):&#160;complex.cpp'],['../complex_8h.html#aaf0c6edc5d4d302967d36816d838a989',1,'greater_zero(double a):&#160;complex.cpp']]]
+  ['error_5fcolor_0',['error_color',['../console__painting_8cpp.html#a101a4ebe46153dd6bf2b82d722fb2a07',1,'error_color():&#160;console_painting.cpp'],['../console__painting_8h.html#a101a4ebe46153dd6bf2b82d722fb2a07',1,'error_color():&#160;console_painting.cpp']]]
 ];
