@@ -32,8 +32,8 @@ void standard()
     } else
     {
         failure_color();
-
-        printf("Try next time\n");
+        printf("Try next time");
+        basic_color();
     }
 }
 
@@ -74,8 +74,9 @@ int square_equation_input(coefficients *coefs)
         if (scanf("%lf %lf %lf", &coefs->a, &coefs->b, &coefs->c) < 3)
         {
             failure_color();
+            printf("Wrong input, try again");
+            basic_color();
 
-            printf("Wrong input, try again \n");
             clean_char_buffer();
             ++counter;
         } else
@@ -95,51 +96,65 @@ void square_equation_printer(int root_fl, complex x_1, complex x_2)
     switch (root_fl)
     {
         case ZERO:
-            printf("No roots\n");
+            printf("No roots\n\n");
             break;
         case ONE:
-            printf("Only one real root\n");
+            printf("Only one real root\n\n");
             printf("%.2lf", x_1.real);
             break;
         case TWO:
             printf("Two unique real roots\n");
-            printf("First root  %.2lf\nSecond root %.2lf\n", x_1.real, x_2.real);
+            printf("First root  %.2lf\nSecond root %.2lf\n\n", x_1.real, x_2.real);
             break;
         case INFINITES:
             printf("Infinite amount of roots\n");
             break;
         case TWO_SIMILAR:
             printf("Two similar real roots\n");
-            printf("Similar roots %.2lf and %.2lf", x_1.real, x_2.real);
+            printf("Similar roots %.2lf and %.2lf\n\n", x_1.real, x_2.real);
             break;
         case COMPLEX:
             printf("Two complex roots\n");
-            printf("First root  %.2lf + %.2lf i\nSecond root %.2lf - %.2lf i\n",
+            printf("First root  %.2lf + %.2lf i\nSecond root %.2lf - %.2lf i\n\n",
                     x_1.real, abs(x_1.imaginary), x_2.real, abs(x_2.imaginary));
             break;
         default:
             unexpected_color();
             printf("Unsupported case");
+            basic_color();
             break;
     }
 
     basic_color();
 }
 
-roots_type linear_case(coefficients coefs, complex *x)
+roots_type linear_case(coefficients coefs, complex *x_1, complex *x_2)
 {
     if (is_zero(coefs.b))
     {
         if (is_zero(coefs.c))
         {
+            x_1->imaginary = NAN;
+            x_1->real = NAN;
+            x_1->imaginary = NAN;
+            x_1->real = NAN;
+
             return INFINITES;
         } else
         {
+            x_1->imaginary = NAN;
+            x_1->real = NAN;
+            x_1->imaginary = NAN;
+            x_1->real = NAN;
+
             return ZERO;
         }
     } else
     {
-        x->real = (-coefs.c / coefs.b);
+        x_1->real = (-coefs.c / coefs.b);
+        x_1->imaginary = 0;
+        x_2->imaginary = NAN;
+        x_2->real = NAN;
 
         return ONE;
     }
@@ -183,7 +198,7 @@ roots_type solve(coefficients coefs, complex *x_1, complex *x_2)
 
     if (is_zero(coefs.a))
     {
-        root_fl = linear_case(coefs, x_1);
+        root_fl = linear_case(coefs, x_1, x_2);
     } else
     {
         root_fl = square_case(coefs, x_1, x_2);

@@ -14,7 +14,6 @@ void put_test_to_file(unit_test data)
         if (fgetc(fp) == '\n')
             lines_counter++;
     }
-
     fprintf(fp, "%d %lf %lf %lf %lf %lf %lf %lf %d\n", lines_counter,
                 data.coefs.a, data.coefs.b, data.coefs.c,
                 data.expected_x_1.real, data.expected_x_1.imaginary,
@@ -39,7 +38,7 @@ test_bufer read_file()
     int expected_root_int = NON_ROOT_TYPE;
 
     test_bufer tests;
-    while(fscanf(fp, "%d %lf %lf %lf %lf %lf %lf %lf %d", &number_of_test,
+    while (fscanf(fp, "%d %lf %lf %lf %lf %lf %lf %lf %d", &number_of_test,
                 &coefs.a, &coefs.b, &coefs.c,
                 &expected_x_1.real, &expected_x_1.imaginary,
                 &expected_x_2.real, &expected_x_2.imaginary,
@@ -95,8 +94,6 @@ void input_roots_type(roots_type *expected_root_type)
 
     while (!fl)
     {
-        basic_color();
-
         printf("Enter excepted root type of square equation\n"
                 "1) two unique roots\n"
                 "2) one root\n"
@@ -108,8 +105,9 @@ void input_roots_type(roots_type *expected_root_type)
         if (scanf("%d", &expected_root_int) < 1 or expected_root_int > 6 or expected_root_int < 1)
         {
             failure_color();
+            printf("Wrong input, try again");
+            basic_color();
 
-            printf("Wrong input, try again \n");
             clean_char_buffer();
         } else
         {
@@ -127,16 +125,14 @@ void input_roots(complex *x_1, complex *x_2)
 
     while (!fl)
     {
-        basic_color();
-
         printf("Enter expected roots as x_1_real x_1_imaginary x_2_real x_2_imaginary\n"
-                "If your equation doesn't have enough roots put them as 0 0\n");
+                "If your equation doesn't have enough roots put them as nan nan, inf inf or 0 0\n");
 
         if (scanf("%lf %lf %lf %lf", &x_1_real, &x_1_imaginary, &x_2_real, &x_2_imaginary) < 4)
         {
             failure_color();
-
-            printf("Wrong input, try again \n");
+            printf("Wrong input, try again");
+            basic_color();
             clean_char_buffer();
         } else
         {
@@ -184,9 +180,7 @@ int full_test(unit_test data)
     }
 
     success_color();
-
-    printf("Test %d end with SUCCESS \n\n", data.number_of_test);
-
+    printf("Test %d end with SUCCESS", data.number_of_test);
     basic_color();
 
     return SUCCESS;
@@ -197,12 +191,18 @@ bool check_test_correctness(unit_test data,
 {
     if (data.expected_root_type == received_root_type)
     {
-        if (complex_are_similar(data.expected_x_1, received_x_1) and
-            complex_are_similar(data.expected_x_2, received_x_2))
+        if (received_root_type == NON_ROOT_TYPE or
+            received_root_type == INFINITES or received_root_type == ZERO)
         {
             return SUCCESS;
-        }
-        else
+        } else if ((complex_are_similar(data.expected_x_1, received_x_1) and
+            complex_are_similar(data.expected_x_2, received_x_2)) or
+            (received_root_type == ONE and
+            (complex_are_similar(data.expected_x_1, received_x_1) or
+            complex_are_similar(data.expected_x_2, received_x_2))))
+        {
+            return SUCCESS;
+        } else
         {
             return FAILURE;
         }
@@ -215,16 +215,14 @@ bool check_test_correctness(unit_test data,
 void print_results(unit_test data, complex received_x_1, complex received_x_2, roots_type received_root_type)
 {
     failure_color();
-
-    printf("\nTest %d with coefs a = %lf, b = %lf, c = %lf\n"
+    printf("Test %d with coefs a = %lf, b = %lf, c = %lf\n"
            "Expected values: root_type = %d, x_1 = %lf - %lf i, x_2 = %lf + %lf i\n"
-           "Received values: root_type = %d, x_1 = %lf - %lf i, x_2 = %lf + %lf i\n\n",
+           "Received values: root_type = %d, x_1 = %lf - %lf i, x_2 = %lf + %lf i",
             data.number_of_test, data.coefs.a, data.coefs.b, data.coefs.c,
             data.expected_root_type, data.expected_x_1.real, abs(data.expected_x_1.imaginary),
             data.expected_x_2.real, data.expected_x_2.imaginary,
             received_root_type, received_x_1.real, abs(received_x_1.imaginary),
             received_x_2.real, received_x_2.imaginary);
-
     basic_color();
 }
 
@@ -238,9 +236,14 @@ int run_all_tests()
     {
         fl += full_test(all_tests.tests[i]) == FAILURE ? FAILURE : SUCCESS;
     }
-
+    if (fl == 0)
+    {
+        success_color();
+    } else
+    {
+        failure_color();
+    }
+    printf("Tests ended with %d failure(s)", fl);
     basic_color();
-
-    printf("Tests ended with %d failure(s)\n", fl);
     return fl;
 }

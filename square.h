@@ -48,7 +48,7 @@ Provide linear case of square equation
 \param[out] x root from this case
 \return type of amount of roots
 */
-roots_type linear_case(coefficients coefs, complex *x);
+roots_type linear_case(coefficients coefs, complex *x_1, complex *x_2);
 
 /*!
 Provide square case of square equation

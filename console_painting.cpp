@@ -2,36 +2,60 @@
 
 void random_color()
 {
-    txSetConsoleAttr(16 * (rand() % 16) + (rand() % 16));
-    Sleep(100);
+    unsigned now = txGetConsoleAttr();
+
+    txSetConsoleAttr (16 * (rand() % 16) + (rand() % 16));
+
+    if (now != txGetConsoleAttr())
+        printf("\n");
 }
 
 void error_color()
 {
-    txSetConsoleAttr(0x40);
-    Sleep(100);
+    unsigned now = txGetConsoleAttr();
+
+    txSetConsoleAttr (0x40);
+
+    if (now != txGetConsoleAttr())
+        printf("\n");
 }
 
 void unexpected_color()
 {
-    txSetConsoleAttr(0xDF);
-    Sleep(100);
+    unsigned now = txGetConsoleAttr();
+
+    txSetConsoleAttr (0xDF);
+
+    if (now != txGetConsoleAttr())
+        printf("\n");
 }
 
 void success_color()
 {
-    txSetConsoleAttr(0x20);
-    Sleep(100);
+    unsigned now = txGetConsoleAttr();
+
+    txSetConsoleAttr (0x20);
+
+    if (now != txGetConsoleAttr())
+        printf("\n");
 }
 
 void failure_color()
 {
-    txSetConsoleAttr(0x50);
-    Sleep(100);
+    unsigned now = txGetConsoleAttr();
+
+    txSetConsoleAttr (0x50);
+
+    if (now != txGetConsoleAttr())
+        printf("\n");
 }
 
 void basic_color()
 {
-    txSetConsoleAttr(0x00);
-    Sleep(100);
+    unsigned now = txGetConsoleAttr();
+
+    txSetConsoleAttr (0x00);
+
+    if (now != txGetConsoleAttr())
+        printf("\n");
 }

@@ -29,20 +29,22 @@ int main()
                 break;
             case NON_TYPE:
                 error_color();
-                printf("No choose\n");
+                printf("No choose");
+                basic_color();
                 break;
             case EXIT:
                 fl = 1;
                 break;
             default:
                 unexpected_color();
-                printf("Unknown command\n");
+                printf("Unknown command");
+                basic_color();
                 break;
         }
     }
 
-    txSetConsoleAttr(0x00);
-    txClearConsole();
+    txSetConsoleAttr (0x00);
+    txClearConsole ();
 
     return SUCCESS;
 }
@@ -54,8 +56,6 @@ choose_type choose_variant()
     while (choose != STANDARD and choose != MANY_EQUATIONS and choose != UNIT_TESTS
                                                 and choose != INPUT_UNIT_TEST and choose != EXIT and !fl)
     {
-        basic_color();
-
         printf("Choose what you want\n1) Standard input\n2) Random input\n3) Unit tests\n4) Input your unit test\n5) Exit program\n");
         fl = scanf("%d", &choose);
 
@@ -63,8 +63,8 @@ choose_type choose_variant()
                                                 and choose != INPUT_UNIT_TEST and choose != EXIT and !fl)
         {
             failure_color();
-
-            printf("Wrong input, try again\n");
+            printf("Wrong input, try again");
+            basic_color();
             clean_char_buffer();
         }
     }
