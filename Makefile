@@ -5,7 +5,7 @@ COMP = g++
 SOURCES = $(wildcard *.cpp)
 OBJECTS = $(wildcard objects/*.o)
 MOVE_OBJECTS = $(wildcard *.o)
-EXECUTABLE = main
+EXECUTABLE = proj
 TX_LIB = txlib
 look:
 	echo $(SOURCES)
@@ -21,7 +21,7 @@ tx: $(TX_LIB)
 	$(COMP) $(FLAGS) -c TXLib/$<.cpp -o objects/$<.o
 
 all: $(SOURCES)
-	$(COMP) $(SOURCES) -o main $(FLAGS)
+	$(COMP) $(SOURCES) -o $(EXECUTABLE) $(FLAGS)
 
 %.o: %.cpp
 	$(COMP) $(FLAGS) -c $< -o objects/$@

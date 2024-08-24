@@ -1,9 +1,11 @@
 #include "console_painting.h"
 
+static int color_flag = 0;
 void random_color()
 {
     unsigned now = txGetConsoleAttr();
 
+    color_flag = 1 - color_flag;
     txSetConsoleAttr (16 * (rand() % 16) + (rand() % 16));
 
     if (now != txGetConsoleAttr())
@@ -54,7 +56,13 @@ void basic_color()
 {
     unsigned now = txGetConsoleAttr();
 
-    txSetConsoleAttr (0x00);
+    if (color_flag == 1)
+    {
+        txSetConsoleAttr (16 * (rand() % 16) + (rand() % 16));
+    } else
+    {
+        txSetConsoleAttr (0x00);
+    }
 
     if (now != txGetConsoleAttr())
         printf("\n");

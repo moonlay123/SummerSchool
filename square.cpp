@@ -4,6 +4,10 @@
 
 double calculate_Discriminant(coefficients coefs)
 {
+    assert(isfinite(coefs.a));
+    assert(isfinite(coefs.b));
+    assert(isfinite(coefs.c));
+
     return coefs.b * coefs.b - 4 * coefs.a * coefs.c;
 }
 
@@ -36,10 +40,14 @@ void standard()
 
 void solve_with_print(coefficients coefs)
 {
+    assert(isfinite(coefs.a));
+    assert(isfinite(coefs.b));
+    assert(isfinite(coefs.c));
+
     complex x_1 = {0, 0}, x_2 = {0, 0};
     int root_fl = solve(coefs, &x_1, &x_2);
 
-    square_equation_printer(root_fl, x_1, x_2);
+    square_equation_printer(root_fl, x_1, x_2, coefs);
 }
 
 void many_equations()
@@ -55,19 +63,21 @@ void many_equations()
         printf("\nHere is %d equation\n", i+1);
 
         coefficients coefs = {double_rand(), double_rand(), double_rand()};
-        printf("Your coefs: a = %.2lf, b = %.2lf, c = %.2lf\n", coefs.a, coefs.b, coefs.c);
 
         complex x_1 = {0, 0}, x_2 = {0, 0};
         int root_fl = solve(coefs, &x_1, &x_2);
 
-        square_equation_printer(root_fl, x_1, x_2);
+        square_equation_printer(root_fl, x_1, x_2, coefs);
     }
 
 }
 
 int square_equation_input(coefficients *coefs)
 {
-    assert( coefs);
+    assert(coefs != NULL);
+    assert(isfinite(coefs->a));
+    assert(isfinite(coefs->b));
+    assert(isfinite(coefs->c));
 
     int counter = 0;
     bool fl = 0;
@@ -95,10 +105,14 @@ int square_equation_input(coefficients *coefs)
     return SUCCESS;
 }
 
-void square_equation_printer(int root_fl, complex x_1, complex x_2)
+void square_equation_printer(int root_fl, complex x_1, complex x_2, coefficients coefs)
 {
+    assert(isfinite(coefs.a));
+    assert(isfinite(coefs.b));
+    assert(isfinite(coefs.c));
 
     basic_color();
+    printf("Coefs of your square equation are %.4lf %.4lf %.4lf\n", coefs.a, coefs.b, coefs.c);
 
     switch (root_fl)
     {
@@ -107,22 +121,22 @@ void square_equation_printer(int root_fl, complex x_1, complex x_2)
             break;
         case ONE:
             printf("Only one real root\n\n");
-            printf("%.2lf", x_1.real);
+            printf("%.4lf", x_1.real);
             break;
         case TWO:
             printf("Two unique real roots\n");
-            printf("First root  %.2lf\nSecond root %.2lf\n\n", x_1.real, x_2.real);
+            printf("First root  %.4lf\nSecond root %.4lf\n\n", x_1.real, x_2.real);
             break;
         case INFINITES:
             printf("Infinite amount of roots\n");
             break;
         case TWO_SIMILAR:
             printf("Two similar real roots\n");
-            printf("Similar roots %.2lf and %.2lf\n\n", x_1.real, x_2.real);
+            printf("Similar roots %.4lf and %.4lf\n\n", x_1.real, x_2.real);
             break;
         case COMPLEX:
             printf("Two complex roots\n");
-            printf("First root  %.2lf + %.2lf i\nSecond root %.2lf - %.2lf i\n\n",
+            printf("First root  %.4lf + %.4lf i\nSecond root %.4lf - %.4lf i\n\n",
                     x_1.real, abs(x_1.imaginary), x_2.real, abs(x_2.imaginary));
             break;
         default:
@@ -137,6 +151,14 @@ void square_equation_printer(int root_fl, complex x_1, complex x_2)
 
 roots_type linear_case(coefficients coefs, complex *x_1, complex *x_2)
 {
+    assert(isfinite(coefs.a));
+    assert(isfinite(coefs.b));
+    assert(isfinite(coefs.c));
+
+    assert(x_1 != NULL);
+    assert(x_2 != NULL);
+    assert(x_1 != x_2);
+
     if (is_zero(coefs.b))
     {
         if (is_zero(coefs.c))
@@ -168,6 +190,14 @@ roots_type linear_case(coefficients coefs, complex *x_1, complex *x_2)
 }
 roots_type square_case(coefficients coefs, complex *x_1, complex *x_2)
 {
+    assert(isfinite(coefs.a));
+    assert(isfinite(coefs.b));
+    assert(isfinite(coefs.c));
+
+    assert(x_1 != NULL);
+    assert(x_2 != NULL);
+    assert(x_1 != x_2);
+
     double D = calculate_Discriminant(coefs);
     double sqrtD = sqrt(abs(D));
 

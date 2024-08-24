@@ -75,8 +75,9 @@ Print roots
 \param[in]  root_fl info about type of roots
 \param[in]  x_1 double c from square equation
 \param[in]  x_2 double c from square equation
+\param[in] coefs coefs of square equation
 */
-void square_equation_printer(int root_fl, complex x_1, complex x_2);
+void square_equation_printer(int root_fl, complex x_1, complex x_2, coefficients coefs);
 
 /*!
 Input roots

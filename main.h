@@ -35,7 +35,7 @@ Solve square root equation from getted file
 void file_flag(char ** files, int files_size, int files_uk);
 
 /*!
-Use all flags actions
+Use all flags actions and after free dinamic memory
 \param[in] files mas of all file of flag compile
 \param[in] queue mas of all "-" flags
 \param[in] argc size of queue
@@ -43,6 +43,15 @@ Use all flags actions
 */
 void flag_actions(char **files, int *queue, int argc, int files_size);
 
+/*!
+Handle all flag cases
+\param[out] files mas of file names
+\param[in] argv mas of flags
+\param[out] queue mas of handled flags
+\param[in] argc size of argv, files, queue
+\param[out] file_uk pointer of number of files
+*/
+void flag_handler(char **files, char **argv, int *queue, int argc, int *files_uk);
 
 /*!
 Compare for qsort

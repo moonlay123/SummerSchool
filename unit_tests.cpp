@@ -3,7 +3,7 @@
 void put_test_to_file(unit_test data)
 {
     FILE *fp;
-    if ((fp = fopen("tests", "a+")) == NULL)
+    if ((fp = fopen("files/tests", "a+")) == NULL)
     {
         exit(EXIT_FAILURE);
     }
@@ -24,7 +24,7 @@ void put_test_to_file(unit_test data)
 test_bufer read_file()
 {
     FILE *fp;
-    if ((fp = fopen("tests", "r")) == NULL)
+    if ((fp = fopen("files/tests", "r")) == NULL)
     {
         exit(EXIT_FAILURE);
     }
@@ -58,6 +58,8 @@ test_bufer read_file()
 
 void convert_roots_type(int expected_root_int, roots_type *expected_root_type)
 {
+    assert(expected_root_type != NULL);
+
     switch (expected_root_int)
     {
         case NON_ROOT_TYPE:
@@ -89,6 +91,8 @@ void convert_roots_type(int expected_root_int, roots_type *expected_root_type)
 
 void input_roots_type(roots_type *expected_root_type)
 {
+    assert(expected_root_type != NULL);
+
     int expected_root_int = NON_ROOT_TYPE;
     bool fl = 0;
 
@@ -120,6 +124,9 @@ void input_roots_type(roots_type *expected_root_type)
 
 void input_roots(complex *x_1, complex *x_2)
 {
+    assert(x_1 != NULL);
+    assert(x_2 != NULL);
+
     double x_1_real = 0, x_2_real = 0, x_1_imaginary = 0, x_2_imaginary = 0;
     bool fl = 0;
 
@@ -213,9 +220,9 @@ bool check_test_correctness(unit_test data,
 void print_results(unit_test data, complex received_x_1, complex received_x_2, roots_type received_root_type)
 {
     failure_color();
-    printf("Test %d with coefs a = %lf, b = %lf, c = %lf\n"
-           "Expected values: root_type = %d, x_1 = %lf - %lf i, x_2 = %lf + %lf i\n"
-           "Received values: root_type = %d, x_1 = %lf - %lf i, x_2 = %lf + %lf i",
+    printf("Test %d with coefs a = %.4lf, b = %.4lf, c = %.4lf\n"
+           "Expected values: root_type = %d, x_1 = %.4lf - %.4lf i, x_2 = %.4lf + %.4lf i\n"
+           "Received values: root_type = %d, x_1 = %.4lf - %.4lf i, x_2 = %.4lf + %.4lf i",
             data.number_of_test, data.coefs.a, data.coefs.b, data.coefs.c,
             data.expected_root_type, data.expected_x_1.real, abs(data.expected_x_1.imaginary),
             data.expected_x_2.real, data.expected_x_2.imaginary,

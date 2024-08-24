@@ -1,22 +1,33 @@
 #include "unit_tests.h"
 #include "main.h"
 
-int compare(const void *a, const void *b)
-{
-    int l = *((const int *) a);
-    int r = *((const int *) b);
-    return l-r;
-}
-
 int main(int argc, char *argv[])
 {
     ++argv; --argc;
     int *queue = (int *) calloc(argc, sizeof(int));
 
-    int files_uk = 0, file_flag_counts = 0;
+    int files_uk = 0;
     char **files = (char **) calloc(argc, sizeof(char *));
 
+    flag_handler(files, argv, queue, argc, &files_uk);
+
+    flag_actions(files, queue, argc, files_uk);
+
+    txSetConsoleAttr (0x00);
+
+    return SUCCESS;
+}
+
+void flag_handler(char **files, char **argv, int *queue, int argc, int *files_uk)
+{
+    assert(files != NULL);
+    assert(queue !=NULL);
+    assert(files_uk != NULL);
+
+    int file_flag_counts = 0;
+
     basic_color();
+
     for (int i = 0; i < argc; ++i)
     {
         if (!strcmp(argv[i], "-menu"))
@@ -31,33 +42,52 @@ int main(int argc, char *argv[])
             ++file_flag_counts;
         } else if(argv[i][0] != '-')
         {
-            files[files_uk++] = argv[i];
+            files[(*files_uk)++] = argv[i];
             queue[i] = NOTHING;
         } else if(!strcmp(argv[i], "-clean"))
         {
             queue[i] = CLEAN_CONSOLE;
+        } else if(!strcmp(argv[i], "-exit"))
+        {
+            queue[i] = EXIT_FLAG;
+        } else if(!strcmp(argv[i], "-help"))
+        {
+            queue[i] = HELP;
         }
         else
         {
+            unexpected_color();
+            printf("No such flag");
+            basic_color();
+
             queue[i] = NOTHING;
         }
     }
 
-    assert(files_uk == file_flag_counts);
+    assert(*files_uk == file_flag_counts);
 
     qsort(queue, argc, sizeof(int), compare);
-
-    flag_actions(files, queue, argc, files_uk);
-
-    txSetConsoleAttr (0x00);
+}
 
 
-    return SUCCESS;
+int compare(const void *a, const void *b)
+{
+    assert(a != NULL);
+    assert(b != NULL);
+
+    int l = *((const int *) a);
+    int r = *((const int *) b);
+    return l-r;
 }
 
 void flag_actions(char **files, int *queue, int argc, int files_size)
 {
+    assert(files != NULL);
+    assert(queue !=NULL);
+
     int files_uk = 0;
+    if (argc == 0)
+        help();
     for(int i = 0; i < argc; ++i)
     {
         switch (queue[i])
@@ -65,8 +95,12 @@ void flag_actions(char **files, int *queue, int argc, int files_size)
             case NOTHING:
                 break;
             case EXIT_FLAG:
+                free(queue);
+                free(files);
+                return;
                 break;
             case HELP:
+                help();
                 break;
             case RAND_COLOR:
                 random_color();
@@ -90,8 +124,9 @@ void flag_actions(char **files, int *queue, int argc, int files_size)
     free(files);
 }
 
-void file_flag(char ** files, int files_size, int files_uk)
+void file_flag(char **files, int files_size, int files_uk)
 {
+    assert(files != NULL);
     assert(files_uk < files_size);
     assert(files[files_uk] != NULL);
 
@@ -99,7 +134,7 @@ void file_flag(char ** files, int files_size, int files_uk)
     if ((fp = fopen(files[files_uk], "r")) == NULL)
     {
         error_color();
-        printf("No file with name %s", files[files_uk]);
+        printf("No file with path %s", files[files_uk]);
         basic_color();
 
         return;
@@ -112,14 +147,19 @@ void file_flag(char ** files, int files_size, int files_uk)
         printf("Wrong file structure, it must looks like a b c of square equation");
         basic_color();
     }
-
+    printf("Solve of square equation from file with path %s", files[files_uk]);
     solve_with_print(coefs);
 }
 
 void help()
 {
     unexpected_color();
-    printf("I'm too lazy to write it, see in new versions");
+    printf("Usage: ./main [flags] [files] in any order\n"
+           "-rand\t Create random color setup for console for once\n"
+           "-help\t open help tips\n"
+           "-menu\t open choosing menu\n"
+           "-file\t choose file with quadratic coefs and get solve\n"
+           "-clean\t Clear console window after program end\n");
     basic_color();
 }
 
