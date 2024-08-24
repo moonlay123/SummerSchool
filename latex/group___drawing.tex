@@ -835,7 +835,7 @@ HDC tx\+Create\+DIBSection (\begin{DoxyParamCaption}\item[{double}]{sizeX}{, }\i
 \end{DoxySeeAlso}
 @usage 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{txCreateWindow}}\ (800,\ 600);}
 \DoxyCodeLine{}
@@ -914,7 +914,7 @@ HWND tx\+Create\+Window (\begin{DoxyParamCaption}\item[{double}]{sizeX}{, }\item
  Если такой программе нужно одно окно, то в проект следует включить файл, ответственный за рисование, скажем, {\ttfamily graphics.\+cpp}, и выводить графику только через функции этого файла. Такой файл (или библиотеку) в больших проектах часто называют графическим движком. @nn Это влияет не только на фунции рисования, но и на такие функции, как \doxylink{group___mouse_gae56f541d32ff7324dd6dd340411c1130}{tx\+Mouse\+X()}, \doxylink{group___mouse_ga481847278ec77647082072325be5c226}{tx\+Mouse\+Y()}, \doxylink{group___mouse_ga44606f3b7f5f345d15bb20d46fcf78b6}{tx\+Mouse\+Pos()} и другие, прямо или косвенно зависящие от создания окна рисования. @nn То же касается и использования TXLib в {\bfseries{DLL}}.
 \end{DoxyWarning}
 \begin{DoxyNote}{Note}
-Вспомогательные окна могут создаваться по одному на каждый файл многофайлового проекта или загруженную DLL. Для закрытия вспомогательных окон используется \doxylink{group___drawing_ga0a3cf3a018cea9d5889d2626e9a37136}{tx\+Destroy\+Window()}. Для закрытия главного надо выйти из \doxylink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}.
+Вспомогательные окна могут создаваться по одному на каждый файл многофайлового проекта или загруженную DLL. Для закрытия вспомогательных окон используется \doxylink{group___drawing_ga0a3cf3a018cea9d5889d2626e9a37136}{tx\+Destroy\+Window()}. Для закрытия главного надо выйти из \doxylink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main()}.
 \end{DoxyNote}
 \begin{DoxyWarning}{Warning}
 Одновременное создание нескольких окон не потокобезопасно (not thread-\/safe). @nn Многооконная программа на TXLib тормозит, да и однооконная тоже не отличается высокой скоростью. Чтобы избавиться от этого, бросьте TXLib и используйте другие оконные библиотеки\+: \href{http://qt-project.org}{\texttt{ Qt}}, \href{http://wxwidgets.org}{\texttt{ wx\+Widgets}}, \href{http://gtk.org}{\texttt{ GTK+}} и т.\+д., или библиотеки, специально разработанные для создания игр\+: \href{http://sfml-dev.org}{\texttt{ SFML}} (она простая), \href{http://libsdl.org}{\texttt{ SDL}} и другие. Вы можете написать и свою собственную оконную библиотеку, основанную на \href{http://opengl.org}{\texttt{ Open\+GL}} @strike и получится SFML или SDL\+:), @endstrike или DirectX. Помните, что цель TXLib -- облегчить первые шаги, но потом стать ненужной.
@@ -1017,7 +1017,7 @@ bool tx\+Destroy\+Window (\begin{DoxyParamCaption}\item[{HWND}]{wnd}{ = {\ttfami
 Если операция была успешна -- true, иначе -- false.
 \end{DoxyReturn}
 \begin{DoxyWarning}{Warning}
-Если уничтожается окно TXLib, функция \doxylink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()} принудительно прерывается и программа завершается. При этом {\bfseries{не}} гарантируется правильное завершение программы, поэтому так делать {\bfseries{не}} рекомендуется.
+Если уничтожается окно TXLib, функция \doxylink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main()} принудительно прерывается и программа завершается. При этом {\bfseries{не}} гарантируется правильное завершение программы, поэтому так делать {\bfseries{не}} рекомендуется.
 \end{DoxyWarning}
 \begin{DoxySeeAlso}{See also}
 \doxylink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}
@@ -1830,7 +1830,7 @@ bool tx\+IDont\+Want\+To\+Have\+APause\+After\+My\+Program\+Before\+The\+Window\
 \end{DoxySeeAlso}
 @usage 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{txCreateWindow}}\ (800,\ 600);}
 \DoxyCodeLine{}

@@ -1113,7 +1113,7 @@ Variables</h2></td></tr>
 <div class="line">    <a class="code hl_define" href="#gac3163c41843503fb9ed5b51d37fbfb66">TX_DLLIMPORT</a> (<span class="keyword">false</span>, <span class="stringliteral">&quot;ComDlg32.dll&quot;</span>, <span class="keywordtype">bool</span>, GetSaveFileNameA, (OPENFILENAMEA* ofnStruct), WINAPI);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>()</div>
 <div class="line">    {</div>
 <div class="line">    <span class="keywordtype">char</span> fileName[MAX_PATH] = <span class="stringliteral">&quot;&quot;</span>;</div>
 <div class="line"> </div>
@@ -1148,7 +1148,7 @@ Variables</h2></td></tr>
 <div class="ttc" id="agroup___drawing_html_gafa31ebd8ed957c41713900a407497cf8"><div class="ttname"><a href="group___drawing.html#gafa31ebd8ed957c41713900a407497cf8">txWindow</a></div><div class="ttdeci">HWND txWindow() tx_nodiscard</div><div class="ttdoc">Возвращает дескриптор окна рисования</div></div>
 <div class="ttc" id="agroup___misc_html_gac3163c41843503fb9ed5b51d37fbfb66"><div class="ttname"><a href="#gac3163c41843503fb9ed5b51d37fbfb66">TX_DLLIMPORT</a></div><div class="ttdeci">#define TX_DLLIMPORT(required, libName, retValType, funcName, funcParams,...)</div><div class="ttdoc">Импортирует функцию из динамической библиотеки @с .dll.</div><div class="ttdef"><b>Definition</b> <a href="_t_x_lib_8h_source.html#l05299">TXLib.h:5299</a></div></div>
 <div class="ttc" id="agroup___technical_html_ga90ceca3b49e5f889f5f07a996b28b0b3"><div class="ttname"><a href="group___technical.html#ga90ceca3b49e5f889f5f07a996b28b0b3">_txProcessSystemWarnings</a></div><div class="ttdeci">bool _txProcessSystemWarnings</div><div class="ttdoc">Если определено, не исключать адреса без отладочной информации из трассировок стека.</div><div class="ttdef"><b>Definition</b> <a href="_t_x_lib_8h_source.html#l05919">TXLib.h:5919</a></div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00004">main.cpp:4</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00004">main.cpp:4</a></div></div>
 </div><!-- fragment --> 
 <p class="definition">Definition at line <a class="el" href="_t_x_lib_8h_source.html#l05299">5299</a> of file <a class="el" href="_t_x_lib_8h_source.html">TXLib.h</a>.</p>
 
@@ -1844,7 +1844,7 @@ template&lt;typename T &gt; </div>
 <dl class="section note"><dt>Note</dt><dd>В отличие от оригинальной функции GetAsyncKeyState(), возвращает false, если окно TXLib не активно.</dd></dl>
 <p>@usage </p><div class="fragment"><div class="line"><span class="keywordtype">void</span> PlayBall();</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>()</div>
 <div class="line">    {</div>
 <div class="line">    <a class="code hl_function" href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow</a> (800, 600);</div>
 <div class="line"> </div>
@@ -1915,7 +1915,7 @@ template&lt;typename T &gt; </div>
      и посмотреть, что получится.
 </pre></dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab" title="Создание окна рисования.">txCreateWindow()</a>, <a class="el" href="group___drawing.html#ga6c293f0b0f71efebdeeb0b56a97ba50c" title="Задерживает выполнение программы на определенное время.">txSleep()</a></dd></dl>
-<p>@usage </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<p>@usage </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>()</div>
 <div class="line">    {</div>
 <div class="line">    <a class="code hl_function" href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow</a> (800, 600);</div>
 <div class="line"> </div>
@@ -2276,7 +2276,7 @@ template&lt;typename T &gt; </div>
 <div class="line"> </div>
 <div class="line"><span class="preprocessor">#define MARU_ON_YOUTUBE &quot;http://ded32.net.ru/www.youtube.com-watch-z_AbfPXTKms&quot;</span></div>
 <div class="line">                              <span class="comment">// Cached from www.youtube.com/watch/z_AbfPXTKms</span></div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()                    <span class="comment">// Because Google prevents direct playing from Youtube</span></div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>()                    <span class="comment">// Because Google prevents direct playing from Youtube</span></div>
 <div class="line">    {</div>
 <div class="line">    <a class="code hl_function" href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow</a> (800, 500);</div>
 <div class="line">    <a class="code hl_function" href="group___drawing.html#gad21ad5660a5423f31c2c8e77329758b2">txSetFillColor</a> (<a class="code hl_variable" href="group___drawing.html#gaa281a54954945bb0e96314fb4cfad7b9">TX_BLUE</a>);</div>
@@ -2482,7 +2482,7 @@ template&lt;typename T &gt; </div>
      Она должна быть функцией со следующим прототипом:
 </pre> <div class="fragment"><div class="line">LRESULT CALLBACK NewWndProc (HWND window, UINT message, WPARAM wParam, LPARAM lParam);</div>
 </div><!-- fragment --></dd></dl>
-<dl class="section warning"><dt>Warning</dt><dd>Ваша оконная функция будет вызываться из вспомогательного (второго) потока, создаваемого <a class="el" href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow()</a>. Это <b>не</b> тот же самый поток, в котором выполняется <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a>. В связи с этим будьте внимательны при работе с глобальными переменными или их аналогами, т.к. может возникнуть "гонка
+<dl class="section warning"><dt>Warning</dt><dd>Ваша оконная функция будет вызываться из вспомогательного (второго) потока, создаваемого <a class="el" href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow()</a>. Это <b>не</b> тот же самый поток, в котором выполняется <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a>. В связи с этим будьте внимательны при работе с глобальными переменными или их аналогами, т.к. может возникнуть "гонка
          потоков" (race condition).</dd>
 <dd>
 Если ваша оконная функция вернет значение, не равное 0, то стандартная обработка сообщений средствами TXLib производиться <b>не</b> будет. Из-за этого, возможно, окно даже не сможет нормально закрыться. Придется завершать программу с помощью Alt-Ctrl-Del из диспетчера задач, или из более продвинутого диспетчера <a href="http://technet.microsoft.com/en-us/sysinternals/bb896653.aspx">Process Explorer</a>. Если Вы берете на себя обработку оконных сообщений, делайте ее по правилам Win32 (см. в MSDN), включая вызов DefWindowProc(). Этот вызов особенно важен, если вы обрабатываете сообщение <code>WM_CLOSE</code>.</dd></dl>
@@ -2494,7 +2494,7 @@ template&lt;typename T &gt; </div>
 <div class="line"><span class="keywordtype">void</span> DrawCursor (POINT pos, <span class="keywordtype">int</span> size);</div>
 <div class="line"><span class="keywordtype">void</span> DrawShoot  (POINT pos, <span class="keywordtype">int</span> size);</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>()</div>
 <div class="line">    {</div>
 <div class="line">    <a class="code hl_variable" href="group___technical.html#ga4ddb32d7a8a676537014da7aea7bf273">_txWindowStyle</a> |= WS_THICKFRAME;</div>
 <div class="line">    <a class="code hl_function" href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow</a> (GetSystemMetrics (SM_CXSCREEN) / 4, GetSystemMetrics (SM_CYSCREEN) / 4);</div>
@@ -2654,7 +2654,7 @@ template&lt;typename T &gt; </div>
 <p>@usage </p><div class="fragment"><div class="line"><span class="preprocessor">#define  TX_USE_SPEAK</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="_t_x_lib_8h.html">TXLib.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>()</div>
 <div class="line">    {</div>
 <div class="line">    <a class="code hl_function" href="#gad6db0ee1b36288c7eb3f2196077971f9">txSpeak</a> (<span class="stringliteral">&quot;TX Library is cool!&quot;</span>);</div>
 <div class="line"> </div>

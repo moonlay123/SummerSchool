@@ -3,64 +3,72 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{console__painting_8h}{console\_painting.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00003}\mbox{\hyperlink{console__painting_8cpp_a8e18cc5827c38d3b3264ae8282a58b22}{00003}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_a8e18cc5827c38d3b3264ae8282a58b22}{random\_color}}()}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00004}00004\ \{}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00005}00005\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00006}00006\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00007}00007\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (16\ *\ (rand()\ \%\ 16)\ +\ (rand()\ \%\ 16));}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00008}00008\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00009}00009\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00010}00010\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00011}00011\ \}}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00012}00012\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00013}\mbox{\hyperlink{console__painting_8cpp_a101a4ebe46153dd6bf2b82d722fb2a07}{00013}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_a101a4ebe46153dd6bf2b82d722fb2a07}{error\_color}}()}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00014}00014\ \{}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00016}00016\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00017}00017\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (0x40);}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00003}00003\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ color\_flag\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00004}\mbox{\hyperlink{console__painting_8cpp_a8e18cc5827c38d3b3264ae8282a58b22}{00004}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_a8e18cc5827c38d3b3264ae8282a58b22}{random\_color}}()}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00008}00008\ \ \ \ \ color\_flag\ =\ 1\ -\/\ color\_flag;}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (16\ *\ (rand()\ \%\ 16)\ +\ (rand()\ \%\ 16));}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00013}00013\ \}}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00015}\mbox{\hyperlink{console__painting_8cpp_a101a4ebe46153dd6bf2b82d722fb2a07}{00015}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_a101a4ebe46153dd6bf2b82d722fb2a07}{error\_color}}()}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00016}00016\ \{}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00018}00018\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00021}00021\ \}}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00022}00022\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00023}\mbox{\hyperlink{console__painting_8cpp_ad0b8e649394b3376f29c339a63a20361}{00023}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_ad0b8e649394b3376f29c339a63a20361}{unexpected\_color}}()}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00024}00024\ \{}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00026}00026\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (0xDF);}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00019}00019\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (0x40);}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00025}\mbox{\hyperlink{console__painting_8cpp_ad0b8e649394b3376f29c339a63a20361}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_ad0b8e649394b3376f29c339a63a20361}{unexpected\_color}}()}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00026}00026\ \{}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00028}00028\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00029}00029\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00031}00031\ \}}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00032}00032\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00033}\mbox{\hyperlink{console__painting_8cpp_a85ca0251ecee2836e1ed6e16ff0d5877}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_a85ca0251ecee2836e1ed6e16ff0d5877}{success\_color}}()}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00034}00034\ \{}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00036}00036\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00037}00037\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (0x20);}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (0xDF);}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00033}00033\ \}}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00035}\mbox{\hyperlink{console__painting_8cpp_a85ca0251ecee2836e1ed6e16ff0d5877}{00035}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_a85ca0251ecee2836e1ed6e16ff0d5877}{success\_color}}()}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00036}00036\ \{}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00038}00038\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00041}00041\ \}}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00042}00042\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00043}\mbox{\hyperlink{console__painting_8cpp_afc42f126daed1a804618c3edb0ed4dc7}{00043}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_afc42f126daed1a804618c3edb0ed4dc7}{failure\_color}}()}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00044}00044\ \{}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00046}00046\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (0x50);}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (0x20);}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00043}00043\ \}}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00045}\mbox{\hyperlink{console__painting_8cpp_afc42f126daed1a804618c3edb0ed4dc7}{00045}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_afc42f126daed1a804618c3edb0ed4dc7}{failure\_color}}()}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00046}00046\ \{}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00048}00048\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00051}00051\ \}}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00052}00052\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00053}\mbox{\hyperlink{console__painting_8cpp_aca6103b5bbcae7047f962bf9d10ff012}{00053}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_aca6103b5bbcae7047f962bf9d10ff012}{basic\_color}}()}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00054}00054\ \{}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00056}00056\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00057}00057\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (0x00);}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00049}00049\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (0x50);}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00053}00053\ \}}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00055}\mbox{\hyperlink{console__painting_8cpp_aca6103b5bbcae7047f962bf9d10ff012}{00055}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_aca6103b5bbcae7047f962bf9d10ff012}{basic\_color}}()}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00056}00056\ \{}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00061}00061\ \}}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{if}\ (color\_flag\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00060}00060\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (16\ *\ (rand()\ \%\ 16)\ +\ (rand()\ \%\ 16));}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00062}00062\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00063}00063\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (0x00);}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00066}00066\ }
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00067}00067\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ printf(\textcolor{stringliteral}{"{}\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00069}00069\ \}}
 
 \end{DoxyCode}

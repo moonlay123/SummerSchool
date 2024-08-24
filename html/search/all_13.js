@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['wcsncpy_5fs_0',['wcsncpy_s',['../_t_x_lib_8h.html#abf2914ccf27cf7f9de82121d213e8660',1,'TXLib.h']]],
-  ['wndclass_1',['wndclass',['../structtx_dialog_1_1_layout.html#aef0e185c3b1c26598c04af6fc185afd2',1,'txDialog::Layout']]]
+  ['verified_0',['verified',['../_t_x_lib_8h.html#a66cb8e8fe20d9d05d02e73373bda7f8a',1,'TXLib.h']]],
+  ['verify_1',['verify',['../group___misc.html#ga14fecb1c008314444a74c1fe7d9a113b',1,'TXLib.h']]]
 ];

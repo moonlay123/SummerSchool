@@ -136,7 +136,7 @@ Macros</h2></td></tr>
 <tr class="memdesc:ga90ceca3b49e5f889f5f07a996b28b0b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Если определено, не исключать адреса без отладочной информации из трассировок стека.  <br /></td></tr>
 <tr class="separator:ga90ceca3b49e5f889f5f07a996b28b0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga181143543b3883cf8570f80da3ad7fcc" id="r_ga181143543b3883cf8570f80da3ad7fcc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga181143543b3883cf8570f80da3ad7fcc">_txWatchdogTimeout</a> = 10*<a class="el" href="#ga7859e95fc4faec435abe372989f4f8ac">_TX_TIMEOUT</a></td></tr>
-<tr class="memdesc:ga181143543b3883cf8570f80da3ad7fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Лимит времени на завершение программы, начиная от завершения функции <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a> или от вызова exit(), в мс.  <br /></td></tr>
+<tr class="memdesc:ga181143543b3883cf8570f80da3ad7fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Лимит времени на завершение программы, начиная от завершения функции <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> или от вызова exit(), в мс.  <br /></td></tr>
 <tr class="separator:ga181143543b3883cf8570f80da3ad7fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa7273b2f613970c283053c5d9136addd" id="r_gaa7273b2f613970c283053c5d9136addd"><td class="memItemLeft" align="right" valign="top">const unsigned&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#gaa7273b2f613970c283053c5d9136addd">_TX_BIGBUFSIZE</a> = <a class="el" href="#ga352331b32407c4e95bc4f7a5e39fad25">_TX_BUFSIZE</a> * 2</td></tr>
 <tr class="memdesc:gaa7273b2f613970c283053c5d9136addd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Размеры больших статических буферов.  <br /></td></tr>
@@ -222,7 +222,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="preprocessor">#define   TX_COMPILED   </span><span class="comment">// Обязательно ПЕРЕД командой #include</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="_t_x_lib_8h.html">TXLib.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>()</div>
 <div class="line">    {</div>
 <div class="line">    <a class="code hl_function" href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow</a> (800, 600);</div>
 <div class="line">    ...</div>
@@ -238,7 +238,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="comment">// [Больше в этом файле ничего нет]</span></div>
 <div class="ttc" id="a_t_x_lib_8h_html"><div class="ttname"><a href="_t_x_lib_8h.html">TXLib.h</a></div><div class="ttdoc">Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).</div></div>
 <div class="ttc" id="agroup___drawing_html_gafce21ce98474d5559f316b3d47cdbfab"><div class="ttname"><a href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow</a></div><div class="ttdeci">HWND txCreateWindow(double sizeX, double sizeY, bool centered=true)</div><div class="ttdoc">Создание окна рисования.</div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00004">main.cpp:4</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00004">main.cpp:4</a></div></div>
 </div><!-- fragment --> </td></tr>
 <tr class="memitem:ga2aa2550a5302deb4d46b3759b26f4b41" id="r_ga2aa2550a5302deb4d46b3759b26f4b41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ga2aa2550a5302deb4d46b3759b26f4b41">TX_TRACE</a></td></tr>
 <tr class="memdesc:ga2aa2550a5302deb4d46b3759b26f4b41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Включает/отключает внутреннюю трассировку исполнения кода библиотеки.  <br /></td></tr>
@@ -597,7 +597,7 @@ Macros</h2></td></tr>
 
      TX_TRACE можно переопределить в свой код. Тогда, если трассировка библиотеки разрешена, он будет
      вызываться почти перед каждой исполняемой строкой TXLib. Может быть, это кому-нибудь будет интересно.
-</pre><p>@usage </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+</pre><p>@usage </p><div class="fragment"><div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>()</div>
 <div class="line">    {</div>
 <div class="line">    ...</div>
 <div class="line">    <a class="code hl_define" href="#ga2aa2550a5302deb4d46b3759b26f4b41">TX_TRACE</a>;  <span class="comment">// Через DbgView увидим имя файла и номер выполняемой строки</span></div>
@@ -955,7 +955,7 @@ Macros</h2></td></tr>
 <div class="line">    <span class="keywordflow">return</span> <a class="code hl_function" href="group___drawing.html#ga4d6f780cdef622df0fda71d0b3cfee52">txAlphaBlend</a> (dest, xDest, yDest, wSrc-xSrc, hSrc-ySrc, src, xSrc, ySrc, 0.01);</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>()</div>
 <div class="line">    {</div>
 <div class="line">    <a class="code hl_variable" href="#gad85278fd5caaf0ce42e307d6ce8d79c5">_txSwapBuffers</a> = MySwapBuffers;  <span class="comment">// That&#39;s it</span></div>
 <div class="line"> </div>
@@ -997,7 +997,7 @@ Macros</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Лимит времени на завершение программы, начиная от завершения функции <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a> или от вызова exit(), в мс. </p>
+<p>Лимит времени на завершение программы, начиная от завершения функции <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> или от вызова exit(), в мс. </p>
 <pre class="fragment">     Если значение меньше 0, то время не лимитируется.
 </pre><dl class="section note"><dt>Note</dt><dd>Для предотвращения зависания программы при выходе TXLib запускает отдельный сторожевой поток (watchdog thread), который ожидает _txWatchdogTimeout миллисекунд, а затем принудительно завершает программу.</dd></dl>
 <dl class="section see"><dt>See also</dt><dd><a class="el" href="#ga2c0a4fe0612f109c5c88d6d55a061db5" title="Список запускающих программ, которые ждут нажатия клавиши после завершения процесса TXLib.">_TX_WAITABLE_PARENTS</a>, <a class="el" href="#gaab281ee20ea6be5eae34d0e15bf03dcf" title="Запрет ранней инициализации TXLib.">_TX_NOINIT</a> </dd></dl>

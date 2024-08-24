@@ -12,11 +12,34 @@ enum \mbox{\hyperlink{main_8h_a9af026261f5cfa59aa2bb1a497bd2f93}{choose\+\_\+typ
 \mbox{\hyperlink{main_8h_a9af026261f5cfa59aa2bb1a497bd2f93a9de934790934fe831fe946c851e8338e}{STANDARD}} = 1
 , \mbox{\hyperlink{main_8h_a9af026261f5cfa59aa2bb1a497bd2f93a388e687825deef54499e2cbd6a980199}{NON\+\_\+\+TYPE}} = 0
  \}
+\item 
+enum \mbox{\hyperlink{main_8h_af4f880095ceac6d9516b1ad0d83778c0}{flags\+\_\+type}} \{ \newline
+\mbox{\hyperlink{main_8h_af4f880095ceac6d9516b1ad0d83778c0aec17ee4643c2de4daf0fc6e0fa18d0a5}{CLEAN\+\_\+\+CONSOLE}} = 100
+, \mbox{\hyperlink{main_8h_af4f880095ceac6d9516b1ad0d83778c0a4c40e60bc71a32b924ce1f08d57f9721}{MENU}} = 4
+, \mbox{\hyperlink{main_8h_af4f880095ceac6d9516b1ad0d83778c0af7d6d54754b1a2afa177129defa0177e}{FILE\+\_\+\+FLAG}} = 3
+, \mbox{\hyperlink{main_8h_af4f880095ceac6d9516b1ad0d83778c0af67acba8d8b8efdacea858b402ea4431}{RAND\+\_\+\+COLOR}} = 2
+, \newline
+\mbox{\hyperlink{main_8h_af4f880095ceac6d9516b1ad0d83778c0a9f5cb747b2e1f0ea781d2b1f2a5b4824}{HELP}} = 1
+, \mbox{\hyperlink{main_8h_af4f880095ceac6d9516b1ad0d83778c0acfe24a7b308a82835c8a9a9a89bc4ca2}{NOTHING}} = 0
+, \mbox{\hyperlink{main_8h_af4f880095ceac6d9516b1ad0d83778c0a817bfa9ecaa5501eb35f1f61cbb32091}{EXIT\+\_\+\+FLAG}} = -\/1
+ \}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{main_8h_a9af026261f5cfa59aa2bb1a497bd2f93}{choose\+\_\+type}} \mbox{\hyperlink{main_8h_ad7391e6ff1ba1b6cdf15c05e1af457df}{choose\+\_\+variant}} ()
+\item 
+void \mbox{\hyperlink{main_8h_a2a0e843767aeea4f433a28b9c54f573a}{menu}} ()
+\item 
+void \mbox{\hyperlink{main_8h_a97ee70a8770dc30d06c744b24eb2fcfc}{help}} ()
+\item 
+void \mbox{\hyperlink{main_8h_a799ce8d8eeae76267c19f6370b2a22a4}{file\+\_\+flag}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}files, int files\+\_\+size, int files\+\_\+uk)
+\item 
+void \mbox{\hyperlink{main_8h_a603433419ff7b29a3b123f330c96b56e}{flag\+\_\+actions}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}files, int \texorpdfstring{$\ast$}{*}queue, int argc, int files\+\_\+size)
+\item 
+void \mbox{\hyperlink{main_8h_aa720df54eea0491d48bf1c9747b1043a}{flag\+\_\+handler}} (char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}files, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}argv, int \texorpdfstring{$\ast$}{*}queue, int argc, int \texorpdfstring{$\ast$}{*}files\+\_\+uk)
+\item 
+int \mbox{\hyperlink{main_8h_ac70138609ef6aa6fabca57aca8681e83}{compare}} (const void \texorpdfstring{$\ast$}{*}a, const void \texorpdfstring{$\ast$}{*}b)
 \end{DoxyCompactItemize}
 
 
@@ -57,6 +80,46 @@ NON\+\_\+\+TYPE&\\
 
 Definition at line \mbox{\hyperlink{main_8h_source_l00006}{6}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
 
+\Hypertarget{main_8h_af4f880095ceac6d9516b1ad0d83778c0}\index{main.h@{main.h}!flags\_type@{flags\_type}}
+\index{flags\_type@{flags\_type}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{flags\_type}{flags\_type}}
+{\footnotesize\ttfamily \label{main_8h_af4f880095ceac6d9516b1ad0d83778c0} 
+enum \mbox{\hyperlink{main_8h_af4f880095ceac6d9516b1ad0d83778c0}{flags\+\_\+type}}}
+
+Enum of all console action types \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CLEAN\_CONSOLE@{CLEAN\_CONSOLE}!main.h@{main.h}}\index{main.h@{main.h}!CLEAN\_CONSOLE@{CLEAN\_CONSOLE}}}\Hypertarget{main_8h_af4f880095ceac6d9516b1ad0d83778c0aec17ee4643c2de4daf0fc6e0fa18d0a5}\label{main_8h_af4f880095ceac6d9516b1ad0d83778c0} 
+CLEAN\+\_\+\+CONSOLE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MENU@{MENU}!main.h@{main.h}}\index{main.h@{main.h}!MENU@{MENU}}}\Hypertarget{main_8h_af4f880095ceac6d9516b1ad0d83778c0a4c40e60bc71a32b924ce1f08d57f9721}\label{main_8h_af4f880095ceac6d9516b1ad0d83778c0} 
+MENU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FILE\_FLAG@{FILE\_FLAG}!main.h@{main.h}}\index{main.h@{main.h}!FILE\_FLAG@{FILE\_FLAG}}}\Hypertarget{main_8h_af4f880095ceac6d9516b1ad0d83778c0af7d6d54754b1a2afa177129defa0177e}\label{main_8h_af4f880095ceac6d9516b1ad0d83778c0} 
+FILE\+\_\+\+FLAG&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RAND\_COLOR@{RAND\_COLOR}!main.h@{main.h}}\index{main.h@{main.h}!RAND\_COLOR@{RAND\_COLOR}}}\Hypertarget{main_8h_af4f880095ceac6d9516b1ad0d83778c0af67acba8d8b8efdacea858b402ea4431}\label{main_8h_af4f880095ceac6d9516b1ad0d83778c0} 
+RAND\+\_\+\+COLOR&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HELP@{HELP}!main.h@{main.h}}\index{main.h@{main.h}!HELP@{HELP}}}\Hypertarget{main_8h_af4f880095ceac6d9516b1ad0d83778c0a9f5cb747b2e1f0ea781d2b1f2a5b4824}\label{main_8h_af4f880095ceac6d9516b1ad0d83778c0} 
+HELP&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NOTHING@{NOTHING}!main.h@{main.h}}\index{main.h@{main.h}!NOTHING@{NOTHING}}}\Hypertarget{main_8h_af4f880095ceac6d9516b1ad0d83778c0acfe24a7b308a82835c8a9a9a89bc4ca2}\label{main_8h_af4f880095ceac6d9516b1ad0d83778c0} 
+NOTHING&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EXIT\_FLAG@{EXIT\_FLAG}!main.h@{main.h}}\index{main.h@{main.h}!EXIT\_FLAG@{EXIT\_FLAG}}}\Hypertarget{main_8h_af4f880095ceac6d9516b1ad0d83778c0a817bfa9ecaa5501eb35f1f61cbb32091}\label{main_8h_af4f880095ceac6d9516b1ad0d83778c0} 
+EXIT\+\_\+\+FLAG&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{main_8h_source_l00011}{11}} of file \mbox{\hyperlink{main_8h_source}{main.\+h}}.
+
 
 
 \doxysubsection{Function Documentation}
@@ -71,5 +134,108 @@ the selected program action
 \end{DoxyReturn}
 
 
-Definition at line \mbox{\hyperlink{main_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00207}{207}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\Hypertarget{main_8h_ac70138609ef6aa6fabca57aca8681e83}\index{main.h@{main.h}!compare@{compare}}
+\index{compare@{compare}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{compare()}{compare()}}
+{\footnotesize\ttfamily \label{main_8h_ac70138609ef6aa6fabca57aca8681e83} 
+int compare (\begin{DoxyParamCaption}\item[{const void \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{const void \texorpdfstring{$\ast$}{*}}]{b}{}\end{DoxyParamCaption})}
+
+Compare for qsort 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & const addredd of first \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & const addredd of first \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+compare rule 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00073}{73}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\Hypertarget{main_8h_a799ce8d8eeae76267c19f6370b2a22a4}\index{main.h@{main.h}!file\_flag@{file\_flag}}
+\index{file\_flag@{file\_flag}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{file\_flag()}{file\_flag()}}
+{\footnotesize\ttfamily \label{main_8h_a799ce8d8eeae76267c19f6370b2a22a4} 
+void file\+\_\+flag (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{files}{, }\item[{int}]{files\+\_\+size}{, }\item[{int}]{files\+\_\+uk}{}\end{DoxyParamCaption})}
+
+Solve square root equation from getted file 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em files} & mas of all file of flag compile \\
+\hline
+\mbox{\texttt{ in}}  & {\em files\+\_\+size} & size of files \\
+\hline
+\mbox{\texttt{ in}}  & {\em files\+\_\+uk} & pointer of current file \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00128}{128}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\Hypertarget{main_8h_a603433419ff7b29a3b123f330c96b56e}\index{main.h@{main.h}!flag\_actions@{flag\_actions}}
+\index{flag\_actions@{flag\_actions}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{flag\_actions()}{flag\_actions()}}
+{\footnotesize\ttfamily \label{main_8h_a603433419ff7b29a3b123f330c96b56e} 
+void flag\+\_\+actions (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{files}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{int}]{argc}{, }\item[{int}]{files\+\_\+size}{}\end{DoxyParamCaption})}
+
+Use all flags actions and after free dinamic memory 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em files} & mas of all file of flag compile \\
+\hline
+\mbox{\texttt{ in}}  & {\em queue} & mas of all "{}-\/"{} flags \\
+\hline
+\mbox{\texttt{ in}}  & {\em argc} & size of queue \\
+\hline
+\mbox{\texttt{ in}}  & {\em files\+\_\+size} & size of files \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\Hypertarget{main_8h_aa720df54eea0491d48bf1c9747b1043a}\index{main.h@{main.h}!flag\_handler@{flag\_handler}}
+\index{flag\_handler@{flag\_handler}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{flag\_handler()}{flag\_handler()}}
+{\footnotesize\ttfamily \label{main_8h_aa720df54eea0491d48bf1c9747b1043a} 
+void flag\+\_\+handler (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{files}{, }\item[{char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}}]{argv}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{queue}{, }\item[{int}]{argc}{, }\item[{int \texorpdfstring{$\ast$}{*}}]{files\+\_\+uk}{}\end{DoxyParamCaption})}
+
+Handle all flag cases 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ out}}  & {\em files} & mas of file names \\
+\hline
+\mbox{\texttt{ in}}  & {\em argv} & mas of flags \\
+\hline
+\mbox{\texttt{ out}}  & {\em queue} & mas of handled flags \\
+\hline
+\mbox{\texttt{ in}}  & {\em argc} & size of argv, files, queue \\
+\hline
+\mbox{\texttt{ out}}  & {\em file\+\_\+uk} & pointer of number of files \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\Hypertarget{main_8h_a97ee70a8770dc30d06c744b24eb2fcfc}\index{main.h@{main.h}!help@{help}}
+\index{help@{help}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{help()}{help()}}
+{\footnotesize\ttfamily \label{main_8h_a97ee70a8770dc30d06c744b24eb2fcfc} 
+void help (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Print help docs 
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00155}{155}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
+
+\Hypertarget{main_8h_a2a0e843767aeea4f433a28b9c54f573a}\index{main.h@{main.h}!menu@{menu}}
+\index{menu@{menu}!main.h@{main.h}}
+\doxysubsubsection{\texorpdfstring{menu()}{menu()}}
+{\footnotesize\ttfamily \label{main_8h_a2a0e843767aeea4f433a28b9c54f573a} 
+void menu (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+Function using with -\/menu flag 
+
+Definition at line \mbox{\hyperlink{main_8cpp_source_l00168}{168}} of file \mbox{\hyperlink{main_8cpp_source}{main.\+cpp}}.
 

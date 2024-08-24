@@ -112,6 +112,7 @@ void flag_actions(char **files, int *queue, int argc, int files_size)
                 menu();
                 break;
             case CLEAN_CONSOLE:
+                txSetConsoleAttr (0x00);
                 txClearConsole();
                 break;
             default:
@@ -154,12 +155,13 @@ void file_flag(char **files, int files_size, int files_uk)
 void help()
 {
     unexpected_color();
-    printf("Usage: ./main [flags] [files] in any order\n"
+    printf("Usage: ./proj [flags] [files] in any order\n"
            "-rand\t Create random color setup for console for once\n"
            "-help\t open help tips\n"
            "-menu\t open choosing menu\n"
            "-file\t choose file with quadratic coefs and get solve\n"
            "-clean\t Clear console window after program end\n");
+    getchar();
     basic_color();
 }
 

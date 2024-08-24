@@ -287,7 +287,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="preprocessor">#define   TX_COMPILED   </span><span class="comment">// Обязательно ПЕРЕД командой #include</span></div>
 <div class="line"><span class="preprocessor">#include &quot;<a class="code" href="_t_x_lib_8h.html">TXLib.h</a>&quot;</span></div>
 <div class="line"> </div>
-<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>()</div>
+<div class="line"><span class="keywordtype">int</span> <a class="code hl_function" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a>()</div>
 <div class="line">    {</div>
 <div class="line">    <a class="code hl_function" href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow</a> (800, 600);</div>
 <div class="line">    ...</div>
@@ -303,7 +303,7 @@ Macros</h2></td></tr>
 <div class="line"><span class="comment">// [Больше в этом файле ничего нет]</span></div>
 <div class="ttc" id="a_t_x_lib_8h_html"><div class="ttname"><a href="_t_x_lib_8h.html">TXLib.h</a></div><div class="ttdoc">Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).</div></div>
 <div class="ttc" id="agroup___drawing_html_gafce21ce98474d5559f316b3d47cdbfab"><div class="ttname"><a href="group___drawing.html#gafce21ce98474d5559f316b3d47cdbfab">txCreateWindow</a></div><div class="ttdeci">HWND txCreateWindow(double sizeX, double sizeY, bool centered=true)</div><div class="ttdoc">Создание окна рисования.</div></div>
-<div class="ttc" id="amain_8cpp_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00004">main.cpp:4</a></div></div>
+<div class="ttc" id="amain_8cpp_html_a0ddf1224851353fc92bfbff6f499fa97"><div class="ttname"><a href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main</a></div><div class="ttdeci">int main(int argc, char *argv[])</div><div class="ttdef"><b>Definition</b> <a href="main_8cpp_source.html#l00004">main.cpp:4</a></div></div>
 </div><!-- fragment --> </div></td></tr>
 <tr class="memitem:ga2aa2550a5302deb4d46b3759b26f4b41" id="r_ga2aa2550a5302deb4d46b3759b26f4b41"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___technical.html#ga2aa2550a5302deb4d46b3759b26f4b41">TX_TRACE</a></td></tr>
 <tr class="memdesc:ga2aa2550a5302deb4d46b3759b26f4b41"><td class="mdescLeft">&#160;</td><td class="mdescRight">Включает/отключает внутреннюю трассировку исполнения кода библиотеки.  <br /></td></tr>
@@ -752,7 +752,7 @@ Variables</h2></td></tr>
 <tr class="memdesc:ga90ceca3b49e5f889f5f07a996b28b0b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Если определено, не исключать адреса без отладочной информации из трассировок стека.  <br /></td></tr>
 <tr class="separator:ga90ceca3b49e5f889f5f07a996b28b0b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga181143543b3883cf8570f80da3ad7fcc" id="r_ga181143543b3883cf8570f80da3ad7fcc"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___technical.html#ga181143543b3883cf8570f80da3ad7fcc">_txWatchdogTimeout</a> = 10*<a class="el" href="group___technical.html#ga7859e95fc4faec435abe372989f4f8ac">_TX_TIMEOUT</a></td></tr>
-<tr class="memdesc:ga181143543b3883cf8570f80da3ad7fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Лимит времени на завершение программы, начиная от завершения функции <a class="el" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main()</a> или от вызова exit(), в мс.  <br /></td></tr>
+<tr class="memdesc:ga181143543b3883cf8570f80da3ad7fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Лимит времени на завершение программы, начиная от завершения функции <a class="el" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97">main()</a> или от вызова exit(), в мс.  <br /></td></tr>
 <tr class="separator:ga181143543b3883cf8570f80da3ad7fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader">Установка цветов и режимов рисования</h2></td></tr>
@@ -888,7 +888,7 @@ Variables</h2></td></tr>
      &lt;b&gt;на сайте sourceforge.net.&lt;/b&gt;&lt;/a&gt; См. также раздел @ref TXLibSetup "Установка библиотеки".
 </pre><dl class="section note"><dt>Note</dt><dd>Библиотека TXLib состоит из единственного файла и не требует никаких настроек в среде программирования, чтобы облегчить ее установку и работу для начинающих.</dd>
 <dd>
-Файл библиотеки большой и может компилироваться долго, поэтому обратите внимание на возможность использования прекомпилированной версии в проектак с раздельной компиляцией. См. макрос TX_COMPILED. Также можно определить макрос <code>WIN32_LEAN_AND_MEAN</code> до включения <code><a class="el" href="_t_x_lib_8h.html" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a></code> в программу.</dd></dl>
+Файл библиотеки большой и может компилироваться долго, поэтому обратите внимание на возможность использования прекомпилированной версии в проектак с раздельной компиляцией. См. макрос <a class="el" href="console__painting_8h.html#a664ae50e3ec3c7cf59cdd4b7eeef6a7f">TX_COMPILED</a>. Также можно определить макрос <code>WIN32_LEAN_AND_MEAN</code> до включения <code><a class="el" href="_t_x_lib_8h.html" title="Библиотека Тупого Художника (The Dumb Artist Library, TX Library, TXLib).">TXLib.h</a></code> в программу.</dd></dl>
 <ol type="1">
 <li><a href="https://sourceforge.net/projects/txlib/files/latest/download">Скачайте</a> программу установки, загрузка по ссылке начнется автоматически. Ее имя имеет вид <code>TXLib-v0173a.rar.exe.</code> Цифры могут отличаться (это номер версии), расширение <code></code>.exe может не отображаться, в зависимости от настроек Windows.</li>
 <li>Запустите скачанную программу установки. Программа установки &ndash; это саморазархивирующийся архив, она не требует особых прав для запуска.</li>

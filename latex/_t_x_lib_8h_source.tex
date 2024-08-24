@@ -3821,7 +3821,7 @@
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08092}08092\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \_tx\_DLGTEMPLATE\_Create\ \ \ \ \ \ (\textcolor{keywordtype}{void}*\ globalMem,\ \textcolor{keywordtype}{size\_t}\ bufsize,\ DWORD\ style,\ DWORD\ exStyle,}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08093}08093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WORD\ controls,\ \textcolor{keywordtype}{short}\ x,\ \textcolor{keywordtype}{short}\ y,\ \textcolor{keywordtype}{short}\ cx,\ \textcolor{keywordtype}{short}\ cy,}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08094}08094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ \textcolor{keywordtype}{char}\ caption[],\ const\ \textcolor{keywordtype}{char}\ font[],\ WORD\ fontsize,}
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08095}08095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ \textcolor{keywordtype}{char}\ menu[])\ tx\_nodiscard;}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08095}08095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ const\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}}[])\ tx\_nodiscard;}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08096}08096\ }
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08097}08097\ \textcolor{keywordtype}{void}*\ \ \ \ \ \ \ \ \ \ \ \ \_tx\_DLGTEMPLATE\_Add\ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{void}*\ dlgTemplatePtr,\ \textcolor{keywordtype}{size\_t}\ bufsize,\ DWORD\ style,\ DWORD\ exStyle,}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08098}08098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{short}\ x,\ \textcolor{keywordtype}{short}\ y,\ \textcolor{keywordtype}{short}\ cx,\ \textcolor{keywordtype}{short}\ cy,}
@@ -4499,8 +4499,8 @@
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08776}08776\ \$\ \ \ \textcolor{keywordflow}{if}\ (console\ \&\&\ (proc\ ==\ GetCurrentProcessId()\ ||\ \_txIsParentWaitable()))}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08777}08777\ \ \ \ \ \ \ \ \ \{\$\ ShowWindow\ (console,\ \mbox{\hyperlink{group___technical_ga82c63be7c47e2b13e5b6f7661cc3fbe4}{TX\_CONSOLE\_MODE}});\ \}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08778}08778\ }
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08779}08779\ \$\ \ \ HMENU\ menu\ =\ GetSystemMenu\ (\mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{txWindow}}(),\ \textcolor{keyword}{false});}
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08780}08780\ \ \ \ \ \textcolor{keywordflow}{if}\ (menu)\ \{\$\ CheckMenuItem\ (menu,\ \_TX\_IDM\_CONSOLE,\ (console?\ (IsWindowVisible\ (console)?\ MF\_CHECKED\ :\ 0)\ :\ MF\_DISABLED));\ \}}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08779}08779\ \$\ \ \ HMENU\ \mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}}\ =\ GetSystemMenu\ (\mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{txWindow}}(),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08780}08780\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}})\ \{\$\ CheckMenuItem\ (\mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}},\ \_TX\_IDM\_CONSOLE,\ (console?\ (IsWindowVisible\ (console)?\ MF\_CHECKED\ :\ 0)\ :\ MF\_DISABLED));\ \}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08781}08781\ }
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08782}08782\ \$\ \ \ Win32::GdiSetBatchLimit\ (1);}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l08783}08783\ }
@@ -5525,14 +5525,14 @@
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09804}09804\ \$\ \ \ HICON\ \ \ icon32\ =\ LoadIcon\ \ \ \ \ \ \ \ \ (NULL,\ \textcolor{stringliteral}{"{}\_TX\_ICON"{}});}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09805}09805\ \$\ \ \ HICON\ \ \ icon16\ =\ LoadIcon\ \ \ \ \ \ \ \ \ (NULL,\ \textcolor{stringliteral}{"{}\_TX\_ICONSM"{}});}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09806}09806\ \$\ \ \ HCURSOR\ cursor\ =\ LoadCursor\ \ \ \ \ \ \ (NULL,\ \textcolor{stringliteral}{"{}\_TX\_CURSOR"{}});}
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09807}09807\ \$\ \ \ HMENU\ \ \ menu\ \ \ =\ LoadMenu\ \ \ \ \ \ \ \ \ (NULL,\ \textcolor{stringliteral}{"{}\_TX\_MENU"{}});}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09807}09807\ \$\ \ \ HMENU\ \ \ \mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}}\ \ \ =\ LoadMenu\ \ \ \ \ \ \ \ \ (NULL,\ \textcolor{stringliteral}{"{}\_TX\_MENU"{}});}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09808}09808\ \$\ \ \ HACCEL\ \ accel\ \ =\ LoadAccelerators\ (NULL,\ \textcolor{stringliteral}{"{}\_TX\_ACCELERATORS"{}});}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09809}09809\ }
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09810}09810\ \$\ \ \ SetClassLong\_\ (wnd,\ GCL\_HICON\_,\ \ \ (LONG\_PTR)\ (icon32?\ icon32\ :\ \_txCreateTXIcon\ (32)));\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/V107\ //-\/V112}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09811}09811\ \$\ \ \ SetClassLong\_\ (wnd,\ GCL\_HICONSM\_,\ (LONG\_PTR)\ (icon16?\ icon16\ :\ \_txCreateTXIcon\ (16)));\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/V107}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09812}09812\ \$\ \ \ SetClassLong\_\ (wnd,\ GCL\_HCURSOR\_,\ (LONG\_PTR)\ (cursor?\ cursor\ :\ LoadCursor\ (NULL,\ IDC\_ARROW)));\ \ \textcolor{comment}{//-\/V107}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09813}09813\ }
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09814}09814\ \ \ \ \ \textcolor{keywordflow}{if}\ (menu)\ \{\$\ SetMenu\ (wnd,\ menu);\ DrawMenuBar\ (wnd);\ \}}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09814}09814\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}})\ \{\$\ SetMenu\ (wnd,\ \mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}});\ DrawMenuBar\ (wnd);\ \}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09815}09815\ }
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09816}09816\ \$\ \ \ Win32::GdiSetBatchLimit\ (1);}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09817}09817\ }
@@ -5610,12 +5610,12 @@
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09889}09889\ \$\ \ \ \textcolor{keywordflow}{if}\ (!wnd\ ||\ !\mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{txWindow}}())}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09890}09890\ \ \ \ \ \ \ \ \ \{\$\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___misc_gabe7d5b7083c7588b457f73c1e0461044}{TX\_DEBUG\_ERROR}}\ (\textcolor{stringliteral}{"{}Cannot\ create\ canvas:\ CreateWindowEx()\ failed"{}}),\ (HWND)\ NULL;\ \}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09891}09891\ }
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09892}09892\ \$\ \ \ HMENU\ menu\ =\ GetSystemMenu\ (\mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{txWindow}}(),\ \textcolor{keyword}{false});}
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09893}09893\ \ \ \ \ \textcolor{keywordflow}{if}\ (!menu)\ \{\$\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{txWindow}}();\ \}}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09892}09892\ \$\ \ \ HMENU\ \mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}}\ =\ GetSystemMenu\ (\mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{txWindow}}(),\ \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09893}09893\ \ \ \ \ \textcolor{keywordflow}{if}\ (!\mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}})\ \{\$\ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{txWindow}}();\ \}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09894}09894\ }
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09895}09895\ \$\ \ \ AppendMenu\ (menu,\ MF\_SEPARATOR,\ 0,\ NULL)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___misc_ga889b74443b3e918adee3e31fad4653f7}{asserted}};}
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09896}09896\ \$\ \ \ AppendMenu\ (menu,\ MF\_STRING,\ \_TX\_IDM\_CONSOLE,\ \textcolor{stringliteral}{"{}Show\ \&Console"{}})\ \mbox{\hyperlink{group___misc_ga889b74443b3e918adee3e31fad4653f7}{asserted}};}
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09897}09897\ \$\ \ \ AppendMenu\ (menu,\ MF\_STRING,\ \_TX\_IDM\_ABOUT,\ \ \ "{}\&About..."{})\ \ \ \ \ \mbox{\hyperlink{group___misc_ga889b74443b3e918adee3e31fad4653f7}{asserted}};}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09895}09895\ \$\ \ \ AppendMenu\ (\mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}},\ MF\_SEPARATOR,\ 0,\ NULL)\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___misc_ga889b74443b3e918adee3e31fad4653f7}{asserted}};}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09896}09896\ \$\ \ \ AppendMenu\ (\mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}},\ MF\_STRING,\ \_TX\_IDM\_CONSOLE,\ \textcolor{stringliteral}{"{}Show\ \&Console"{}})\ \mbox{\hyperlink{group___misc_ga889b74443b3e918adee3e31fad4653f7}{asserted}};}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09897}09897\ \$\ \ \ AppendMenu\ (\mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}},\ MF\_STRING,\ \_TX\_IDM\_ABOUT,\ \ \ "{}\&About..."{})\ \ \ \ \ \mbox{\hyperlink{group___misc_ga889b74443b3e918adee3e31fad4653f7}{asserted}};}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09898}09898\ }
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09899}09899\ \$\ \ \ return\ \mbox{\hyperlink{group___drawing_gafa31ebd8ed957c41713900a407497cf8}{txWindow}}();}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l09900}09900\ \ \ \ \ \}}
@@ -11267,7 +11267,7 @@
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15558}15558\ }
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15559}15559\ \textcolor{keywordtype}{void}*\ \_tx\_DLGTEMPLATE\_Create\ (\textcolor{keywordtype}{void}*\ globalMem,\ \textcolor{keywordtype}{size\_t}\ bufsize,\ DWORD\ style,\ DWORD\ exStyle,}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15560}15560\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ WORD\ controls,\ \textcolor{keywordtype}{short}\ x,\ \textcolor{keywordtype}{short}\ y,\ \textcolor{keywordtype}{short}\ cx,\ \textcolor{keywordtype}{short}\ cy,}
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15561}15561\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ caption[],\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ font[],\ WORD\ fontsize,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ menu[])}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15561}15561\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ caption[],\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ font[],\ WORD\ fontsize,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{char}\ \mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}}[])}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15562}15562\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15563}15563\ \$1\ \ \textcolor{keywordflow}{if}\ (\_TX\_ARGUMENT\_FAILED\ (globalMem))\ \textcolor{keywordflow}{return}\ NULL;}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15564}15564\ }
@@ -11283,15 +11283,15 @@
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15574}15574\ \$\ \ \ tmpl-\/>cx\ \ \ \ =\ cx;}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15575}15575\ \$\ \ \ tmpl-\/>cy\ \ \ \ =\ cy;}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15576}15576\ }
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15577}15577\ \$\ \ \ \textcolor{keywordflow}{if}\ (menu\ >\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*)\ 0xFFFF)}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15577}15577\ \$\ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}}\ >\ (\textcolor{keyword}{const}\ \textcolor{keywordtype}{char}*)\ 0xFFFF)}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15578}15578\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15579}15579\ \$\ \ \ \ \ \ \ pw\ \ +=\ MultiByteToWideChar\ \ (\mbox{\hyperlink{group___misc_gaf40cd03b465387a736443214b7b44c32}{\_TX\_CODEPAGE}},\ 0,\ (menu?\ \ \ \ menu\ \ \ \ :\ \textcolor{stringliteral}{"{}"{}}),\ -\/1,\ (\textcolor{keywordtype}{wchar\_t}*)\ pw,\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/V547}}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15579}15579\ \$\ \ \ \ \ \ \ pw\ \ +=\ MultiByteToWideChar\ \ (\mbox{\hyperlink{group___misc_gaf40cd03b465387a736443214b7b44c32}{\_TX\_CODEPAGE}},\ 0,\ (\mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}}?\ \ \ \ \mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}}\ \ \ \ :\ \textcolor{stringliteral}{"{}"{}}),\ -\/1,\ (\textcolor{keywordtype}{wchar\_t}*)\ pw,\ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//-\/V547}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15580}15580\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (\textcolor{keywordtype}{int})\ (bufsize?\ bufsize\ -\/\ ((\textcolor{keywordtype}{char}*)\ pw\ -\/\ (\textcolor{keywordtype}{char}*)\ globalMem)\ :\ 0xFFFF));\ \ \textcolor{comment}{//-\/V202}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15581}15581\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15582}15582\ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15583}15583\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15584}15584\ \$\ \ \ \ \ \ \ *pw++\ =\ (WORD)(uintptr\_t)\ (menu?\ 0xFFFF\ :\ 0);}
-\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15585}15585\ \$\ \ \ \ \ \ \ *pw++\ =\ (WORD)(uintptr\_t)\ \ menu;}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15584}15584\ \$\ \ \ \ \ \ \ *pw++\ =\ (WORD)(uintptr\_t)\ (\mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}}?\ 0xFFFF\ :\ 0);}
+\DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15585}15585\ \$\ \ \ \ \ \ \ *pw++\ =\ (WORD)(uintptr\_t)\ \ \mbox{\hyperlink{main_8cpp_a2a0e843767aeea4f433a28b9c54f573a}{menu}};}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15586}15586\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15587}15587\ }
 \DoxyCodeLine{\Hypertarget{_t_x_lib_8h_source_l15588}15588\ \$\ \ \ \textcolor{keywordflow}{if}\ (caption)}

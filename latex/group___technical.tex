@@ -35,7 +35,7 @@ const unsigned \mbox{\hyperlink{group___technical_ga352331b32407c4e95bc4f7a5e39f
 bool \mbox{\hyperlink{group___technical_ga90ceca3b49e5f889f5f07a996b28b0b3}{\+\_\+tx\+Process\+System\+Warnings}} = true
 \begin{DoxyCompactList}\small\item\em Если определено, не исключать адреса без отладочной информации из трассировок стека. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{group___technical_ga181143543b3883cf8570f80da3ad7fcc}{\+\_\+tx\+Watchdog\+Timeout}} = 10\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{group___technical_ga7859e95fc4faec435abe372989f4f8ac}{\+\_\+\+TX\+\_\+\+TIMEOUT}}
-\begin{DoxyCompactList}\small\item\em Лимит времени на завершение программы, начиная от завершения функции \doxylink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()} или от вызова exit(), в мс. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Лимит времени на завершение программы, начиная от завершения функции \doxylink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main()} или от вызова exit(), в мс. \end{DoxyCompactList}\item 
 const unsigned \mbox{\hyperlink{group___technical_gaa7273b2f613970c283053c5d9136addd}{\+\_\+\+TX\+\_\+\+BIGBUFSIZE}} = \mbox{\hyperlink{group___technical_ga352331b32407c4e95bc4f7a5e39fad25}{\+\_\+\+TX\+\_\+\+BUFSIZE}} \texorpdfstring{$\ast$}{*} 2
 \begin{DoxyCompactList}\small\item\em Размеры больших статических буферов. \end{DoxyCompactList}\item 
 const unsigned \mbox{\hyperlink{group___technical_ga9982623aefbe28deab03b1252777ec2a}{\+\_\+\+TX\+\_\+\+HUGEBUFSIZE}} = \mbox{\hyperlink{group___technical_ga352331b32407c4e95bc4f7a5e39fad25}{\+\_\+\+TX\+\_\+\+BUFSIZE}} \texorpdfstring{$\ast$}{*} 20
@@ -118,7 +118,7 @@ const char \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{group___drawing_ga596c233
 \DoxyCodeLine{\textcolor{preprocessor}{\#define\ \ \ TX\_COMPILED\ \ \ }\textcolor{comment}{//\ Обязательно ПЕРЕД командой \#include}}
 \DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_t_x_lib_8h}{TXLib.h}}"{}}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{txCreateWindow}}\ (800,\ 600);}
 \DoxyCodeLine{\ \ \ \ ...}
@@ -519,7 +519,7 @@ Definition at line \mbox{\hyperlink{_t_x_lib_8h_source_l05727}{5727}} of file \m
 
 @usage 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ ...}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___technical_ga2aa2550a5302deb4d46b3759b26f4b41}{TX\_TRACE}};\ \ \textcolor{comment}{//\ Через DbgView\ увидим имя\ файла и\ номер выполняемой строки}}
@@ -786,7 +786,7 @@ bool(\texorpdfstring{$\ast$}{*} \+\_\+tx\+Swap\+Buffers)(HDC dest, int x\+Dest, 
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{group___drawing_ga4d6f780cdef622df0fda71d0b3cfee52}{txAlphaBlend}}\ (dest,\ xDest,\ yDest,\ wSrc-\/xSrc,\ hSrc-\/ySrc,\ src,\ xSrc,\ ySrc,\ 0.01);}
 \DoxyCodeLine{\ \ \ \ \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___technical_gad85278fd5caaf0ce42e307d6ce8d79c5}{\_txSwapBuffers}}\ =\ MySwapBuffers;\ \ \textcolor{comment}{//\ That's\ it}}
 \DoxyCodeLine{}
@@ -817,7 +817,7 @@ int \+\_\+tx\+Watchdog\+Timeout = 10\texorpdfstring{$\ast$}{*}\mbox{\hyperlink{g
 
 
 
-Лимит времени на завершение программы, начиная от завершения функции \doxylink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()} или от вызова exit(), в мс. 
+Лимит времени на завершение программы, начиная от завершения функции \doxylink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main()} или от вызова exit(), в мс. 
 
 \begin{DoxyVerb}     Если значение меньше 0, то время не лимитируется.
 \end{DoxyVerb}

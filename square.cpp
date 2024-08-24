@@ -120,8 +120,8 @@ void square_equation_printer(int root_fl, complex x_1, complex x_2, coefficients
             printf("No roots\n\n");
             break;
         case ONE:
-            printf("Only one real root\n\n");
-            printf("%.4lf", x_1.real);
+            printf("Only one real root\n");
+            printf("%.4lf\n", x_1.real);
             break;
         case TWO:
             printf("Two unique real roots\n");

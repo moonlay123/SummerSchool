@@ -1014,7 +1014,7 @@ Definition at line \mbox{\hyperlink{_t_x_lib_8h_source_l05071}{5071}} of file \m
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___misc_gac3163c41843503fb9ed5b51d37fbfb66}{TX\_DLLIMPORT}}\ (\textcolor{keyword}{false},\ \textcolor{stringliteral}{"{}ComDlg32.dll"{}},\ \textcolor{keywordtype}{bool},\ GetSaveFileNameA,\ (OPENFILENAMEA*\ ofnStruct),\ WINAPI);}
 \DoxyCodeLine{\ \ \ \ \}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \textcolor{keywordtype}{char}\ fileName[MAX\_PATH]\ =\ \textcolor{stringliteral}{"{}"{}};}
 \DoxyCodeLine{}
@@ -1643,7 +1643,7 @@ true, если указанна€ клавиша нажата, false -- если не нажата.
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\textcolor{keywordtype}{void}\ PlayBall();}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{txCreateWindow}}\ (800,\ 600);}
 \DoxyCodeLine{}
@@ -1709,7 +1709,7 @@ bool tx\+IDont\+Want\+To\+Have\+APause\+After\+My\+Program\+Before\+The\+Window\
 \end{DoxySeeAlso}
 @usage 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{txCreateWindow}}\ (800,\ 600);}
 \DoxyCodeLine{}
@@ -2025,7 +2025,7 @@ intptr\+\_\+t tx\+Play\+Video (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[
 \DoxyCodeLine{}
 \DoxyCodeLine{\textcolor{preprocessor}{\#define\ MARU\_ON\_YOUTUBE\ "{}http://ded32.net.ru/www.youtube.com-\/watch-\/z\_AbfPXTKms"{}}}
 \DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Cached\ from\ www.youtube.com/watch/z\_AbfPXTKms}}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Because\ Google\ prevents\ direct\ playing\ from\ Youtube}}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Because\ Google\ prevents\ direct\ playing\ from\ Youtube}}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{txCreateWindow}}\ (800,\ 500);}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___drawing_gad21ad5660a5423f31c2c8e77329758b2}{txSetFillColor}}\ (\mbox{\hyperlink{group___drawing_gaa281a54954945bb0e96314fb4cfad7b9}{TX\_BLUE}});}
@@ -2197,7 +2197,7 @@ WNDPROC tx\+Set\+Windows\+Hook (\begin{DoxyParamCaption}\item[{WNDPROC}]{wnd\+Pr
 
 \end{DoxyReturn}
 \begin{DoxyWarning}{Warning}
-¬аша оконна€ функци€ будет вызыватьс€ из вспомогательного (второго) потока, создаваемого \doxylink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}. Ёто {\bfseries{не}} тот же самый поток, в котором выполн€етс€ \doxylink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}. ¬ св€зи с этим будьте внимательны при работе с глобальными переменными или их аналогами, т.\+к. может возникнуть "{}гонка          потоков"{} (race condition).
+¬аша оконна€ функци€ будет вызыватьс€ из вспомогательного (второго) потока, создаваемого \doxylink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{tx\+Create\+Window()}. Ёто {\bfseries{не}} тот же самый поток, в котором выполн€етс€ \doxylink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main()}. ¬ св€зи с этим будьте внимательны при работе с глобальными переменными или их аналогами, т.\+к. может возникнуть "{}гонка          потоков"{} (race condition).
 
 ≈сли ваша оконна€ функци€ вернет значение, не равное 0, то стандартна€ обработка сообщений средствами TXLib производитьс€ {\bfseries{не}} будет. »з-\/за этого, возможно, окно даже не сможет нормально закрытьс€. ѕридетс€ завершать программу с помощью Alt-\/\+Ctrl-\/\+Del из диспетчера задач, или из более продвинутого диспетчера \href{http://technet.microsoft.com/en-us/sysinternals/bb896653.aspx}{\texttt{ Process Explorer}}. ≈сли ¬ы берете на себ€ обработку оконных сообщений, делайте ее по правилам Win32 (см. в MSDN), включа€ вызов Def\+Window\+Proc(). Ётот вызов особенно важен, если вы обрабатываете сообщение {\ttfamily WM\+\_\+\+CLOSE}.
 \end{DoxyWarning}
@@ -2219,7 +2219,7 @@ WNDPROC tx\+Set\+Windows\+Hook (\begin{DoxyParamCaption}\item[{WNDPROC}]{wnd\+Pr
 \DoxyCodeLine{\textcolor{keywordtype}{void}\ DrawCursor\ (POINT\ pos,\ \textcolor{keywordtype}{int}\ size);}
 \DoxyCodeLine{\textcolor{keywordtype}{void}\ DrawShoot\ \ (POINT\ pos,\ \textcolor{keywordtype}{int}\ size);}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___technical_ga4ddb32d7a8a676537014da7aea7bf273}{\_txWindowStyle}}\ |=\ WS\_THICKFRAME;}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___drawing_gafce21ce98474d5559f316b3d47cdbfab}{txCreateWindow}}\ (GetSystemMetrics\ (SM\_CXSCREEN)\ /\ 4,\ GetSystemMetrics\ (SM\_CYSCREEN)\ /\ 4);}
@@ -2374,7 +2374,7 @@ int tx\+Speak (\begin{DoxyParamCaption}\item[{const char \texorpdfstring{$\ast$}
 \DoxyCodeLine{\textcolor{preprocessor}{\#define\ \ TX\_USE\_SPEAK}}
 \DoxyCodeLine{\textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_t_x_lib_8h}{TXLib.h}}"{}}}
 \DoxyCodeLine{}
-\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}}()}
+\DoxyCodeLine{\textcolor{keywordtype}{int}\ \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}}()}
 \DoxyCodeLine{\ \ \ \ \{}
 \DoxyCodeLine{\ \ \ \ \mbox{\hyperlink{group___misc_gad6db0ee1b36288c7eb3f2196077971f9}{txSpeak}}\ (\textcolor{stringliteral}{"{}TX\ Library\ is\ cool!"{}});}
 \DoxyCodeLine{}

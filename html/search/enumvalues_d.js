@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zero_0',['ZERO',['../square_8h.html#a98df0a5ae6ff7dc84cfcf1863112d2c3ae117e3533122c80b262257b49b21cddf',1,'square.h']]]
+  ['two_0',['TWO',['../square_8h.html#a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851',1,'square.h']]],
+  ['two_5fsimilar_1',['TWO_SIMILAR',['../square_8h.html#a98df0a5ae6ff7dc84cfcf1863112d2c3a7dbd60b3d9900fcbe4042e1824388f61',1,'square.h']]]
 ];
