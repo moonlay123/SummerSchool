@@ -80,9 +80,9 @@ int square_equation_input(coefficients *coefs)
     assert(isfinite(coefs->c));
 
     int counter = 0;
-    bool fl = 0;
+    bool input_examination = 0;
 
-    while (!fl)
+    while (!input_examination)
     {
         basic_color();
 
@@ -98,7 +98,7 @@ int square_equation_input(coefficients *coefs)
             ++counter;
         } else
         {
-            fl = 1;
+            input_examination = 1;
         }
     }
 

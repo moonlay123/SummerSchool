@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
         return SUCCESS;
     }
 
-    console_flags flags;
+    console_flags flags = {};
 
     flag_handler(&flags, argc, argv);
 

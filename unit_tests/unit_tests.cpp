@@ -2,7 +2,7 @@
 
 void put_test_to_file(unit_test data)
 {
-    FILE *fp;
+    FILE *fp = NULL;
     if ((fp = fopen("files/tests", "a+")) == NULL)
     {
         error_color();
@@ -30,7 +30,7 @@ void put_test_to_file(unit_test data)
 }
 test_bufer read_file()
 {
-    FILE *fp;
+    FILE *fp = NULL;
     if ((fp = fopen("files/tests", "r")) == NULL)
     {
         error_color();
@@ -46,7 +46,7 @@ test_bufer read_file()
     roots_type expected_root_type = NON_ROOT_TYPE;
     int expected_root_int = NON_ROOT_TYPE;
 
-    test_bufer tests;
+    test_bufer tests = {};
     while (fscanf(fp, "%d %lf %lf %lf %lf %lf %lf %lf %d", &number_of_test,
                 &coefs.a, &coefs.b, &coefs.c,
                 &expected_x_1.real, &expected_x_1.imaginary,
@@ -105,9 +105,9 @@ void input_roots_type(roots_type *expected_root_type)
     assert(expected_root_type != NULL);
 
     int expected_root_int = NON_ROOT_TYPE;
-    bool fl = 0;
+    bool input_examination = 0;
 
-    while (!fl)
+    while (!input_examination)
     {
         printf("Enter excepted root type of square equation\n"
                 "1) two unique roots\n"
@@ -126,7 +126,7 @@ void input_roots_type(roots_type *expected_root_type)
             clean_char_buffer();
         } else
         {
-            fl = 1;
+            input_examination = 1;
         }
     }
 
@@ -139,9 +139,9 @@ void input_roots(complex *x_1, complex *x_2)
     assert(x_2 != NULL);
 
     double x_1_real = 0, x_2_real = 0, x_1_imaginary = 0, x_2_imaginary = 0;
-    bool fl = 0;
+    bool input_examination = 0;
 
-    while (!fl)
+    while (!input_examination)
     {
         printf("Enter expected roots as x_1_real x_1_imaginary x_2_real x_2_imaginary\n"
                 "If your equation doesn't have enough roots put them as nan nan, inf inf or 0 0\n");
@@ -154,7 +154,7 @@ void input_roots(complex *x_1, complex *x_2)
             clean_char_buffer();
         } else
         {
-            fl = 1;
+            input_examination = 1;
         }
     }
 
@@ -247,22 +247,22 @@ void print_results(unit_test data, complex received_x_1, complex received_x_2, r
 
 int run_all_tests()
 {
-    int fl = 0;
+    int test_examination = 0;
 
     test_bufer all_tests = read_file();
 
     for (int i = 0; i < all_tests.size; ++i)
     {
-        fl += full_test(all_tests.tests[i]) == FAILURE ? 1 : 0;
+        test_examination += full_test(all_tests.tests[i]) == FAILURE ? 1 : 0;
     }
-    if (fl == 0)
+    if (test_examination == 0)
     {
         success_color();
     } else
     {
         failure_color();
     }
-    printf("Tests ended with %d failure(s)", fl);
+    printf("Tests ended with %d failure(s)", test_examination);
     basic_color();
-    return fl;
+    return test_examination;
 }

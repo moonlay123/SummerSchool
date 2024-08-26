@@ -157,15 +157,15 @@ void menu()
 choose_type choose_variant()
 {
     int choose = NON_TYPE;
-    int fl = 0;
+    int choose_examination = 0;
     while (choose != STANDARD and choose != MANY_EQUATIONS and choose != UNIT_TESTS
-                                                and choose != INPUT_UNIT_TEST and choose != EXIT and !fl)
+                                                and choose != INPUT_UNIT_TEST and choose != EXIT and !choose_examination)
     {
         printf("Choose what you want\n1) Standard input\n2) Random input\n3) Unit tests\n4) Input your unit test\n5) Exit program\n");
-        fl = scanf("%d", &choose);
+        choose_examination = scanf("%d", &choose);
 
         if (choose != STANDARD and choose != MANY_EQUATIONS and choose != UNIT_TESTS
-                                                and choose != INPUT_UNIT_TEST and choose != EXIT and !fl)
+                                                and choose != INPUT_UNIT_TEST and choose != EXIT and !choose_examination)
         {
             failure_color();
             printf("Wrong input, try again");
