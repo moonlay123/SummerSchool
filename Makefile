@@ -21,7 +21,8 @@ tx: $(TX_LIB)
 	$(COMP) $(FLAGS) -c TXLib/$<.cpp -o objects/$<.o
 
 all: $(SOURCES)
-	$(COMP) $(SOURCES) -o $(EXECUTABLE) $(FLAGS)
+	make obj
+	make link
 
 %.o: %.cpp
 	$(COMP) $(FLAGS) -c $< -o objects/$@
