@@ -117,9 +117,9 @@ void help()
 
 void menu()
 {
-    bool fl = 0;
+    bool input_menu = 0;
 
-    while (!fl)
+    while (!input_menu)
     {
         choose_type note = choose_variant();
 
@@ -143,7 +143,7 @@ void menu()
                 basic_color();
                 break;
             case EXIT:
-                fl = 1;
+                input_menu = 1;
                 break;
             default:
                 unexpected_color();
