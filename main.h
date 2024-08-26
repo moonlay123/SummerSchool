@@ -1,15 +1,30 @@
 #ifndef choosing
 #define choosing
+#include "unit_tests.h"
 /*!
     Enum of all program action types
 */
 typedef enum {EXIT = 5, INPUT_UNIT_TEST = 4, UNIT_TESTS = 3, MANY_EQUATIONS = 2, STANDARD = 1, NON_TYPE = 0} choose_type;
 
+const int MAX_FILES = 100;
 /*!
-    Enum of all console action types
+Struct defining console flags info
 */
-typedef enum {CLEAN_CONSOLE = 100, MENU = 4, FILE_FLAG = 3, RAND_COLOR = 2, HELP = 1, NOTHING = 0, EXIT_FLAG = -1} flags_type;
+struct console_flags
+{
+    /*@{*/
+    bool menu_flag = false; /*!< contains bool of menu flag info */
+    bool clean_flag = false; /*!< contains bool of clean flag info */
+    bool rand_flag = false; /*!< contains bool of rand flag info */
+    bool help_flag = false; /*!< contains bool of help flag info */
+    bool exit_flag = false; /*!< contains bool of exit flag info */
 
+    int file_num = 0; /*!< contains int info of number of -test flags */
+    int filenames_size = 0; /*!< contains int info of console entered filenames num*/
+    int filenames_uk = 0; /*!< Pointer to current filenames position*/
+    int filenames[MAX_FILES] = {}; /*!<mas of argv indexes of files*/
+    /*@}*/
+};
 /*!
 Function for choosing program actions
 \return the selected program action
@@ -28,37 +43,37 @@ void help();
 
 /*!
 Solve square root equation from getted file
-\param[in] files mas of all file of flag compile
-\param[in] files_size size of files
-\param[in] files_uk pointer of current file
+\param[in] filename name of file
 */
-void file_flag(char ** files, int files_size, int files_uk);
-
-/*!
-Use all flags actions and after free dinamic memory
-\param[in] files mas of all file of flag compile
-\param[in] queue mas of all "-" flags
-\param[in] argc size of queue
-\param[in] files_size size of files
-*/
-void flag_actions(char **files, int *queue, int argc, int files_size);
+void file_flag(char *filename);
 
 /*!
 Handle all flag cases
-\param[out] files mas of file names
-\param[in] argv mas of flags
-\param[out] queue mas of handled flags
-\param[in] argc size of argv, files, queue
-\param[out] file_uk pointer of number of files
+\param[in] flags all flags info
+\param[in] argc number of flags
+\param[in] argv all console flags
 */
-void flag_handler(char **files, char **argv, int *queue, int argc, int *files_uk);
+void flag_handler(console_flags *flags, int argc, char **argv);
 
 /*!
-Compare for qsort
-\param[in] a const addredd of first
-\param[in] b const addredd of first
-\return compare rule
+Open file and put pointer to it
+\param[out] fp file pointer
+\param[int] filename path to need file
+\return SUCCESS or FAILURE
 */
-int compare(const void *a, const void *b);
+int file_open(FILE **fp, char *filename);
+
+/*!
+Close file by pointer
+\param[in\out] fp pointer of file
+*/
+void file_close(FILE **fp);
+
+/*!
+Handle correct amount of files
+\param[in] flags all info about flags
+\param[in] argv all console flags
+*/
+void files_handler(console_flags *flags, char **argv);
 
 #endif

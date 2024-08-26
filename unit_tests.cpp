@@ -5,7 +5,11 @@ void put_test_to_file(unit_test data)
     FILE *fp;
     if ((fp = fopen("files/tests", "a+")) == NULL)
     {
-        exit(EXIT_FAILURE);
+        error_color();
+        perror("Open failed");
+        basic_color();
+
+        return;
     }
 
     int lines_counter = 1;
@@ -14,19 +18,24 @@ void put_test_to_file(unit_test data)
         if (fgetc(fp) == '\n')
             lines_counter++;
     }
+
     fprintf(fp, "%d %lf %lf %lf %lf %lf %lf %lf %d\n", lines_counter,
                 data.coefs.a, data.coefs.b, data.coefs.c,
                 data.expected_x_1.real, data.expected_x_1.imaginary,
                 data.expected_x_2.real, data.expected_x_2.imaginary,
                 data.expected_root_type);
-    fclose(fp);
+
+    if (fclose(fp) != 0)
+        perror("Close failed");
 }
 test_bufer read_file()
 {
     FILE *fp;
     if ((fp = fopen("files/tests", "r")) == NULL)
     {
-        exit(EXIT_FAILURE);
+        error_color();
+        perror("Open failed");
+        basic_color();
     }
 
     int number_of_test = 0, test_counter = 0;
@@ -52,7 +61,9 @@ test_bufer read_file()
 
     tests.size = test_counter;
 
-    fclose(fp);
+    if (fclose(fp) != 0)
+        perror("Close failed");
+
     return tests;
 }
 
@@ -199,10 +210,13 @@ bool check_test_correctness(unit_test data,
     if (data.expected_root_type == received_root_type)
     {
         if (received_root_type == NON_ROOT_TYPE or
-            received_root_type == INFINITES or received_root_type == ZERO)
+            received_root_type == INFINITES or
+            received_root_type == ZERO)
         {
             return true;
-        } else if (received_root_type == TWO_SIMILAR or received_root_type == COMPLEX or received_root_type == TWO)
+        } else if (received_root_type == TWO_SIMILAR or
+                   received_root_type == COMPLEX or
+                   received_root_type == TWO)
         {
             return (complex_are_similar(data.expected_x_1, received_x_1) and
                     complex_are_similar(data.expected_x_2, received_x_2));
@@ -239,7 +253,7 @@ int run_all_tests()
 
     for (int i = 0; i < all_tests.size; ++i)
     {
-        fl += full_test(all_tests.tests[i]) == FAILURE ? FAILURE : SUCCESS;
+        fl += full_test(all_tests.tests[i]) == FAILURE ? 1 : 0;
     }
     if (fl == 0)
     {

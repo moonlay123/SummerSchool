@@ -1,30 +1,61 @@
-#include "unit_tests.h"
 #include "main.h"
 
 int main(int argc, char *argv[])
 {
-    ++argv; --argc;
-    int *queue = (int *) calloc(argc, sizeof(int));
+    --argc; ++argv;
 
-    int files_uk = 0;
-    char **files = (char **) calloc(argc, sizeof(char *));
+    if (argc == 0)
+    {
+        help();
+        return SUCCESS;
+    }
 
-    flag_handler(files, argv, queue, argc, &files_uk);
+    console_flags flags;
 
-    flag_actions(files, queue, argc, files_uk);
+    flag_handler(&flags, argc, argv);
 
-    txSetConsoleAttr (0x00);
+    if (flags.exit_flag)
+    {
+        txSetConsoleAttr (0x00);
+        return SUCCESS;
+    }
+    if (flags.help_flag)
+    {
+        help();
+    }
+    if (flags.rand_flag)
+    {
+        random_color();
+    }
+    if (flags.filenames_size > 0)
+    {
+        files_handler(&flags, argv);
+    }
+    if (flags.menu_flag)
+    {
+        menu();
+    }
+    if (flags.clean_flag)
+    {
+        txSetConsoleAttr(0x00);
+        txClearConsole();
+    }
 
     return SUCCESS;
 }
 
-void flag_handler(char **files, char **argv, int *queue, int argc, int *files_uk)
+void files_handler(console_flags *flags, char **argv)
 {
-    assert(files != NULL);
-    assert(queue !=NULL);
-    assert(files_uk != NULL);
+    for (int i = 0; i < min(flags->file_num, flags->filenames_size); ++i)
+    {
+        file_flag(argv[flags->filenames[flags->filenames_uk++]]);
+    }
+}
 
-    int file_flag_counts = 0;
+void flag_handler(console_flags *flags, int argc, char **argv)
+{
+    assert(flags != NULL);
+    assert(argv  != NULL);
 
     basic_color();
 
@@ -32,124 +63,87 @@ void flag_handler(char **files, char **argv, int *queue, int argc, int *files_uk
     {
         if (!strcmp(argv[i], "-menu"))
         {
-            queue[i] = MENU;
+            flags->menu_flag = true;
         } else if(!strcmp(argv[i], "-rand"))
         {
-            queue[i] = RAND_COLOR;
-        } else if(!strcmp(argv[i], "-file"))
+            flags->rand_flag = true;
+        } else if(!strcmp(argv[i], "-test"))
         {
-            queue[i] = FILE_FLAG;
-            ++file_flag_counts;
+            flags->file_num++;
         } else if(argv[i][0] != '-')
         {
-            files[(*files_uk)++] = argv[i];
-            queue[i] = NOTHING;
+            flags->filenames[flags->filenames_size++] = i;
         } else if(!strcmp(argv[i], "-clean"))
         {
-            queue[i] = CLEAN_CONSOLE;
+            flags->clean_flag = true;
         } else if(!strcmp(argv[i], "-exit"))
         {
-            queue[i] = EXIT_FLAG;
+            flags->exit_flag = true;
         } else if(!strcmp(argv[i], "-help"))
         {
-            queue[i] = HELP;
+            flags->help_flag = true;
         }
         else
         {
             unexpected_color();
-            printf("No such flag");
+            printf("No such flag %s", argv[i]);
             basic_color();
-
-            queue[i] = NOTHING;
         }
     }
 
-    assert(*files_uk == file_flag_counts);
-
-    qsort(queue, argc, sizeof(int), compare);
-}
-
-
-int compare(const void *a, const void *b)
-{
-    assert(a != NULL);
-    assert(b != NULL);
-
-    int l = *((const int *) a);
-    int r = *((const int *) b);
-    return l-r;
-}
-
-void flag_actions(char **files, int *queue, int argc, int files_size)
-{
-    assert(files != NULL);
-    assert(queue !=NULL);
-
-    int files_uk = 0;
-    if (argc == 0)
-        help();
-    for(int i = 0; i < argc; ++i)
-    {
-        switch (queue[i])
-        {
-            case NOTHING:
-                break;
-            case EXIT_FLAG:
-                free(queue);
-                free(files);
-                return;
-                break;
-            case HELP:
-                help();
-                break;
-            case RAND_COLOR:
-                random_color();
-                break;
-            case FILE_FLAG:
-                file_flag(files, files_size, files_uk++);
-                break;
-            case MENU:
-                menu();
-                break;
-            case CLEAN_CONSOLE:
-                txSetConsoleAttr (0x00);
-                txClearConsole();
-                break;
-            default:
-                help();
-                break;
-        }
-    }
-
-    free(queue);
-    free(files);
-}
-
-void file_flag(char **files, int files_size, int files_uk)
-{
-    assert(files != NULL);
-    assert(files_uk < files_size);
-    assert(files[files_uk] != NULL);
-
-    FILE *fp;
-    if ((fp = fopen(files[files_uk], "r")) == NULL)
+    if (flags->file_num != flags->filenames_size)
     {
         error_color();
-        printf("No file with path %s", files[files_uk]);
+        printf("You choosed %d file flags, but gave %d", flags->file_num, flags->filenames_size);
         basic_color();
+        getchar();
+    }
+}
 
-        return;
+int file_open(FILE **fp, char *filename)
+{
+    if ((*fp = fopen(filename, "r")) == NULL)
+    {
+        error_color();
+        perror("Open failed");
+        basic_color();
+        getchar();
+
+        return FAILURE;
     }
 
+    return SUCCESS;
+}
+
+void file_close(FILE **fp)
+{
+    if(fclose(*fp) != 0)
+    {
+        perror("Close failed");
+    }
+}
+
+void file_flag(char *filename)
+{
+    assert(filename != NULL);
+
+    FILE *fp = NULL;
+    if (file_open(&fp, filename) == FAILURE)
+        return;
     coefficients coefs = {0, 0, 0};
     if (fscanf(fp, "%lf %lf %lf", &coefs.a, &coefs.b, &coefs.c) < 3)
     {
         error_color();
         printf("Wrong file structure, it must looks like a b c of square equation");
         basic_color();
+        getchar();
     }
-    printf("Solve of square equation from file with path %s", files[files_uk]);
+
+    printf("Solve of square equation from file with path %s\n", filename);
     solve_with_print(coefs);
+    getchar();
+
+    file_close(&fp);
 }
 
 void help()
@@ -159,10 +153,10 @@ void help()
            "-rand\t Create random color setup for console for once\n"
            "-help\t open help tips\n"
            "-menu\t open choosing menu\n"
-           "-file\t choose file with quadratic coefs and get solve\n"
+           "-test\t choose file with quadratic coefs and get solve\n"
            "-clean\t Clear console window after program end\n");
-    getchar();
     basic_color();
+    getchar();
 }
 
 void menu()
