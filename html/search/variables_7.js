@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['max_5ftests_0',['MAX_TESTS',['../unit__tests_8h.html#a0e2dab88454434a909878a49ce388ec5',1,'unit_tests.h']]]
+  ['id_0',['id',['../structtx_dialog_1_1_layout.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd',1,'txDialog::Layout']]],
+  ['imaginary_1',['imaginary',['../structcomplex.html#a92dcee8df01cf892620da47f14b8e102',1,'complex']]]
 ];

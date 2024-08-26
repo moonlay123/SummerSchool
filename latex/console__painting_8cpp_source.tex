@@ -3,12 +3,12 @@
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{console__painting_8h}{console\_painting.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00002}00002\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00003}00003\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}\ color\_flag\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00003}00003\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ color\_flag\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00004}\mbox{\hyperlink{console__painting_8cpp_a8e18cc5827c38d3b3264ae8282a58b22}{00004}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{console__painting_8cpp_a8e18cc5827c38d3b3264ae8282a58b22}{random\_color}}()}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00005}00005\ \{}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00006}00006\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00007}00007\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00008}00008\ \ \ \ \ color\_flag\ =\ 1\ -\/\ color\_flag;}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00008}00008\ \ \ \ \ color\_flag\ =\ !color\_flag;}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00009}00009\ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (16\ *\ (rand()\ \%\ 16)\ +\ (rand()\ \%\ 16));}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00010}00010\ }
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{if}\ (now\ !=\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}())}
@@ -59,7 +59,7 @@
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00056}00056\ \{}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{unsigned}\ now\ =\ \mbox{\hyperlink{group___drawing_gad1fdf92b2b1e0e3d56e03fad24d735bd}{txGetConsoleAttr}}();}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00058}00058\ }
-\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{if}\ (color\_flag\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{if}\ (color\_flag)}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00060}00060\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{group___drawing_ga791155510da5fc336b3dbe4deab37974}{txSetConsoleAttr}}\ (16\ *\ (rand()\ \%\ 16)\ +\ (rand()\ \%\ 16));}
 \DoxyCodeLine{\Hypertarget{console__painting_8cpp_source_l00062}00062\ \ \ \ \ \}\ \textcolor{keywordflow}{else}}

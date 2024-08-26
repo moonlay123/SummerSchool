@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['listbox_0',['LISTBOX',['../group___dialogs.html#gga077745aacfb8431d6529e20ad67d1674a097e68cde08918fb77838059126485f7',1,'txDialog']]]
+  ['many_5fequations_0',['MANY_EQUATIONS',['../main_8h.html#a9af026261f5cfa59aa2bb1a497bd2f93a6484befd4590d68d5e33e618e4b825d7',1,'main.h']]]
 ];

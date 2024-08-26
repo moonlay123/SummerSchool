@@ -90,13 +90,13 @@ $(function(){ initResizable(false); });
 <div class="contents">
 <a href="console__painting_8cpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#include &quot;<a class="code" href="console__painting_8h.html">console_painting.h</a>&quot;</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">static</span> <span class="keywordtype">int</span> color_flag = 0;</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">static</span> <span class="keywordtype">bool</span> color_flag = 0;</div>
 <div class="foldopen" id="foldopen00004" data-start="{" data-end="}">
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno"><a class="line" href="console__painting_8cpp.html#a8e18cc5827c38d3b3264ae8282a58b22">    4</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="console__painting_8cpp.html#a8e18cc5827c38d3b3264ae8282a58b22">random_color</a>()</div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span>{</div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>    <span class="keywordtype">unsigned</span> now = <a class="code hl_function" href="group___drawing.html#gad1fdf92b2b1e0e3d56e03fad24d735bd">txGetConsoleAttr</a>();</div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span> </div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    color_flag = 1 - color_flag;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>    color_flag = !color_flag;</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>    <a class="code hl_function" href="group___drawing.html#ga791155510da5fc336b3dbe4deab37974">txSetConsoleAttr</a> (16 * (rand() % 16) + (rand() % 16));</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <span class="keywordflow">if</span> (now != <a class="code hl_function" href="group___drawing.html#gad1fdf92b2b1e0e3d56e03fad24d735bd">txGetConsoleAttr</a>())</div>
@@ -157,7 +157,7 @@ $(function(){ initResizable(false); });
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <span class="keywordtype">unsigned</span> now = <a class="code hl_function" href="group___drawing.html#gad1fdf92b2b1e0e3d56e03fad24d735bd">txGetConsoleAttr</a>();</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span> (color_flag == 1)</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    <span class="keywordflow">if</span> (color_flag)</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    {</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <a class="code hl_function" href="group___drawing.html#ga791155510da5fc336b3dbe4deab37974">txSetConsoleAttr</a> (16 * (rand() % 16) + (rand() % 16));</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    } <span class="keywordflow">else</span></div>

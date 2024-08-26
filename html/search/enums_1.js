@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['flags_5ftype_0',['flags_type',['../main_8h.html#af4f880095ceac6d9516b1ad0d83778c0',1,'main.h']]]
+  ['roots_5ftype_0',['roots_type',['../square_8h.html#a98df0a5ae6ff7dc84cfcf1863112d2c3',1,'square.h']]]
 ];

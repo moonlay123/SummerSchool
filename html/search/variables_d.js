@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['x_0',['x',['../structtx_dialog_1_1_layout.html#ad34729e4edc23ac502eaa17b188df67b',1,'txDialog::Layout']]]
+  ['wndclass_0',['wndclass',['../structtx_dialog_1_1_layout.html#aef0e185c3b1c26598c04af6fc185afd2',1,'txDialog::Layout']]]
 ];

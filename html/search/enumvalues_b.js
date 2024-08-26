@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rand_5fcolor_0',['RAND_COLOR',['../main_8h.html#af4f880095ceac6d9516b1ad0d83778c0af67acba8d8b8efdacea858b402ea4431',1,'main.h']]]
+  ['two_0',['TWO',['../square_8h.html#a98df0a5ae6ff7dc84cfcf1863112d2c3a0e793500a63ffa575b9b712ca3bc9851',1,'square.h']]],
+  ['two_5fsimilar_1',['TWO_SIMILAR',['../square_8h.html#a98df0a5ae6ff7dc84cfcf1863112d2c3a7dbd60b3d9900fcbe4042e1824388f61',1,'square.h']]]
 ];

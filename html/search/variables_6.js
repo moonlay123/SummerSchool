@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['id_0',['id',['../structtx_dialog_1_1_layout.html#a7b7a6396b2c82ad46c6d8b2bf141a8dd',1,'txDialog::Layout']]],
-  ['imaginary_1',['imaginary',['../structcomplex.html#a92dcee8df01cf892620da47f14b8e102',1,'complex']]]
+  ['help_5fflag_0',['help_flag',['../structconsole__flags.html#a47a15d53605fd7375635b3265f6d0ff2',1,'console_flags']]]
 ];

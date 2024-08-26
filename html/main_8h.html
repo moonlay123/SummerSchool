@@ -86,14 +86,22 @@ $(function(){ initResizable(false); });
 <div id="doc-content">
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Data Structures</a> &#124;
 <a href="#enum-members">Enumerations</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle"><div class="title">main.h File Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
+<div class="textblock"><code>#include &quot;<a class="el" href="unit__tests_8h_source.html">unit_tests.h</a>&quot;</code><br />
+</div>
 <p><a href="main_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Data Structures</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structconsole__flags.html">console_flags</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
 Enumerations</h2></td></tr>
 <tr class="memitem:a9af026261f5cfa59aa2bb1a497bd2f93" id="r_a9af026261f5cfa59aa2bb1a497bd2f93"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9af026261f5cfa59aa2bb1a497bd2f93">choose_type</a> { <br />
@@ -107,18 +115,6 @@ Enumerations</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a9af026261f5cfa59aa2bb1a497bd2f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4f880095ceac6d9516b1ad0d83778c0" id="r_af4f880095ceac6d9516b1ad0d83778c0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af4f880095ceac6d9516b1ad0d83778c0">flags_type</a> { <br />
-&#160;&#160;<a class="el" href="#af4f880095ceac6d9516b1ad0d83778c0aec17ee4643c2de4daf0fc6e0fa18d0a5">CLEAN_CONSOLE</a> = 100
-, <a class="el" href="#af4f880095ceac6d9516b1ad0d83778c0a4c40e60bc71a32b924ce1f08d57f9721">MENU</a> = 4
-, <a class="el" href="#af4f880095ceac6d9516b1ad0d83778c0af7d6d54754b1a2afa177129defa0177e">FILE_FLAG</a> = 3
-, <a class="el" href="#af4f880095ceac6d9516b1ad0d83778c0af67acba8d8b8efdacea858b402ea4431">RAND_COLOR</a> = 2
-, <br />
-&#160;&#160;<a class="el" href="#af4f880095ceac6d9516b1ad0d83778c0a9f5cb747b2e1f0ea781d2b1f2a5b4824">HELP</a> = 1
-, <a class="el" href="#af4f880095ceac6d9516b1ad0d83778c0acfe24a7b308a82835c8a9a9a89bc4ca2">NOTHING</a> = 0
-, <a class="el" href="#af4f880095ceac6d9516b1ad0d83778c0a817bfa9ecaa5501eb35f1f61cbb32091">EXIT_FLAG</a> = -1
-<br />
- }</td></tr>
-<tr class="separator:af4f880095ceac6d9516b1ad0d83778c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -128,14 +124,21 @@ Functions</h2></td></tr>
 <tr class="separator:a2a0e843767aeea4f433a28b9c54f573a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97ee70a8770dc30d06c744b24eb2fcfc" id="r_a97ee70a8770dc30d06c744b24eb2fcfc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a97ee70a8770dc30d06c744b24eb2fcfc">help</a> ()</td></tr>
 <tr class="separator:a97ee70a8770dc30d06c744b24eb2fcfc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a799ce8d8eeae76267c19f6370b2a22a4" id="r_a799ce8d8eeae76267c19f6370b2a22a4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a799ce8d8eeae76267c19f6370b2a22a4">file_flag</a> (char **files, int files_size, int files_uk)</td></tr>
-<tr class="separator:a799ce8d8eeae76267c19f6370b2a22a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a603433419ff7b29a3b123f330c96b56e" id="r_a603433419ff7b29a3b123f330c96b56e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a603433419ff7b29a3b123f330c96b56e">flag_actions</a> (char **files, int *queue, int argc, int files_size)</td></tr>
-<tr class="separator:a603433419ff7b29a3b123f330c96b56e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa720df54eea0491d48bf1c9747b1043a" id="r_aa720df54eea0491d48bf1c9747b1043a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa720df54eea0491d48bf1c9747b1043a">flag_handler</a> (char **files, char **argv, int *queue, int argc, int *files_uk)</td></tr>
-<tr class="separator:aa720df54eea0491d48bf1c9747b1043a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac70138609ef6aa6fabca57aca8681e83" id="r_ac70138609ef6aa6fabca57aca8681e83"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac70138609ef6aa6fabca57aca8681e83">compare</a> (const void *a, const void *b)</td></tr>
-<tr class="separator:ac70138609ef6aa6fabca57aca8681e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a815e73962c65d1076d2cc5e4907b1709" id="r_a815e73962c65d1076d2cc5e4907b1709"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a815e73962c65d1076d2cc5e4907b1709">file_flag</a> (char *filename)</td></tr>
+<tr class="separator:a815e73962c65d1076d2cc5e4907b1709"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d4383816754959327a4380e79fced23" id="r_a3d4383816754959327a4380e79fced23"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3d4383816754959327a4380e79fced23">flag_handler</a> (<a class="el" href="structconsole__flags.html">console_flags</a> *flags, int argc, char **argv)</td></tr>
+<tr class="separator:a3d4383816754959327a4380e79fced23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab46dcf82b13cb23570fe27090f9cce2c" id="r_ab46dcf82b13cb23570fe27090f9cce2c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab46dcf82b13cb23570fe27090f9cce2c">file_open</a> (FILE **fp, char *filename)</td></tr>
+<tr class="separator:ab46dcf82b13cb23570fe27090f9cce2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2dd152b3824f6d273a927d885f311c2" id="r_ac2dd152b3824f6d273a927d885f311c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac2dd152b3824f6d273a927d885f311c2">file_close</a> (FILE **fp)</td></tr>
+<tr class="separator:ac2dd152b3824f6d273a927d885f311c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af651d706e4be82f72658de36c7964d00" id="r_af651d706e4be82f72658de36c7964d00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af651d706e4be82f72658de36c7964d00">files_handler</a> (<a class="el" href="structconsole__flags.html">console_flags</a> *flags, char **argv)</td></tr>
+<tr class="separator:af651d706e4be82f72658de36c7964d00"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a70c8e8ed53225d83941c1fb85bee98a7" id="r_a70c8e8ed53225d83941c1fb85bee98a7"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70c8e8ed53225d83941c1fb85bee98a7">MAX_FILES</a> = 100</td></tr>
+<tr class="separator:a70c8e8ed53225d83941c1fb85bee98a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
 <a id="a9af026261f5cfa59aa2bb1a497bd2f93" name="a9af026261f5cfa59aa2bb1a497bd2f93"></a>
@@ -159,33 +162,7 @@ Functions</h2></td></tr>
 <tr><td class="fieldname"><a id="a9af026261f5cfa59aa2bb1a497bd2f93a388e687825deef54499e2cbd6a980199" name="a9af026261f5cfa59aa2bb1a497bd2f93a388e687825deef54499e2cbd6a980199"></a>NON_TYPE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="main_8h_source.html#l00006">6</a> of file <a class="el" href="main_8h_source.html">main.h</a>.</p>
-
-</div>
-</div>
-<a id="af4f880095ceac6d9516b1ad0d83778c0" name="af4f880095ceac6d9516b1ad0d83778c0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4f880095ceac6d9516b1ad0d83778c0">&#9670;&#160;</a></span>flags_type</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">enum <a class="el" href="#af4f880095ceac6d9516b1ad0d83778c0">flags_type</a></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Enum of all console action types </p>
-<table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="af4f880095ceac6d9516b1ad0d83778c0aec17ee4643c2de4daf0fc6e0fa18d0a5" name="af4f880095ceac6d9516b1ad0d83778c0aec17ee4643c2de4daf0fc6e0fa18d0a5"></a>CLEAN_CONSOLE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af4f880095ceac6d9516b1ad0d83778c0a4c40e60bc71a32b924ce1f08d57f9721" name="af4f880095ceac6d9516b1ad0d83778c0a4c40e60bc71a32b924ce1f08d57f9721"></a>MENU&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af4f880095ceac6d9516b1ad0d83778c0af7d6d54754b1a2afa177129defa0177e" name="af4f880095ceac6d9516b1ad0d83778c0af7d6d54754b1a2afa177129defa0177e"></a>FILE_FLAG&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af4f880095ceac6d9516b1ad0d83778c0af67acba8d8b8efdacea858b402ea4431" name="af4f880095ceac6d9516b1ad0d83778c0af67acba8d8b8efdacea858b402ea4431"></a>RAND_COLOR&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af4f880095ceac6d9516b1ad0d83778c0a9f5cb747b2e1f0ea781d2b1f2a5b4824" name="af4f880095ceac6d9516b1ad0d83778c0a9f5cb747b2e1f0ea781d2b1f2a5b4824"></a>HELP&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af4f880095ceac6d9516b1ad0d83778c0acfe24a7b308a82835c8a9a9a89bc4ca2" name="af4f880095ceac6d9516b1ad0d83778c0acfe24a7b308a82835c8a9a9a89bc4ca2"></a>NOTHING&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="af4f880095ceac6d9516b1ad0d83778c0a817bfa9ecaa5501eb35f1f61cbb32091" name="af4f880095ceac6d9516b1ad0d83778c0a817bfa9ecaa5501eb35f1f61cbb32091"></a>EXIT_FLAG&#160;</td><td class="fielddoc"></td></tr>
-</table>
-
-<p class="definition">Definition at line <a class="el" href="main_8h_source.html#l00011">11</a> of file <a class="el" href="main_8h_source.html">main.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8h_source.html#l00007">7</a> of file <a class="el" href="main_8h_source.html">main.h</a>.</p>
 
 </div>
 </div>
@@ -206,43 +183,38 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Function for choosing program actions </p><dl class="section return"><dt>Returns</dt><dd>the selected program action </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00207">207</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00201">201</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
-<a id="ac70138609ef6aa6fabca57aca8681e83" name="ac70138609ef6aa6fabca57aca8681e83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac70138609ef6aa6fabca57aca8681e83">&#9670;&#160;</a></span>compare()</h2>
+<a id="ac2dd152b3824f6d273a927d885f311c2" name="ac2dd152b3824f6d273a927d885f311c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2dd152b3824f6d273a927d885f311c2">&#9670;&#160;</a></span>file_close()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int compare </td>
+          <td class="memname">void file_close </td>
           <td>(</td>
-          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>a</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">FILE **</td>          <td class="paramname"><span class="paramname"><em>fp</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">const void *</td>          <td class="paramname"><span class="paramname"><em>b</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Compare for qsort </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Close file by pointer </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">a</td><td>const addredd of first </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">b</td><td>const addredd of first </td></tr>
+    <tr><td class="paramname">[in</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>compare rule </dd></dl>
+<p>out] fp pointer of file </p>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00073">73</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00118">118</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a799ce8d8eeae76267c19f6370b2a22a4" name="a799ce8d8eeae76267c19f6370b2a22a4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a799ce8d8eeae76267c19f6370b2a22a4">&#9670;&#160;</a></span>file_flag()</h2>
+<a id="a815e73962c65d1076d2cc5e4907b1709" name="a815e73962c65d1076d2cc5e4907b1709"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a815e73962c65d1076d2cc5e4907b1709">&#9670;&#160;</a></span>file_flag()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -250,77 +222,85 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void file_flag </td>
           <td>(</td>
-          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>files</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span></td><td>)</td>
           <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>files_size</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>files_uk</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Solve square root equation from getted file </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">files</td><td>mas of all file of flag compile </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">files_size</td><td>size of files </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">files_uk</td><td>pointer of current file </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">filename</td><td>name of file </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00128">128</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00126">126</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
-<a id="a603433419ff7b29a3b123f330c96b56e" name="a603433419ff7b29a3b123f330c96b56e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a603433419ff7b29a3b123f330c96b56e">&#9670;&#160;</a></span>flag_actions()</h2>
+<a id="ab46dcf82b13cb23570fe27090f9cce2c" name="ab46dcf82b13cb23570fe27090f9cce2c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab46dcf82b13cb23570fe27090f9cce2c">&#9670;&#160;</a></span>file_open()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void flag_actions </td>
+          <td class="memname">int file_open </td>
           <td>(</td>
-          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>files</em></span>, </td>
+          <td class="paramtype">FILE **</td>          <td class="paramname"><span class="paramname"><em>fp</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>queue</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>argc</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>files_size</em></span>&#160;)</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>filename</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Use all flags actions and after free dinamic memory </p><dl class="params"><dt>Parameters</dt><dd>
+<p>Open file and put pointer to it </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">files</td><td>mas of all file of flag compile </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">queue</td><td>mas of all "-" flags </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>size of queue </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">files_size</td><td>size of files </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">fp</td><td>file pointer </td></tr>
+    <tr><td class="paramdir"></td><td class="paramname">[int]</td><td>filename path to need file </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>SUCCESS or FAILURE </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00103">103</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af651d706e4be82f72658de36c7964d00" name="af651d706e4be82f72658de36c7964d00"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af651d706e4be82f72658de36c7964d00">&#9670;&#160;</a></span>files_handler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void files_handler </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structconsole__flags.html">console_flags</a> *</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Handle correct amount of files </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>all info about flags </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>all console flags </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00083">83</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00047">47</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
-<a id="aa720df54eea0491d48bf1c9747b1043a" name="aa720df54eea0491d48bf1c9747b1043a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa720df54eea0491d48bf1c9747b1043a">&#9670;&#160;</a></span>flag_handler()</h2>
+<a id="a3d4383816754959327a4380e79fced23" name="a3d4383816754959327a4380e79fced23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d4383816754959327a4380e79fced23">&#9670;&#160;</a></span>flag_handler()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -328,17 +308,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void flag_handler </td>
           <td>(</td>
-          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>files</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>queue</em></span>, </td>
+          <td class="paramtype"><a class="el" href="structconsole__flags.html">console_flags</a> *</td>          <td class="paramname"><span class="paramname"><em>flags</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -348,22 +318,20 @@ Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>files_uk</em></span>&#160;)</td>
+          <td class="paramtype">char **</td>          <td class="paramname"><span class="paramname"><em>argv</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 <p>Handle all flag cases </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">files</td><td>mas of file names </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>mas of flags </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">queue</td><td>mas of handled flags </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>size of argv, files, queue </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">file_uk</td><td>pointer of number of files </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">flags</td><td>all flags info </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argc</td><td>number of flags </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">argv</td><td>all console flags </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00021">21</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00055">55</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -383,7 +351,7 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Print help docs </p>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00155">155</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00149">149</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -403,7 +371,24 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Function using with -menu flag </p>
 
-<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00168">168</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+<p class="definition">Definition at line <a class="el" href="main_8cpp_source.html#l00162">162</a> of file <a class="el" href="main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a70c8e8ed53225d83941c1fb85bee98a7" name="a70c8e8ed53225d83941c1fb85bee98a7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a70c8e8ed53225d83941c1fb85bee98a7">&#9670;&#160;</a></span>MAX_FILES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int MAX_FILES = 100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="main_8h_source.html#l00009">9</a> of file <a class="el" href="main_8h_source.html">main.h</a>.</p>
 
 </div>
 </div>
