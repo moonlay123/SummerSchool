@@ -2,7 +2,7 @@ FLAGS=-Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal 
 
 COMP = g++
 
-SOURCES = $(wildcard *.cpp)
+SOURCES = $(wildcard services/*.cpp wildcard solver/*.cpp wildcard unit_tests/*.cpp wildcard flags/*.cpp main.cpp)
 OBJECTS = $(wildcard objects/*.o)
 MOVE_OBJECTS = $(wildcard *.o)
 EXECUTABLE = proj

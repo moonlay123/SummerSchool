@@ -1,7 +1,7 @@
 #ifndef square
 #define square
-#include "console_painting.h"
-#include "complex.h"
+#include "../services/complex.h"
+#include "../services/console_painting.h"
 
 /*!
 Struct defining coefs of square equation
@@ -102,4 +102,5 @@ Function takes coefs of square equation and print solution
 \param[in] coefs coefs of square equation
 */
 void solve_with_print(coefficients coefs);
+
 #endif

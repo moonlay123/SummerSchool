@@ -1,3 +1,7 @@
 *.exe
 *.dmp
 *.log
+./html/
+./.vscode/
+./Doxyfile
+./Makefile

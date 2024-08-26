@@ -1,7 +1,7 @@
 #ifndef PAINT
 #define PAINT
 #define TX_COMPILED
-#include "TXLib.h"
+#include "../TXLib/TXLib.h"
 
 /*!
 Create random console color attribute

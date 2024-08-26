@@ -1,6 +1,6 @@
 #ifndef unit_tests
 #define unit_tests
-#include "square.h"
+#include "../solver/square.h"
 
 /*!
 Struct defining unit_test

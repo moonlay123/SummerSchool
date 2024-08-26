@@ -1,2 +1,2 @@
 #define TX_COMPILING
-#include "../TXLib.h"
+#include "TXLib.h"
