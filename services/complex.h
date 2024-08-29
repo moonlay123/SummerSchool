@@ -7,8 +7,8 @@ Struct defining complex numbers
 struct complex
 {
     /*@{*/
-    double real; /*!< contains real value of complex number  */
-    double imaginary; /*!< contains imaginary value of complex number  */
+    double real;        /*!< contains real value of complex number  */
+    double imaginary;   /*!< contains imaginary value of complex number  */
     /*@}*/
 };
 

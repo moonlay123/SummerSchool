@@ -7,24 +7,26 @@
 typedef enum {EXIT = 5, INPUT_UNIT_TEST = 4, UNIT_TESTS = 3, MANY_EQUATIONS = 2, STANDARD = 1, NON_TYPE = 0} choose_type;
 
 const int MAX_FILES = 100;
+
 /*!
 Struct defining console flags info
 */
 struct console_flags
 {
     /*@{*/
-    bool menu_flag = false; /*!< contains bool of menu flag info */
+    bool menu_flag = false;  /*!< contains bool of menu flag info */
     bool clean_flag = false; /*!< contains bool of clean flag info */
-    bool rand_flag = false; /*!< contains bool of rand flag info */
-    bool help_flag = false; /*!< contains bool of help flag info */
-    bool exit_flag = false; /*!< contains bool of exit flag info */
+    bool rand_flag = false;  /*!< contains bool of rand flag info */
+    bool help_flag = false;  /*!< contains bool of help flag info */
+    bool exit_flag = false;  /*!< contains bool of exit flag info */
 
-    int file_num = 0; /*!< contains int info of number of -test flags */
-    int filenames_size = 0; /*!< contains int info of console entered filenames num*/
-    int filenames_uk = 0; /*!< Pointer to current filenames position*/
+    int file_num = 0;              /*!< contains int info of number of -test flags */
+    int filenames_size = 0;        /*!< contains int info of console entered filenames num*/
+    int filenames_uk = 0;          /*!< Pointer to current filenames position*/
     int filenames[MAX_FILES] = {}; /*!<mas of argv indexes of files*/
     /*@}*/
 };
+
 /*!
 Function for choosing program actions
 \return the selected program action

@@ -158,6 +158,7 @@ choose_type choose_variant()
 {
     int choose = NON_TYPE;
     int choose_examination = 0;
+
     while (choose != STANDARD and choose != MANY_EQUATIONS and choose != UNIT_TESTS
                                                 and choose != INPUT_UNIT_TEST and choose != EXIT and !choose_examination)
     {

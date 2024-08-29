@@ -8,9 +8,9 @@ Struct defining coefs of square equation
 */
 struct coefficients
 {
-    double a, /*!< a of square equation*/
-    b, /*!< b of square equation*/
-    c; /*!< c of square equation*/
+    double a,   /*!< a of square equation*/
+    b,          /*!< b of square equation*/
+    c;          /*!< c of square equation*/
 };
 
 /*!
@@ -33,6 +33,7 @@ Do random value double type
 \return double random value
 */
 double double_rand();
+
 /*!
 Calculating Discriminant of square equation
 \param[in]  a double a from square equation
@@ -41,6 +42,7 @@ Calculating Discriminant of square equation
 \return calculated discriminant
 */
 double calculate_Discriminant(coefficients coefs);
+
 /*!
 Provide linear case of square equation
 \param[in]  b double b from square equation
@@ -84,6 +86,7 @@ Input roots
 \param[in]  a double a from square equation
 \param[in]  b double b from square equation
 \param[in]  c double c from square equation
+\return SUCCESS or FAILURE of read
 */
 int square_equation_input(coefficients *coefs);
 
